@@ -538,6 +538,14 @@ if ( isset( $_GET["addslide"] ) ) {
 														echo 'selected';
 													} ?>
 														value="zoom_in"><?php echo __( 'Zoom In', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'clips_chess_in' ) {
+														echo 'selected';
+													} ?>
+														value="clips_chess_in"><?php echo __( 'Clips & Chess In', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'clip_jump_in' ) {
+														echo 'selected';
+													} ?>
+														value="clip_jump_in"><?php echo __( 'Clip & Jump In', 'photo-gallery-wp' ); ?></option>
 												</select>
 											</li>
 											<li>

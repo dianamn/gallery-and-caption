@@ -1787,6 +1787,7 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
     private function init_controls_masonry() {
         $this->masonry_show_content_in_the_center = $this->get_option("masonry_show_content_in_the_center", 'no');
         $this->masonry_image_width_in_px = $this->get_option("masonry_image_width_in_px", '260');
+        $this->masonry_image_margin_in_px = $this->get_option("masonry_image_margin_in_px", '0');
         $this->masonry_image_border_width_in_px = $this->get_option("masonry_image_border_width_in_px", '0');
         $this->masonry_image_border_color = $this->get_option("masonry_image_border_color", 'eeeeee');
         $this->masonry_image_border_radius = $this->get_option("masonry_image_border_radius", '0');
@@ -1832,6 +1833,12 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
                 'type' => 'number',
                 'default' => $this->masonry_image_width_in_px,
                 'label' => __('Image Width in px', 'photo-gallery-wp')
+            ),
+            'masonry_image_margin_in_px' => array(
+                'section' => 'masonry_image_styles',
+                'type' => 'number',
+                'default' => $this->masonry_image_margin_in_px,
+                'label' => __('Margin in px', 'photo-gallery-wp')
             ),
             'masonry_image_border_width_in_px' => array(
                 'section' => 'masonry_image_styles',

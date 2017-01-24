@@ -4,7 +4,7 @@ Donate link: http://huge-it.com/wordpress-photo-gallery/
 Tags: photo gallery, gallery, slider, image gallery, lightbox gallery, responsive gallery, wordpress gallery, content gallery, slideshow, portfolio gallery, video gallery, gallery slider,
 Requires at least: 3.0.1
 Tested up to: 4.7.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -604,18 +604,22 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 **Slideshow**
 
-* Slideshow. Select to enable slideshow ability in lightbox
-* Slideshow auto. Select to start the slideshow automatically
-* Slideshow Speed. Choose the level of speed for slideshow
+* Slideshow. Select to enable slideshow ability in lightbox.
+* Slideshow auto. Select to start the slideshow automatically.
+* Slideshow Speed. Choose the level of speed for slideshow.
 
 **Dimensions**
 
-* Popup size fix. Select to have fixe size for the lightbox or allow it vary due to the image dimensions
+* Popup size fix. Select to have fixe size for the lightbox or allow it vary due to the image dimensions.
 
 
 If you think, that you found a bug in our [WordPress Photo Gallery](http://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.0.3 =
+* 1) We have added 2 new effects in the Slider view.
+* 2) We also added an option to set a merging to the thumbs in Masonry View (Pro).
 
 = 2.0.2 =
 * 1) We have added 3 new effects to the gallery.

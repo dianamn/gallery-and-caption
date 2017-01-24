@@ -36,6 +36,7 @@
         position: relative;
         overflow: hidden;
         box-sizing: border-box;
+        margin-bottom: <?php echo absint( Photo_Gallery_WP()->settings->masonry_image_margin_in_px ); ?>px !important;
     }
 
     .grid-item img {

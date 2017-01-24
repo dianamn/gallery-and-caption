@@ -39,6 +39,14 @@ jQuery(document).ready(function ($) {
             var jssor_1_SlideshowTransitions = [
                 {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),y:2,$Rows:2,$Zoom:11,$ChessMode:{$Row:15},$Easing:{$Top:$JssorEasing$.$EaseInCubic,$Zoom:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Assembly:2049,$Opacity:2}
             ];
+        case 'clips_chess_in':
+            var jssor_1_SlideshowTransitions = [
+                {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),y:-1,$Cols:8,$Rows:4,$Clip:15,$During:{$Top:[0.5,0.5],$Clip:[0,0.5]},$Formation:$JssorSlideshowFormations$.$FormationStraight,$ChessMode:{$Column:12},$ScaleClip:0.5}
+            ];
+        case 'clip_jump_in':
+            var jssor_1_SlideshowTransitions = [
+                {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),x:-1,y:0.7,$Delay:80,$Cols:12,$Clip:11,$Move:true,$During:{$Left:[0.35,0.65],$Top:[0.35,0.65],$Clip:[0,0.1]},$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Left:$JssorEasing$.$EaseOutQuad,$Top:$JssorEasing$.$EaseOutJump,$Clip:$JssorEasing$.$EaseOutQuad},$Assembly:2049,$ScaleClip:0.7,$Round:{$Top:4}}
+            ];
             break;
     }
 if(re_slider_obj.ph_re_slider_show_thumbnails_show_all == 'default'){

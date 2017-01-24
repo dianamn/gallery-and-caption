@@ -16,7 +16,7 @@ function Ph_Gallery_Masonry(id) {
     _this.documentReady = function () {
         _this.container.find('.grid').masonry({
                 itemSelector: '.grid-item',
-                columnWidth: parseInt(photo_param_obj.masonry_image_width_in_px)
+                columnWidth: parseInt(photo_param_obj.masonry_image_width_in_px)+parseInt(photo_param_obj.masonry_image_margin_in_px)
             });
     };
     _this.showCenter = function () {
