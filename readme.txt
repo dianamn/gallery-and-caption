@@ -1,33 +1,33 @@
 === Gallery ===
 Contributors: Huge-IT
-Donate link: http://huge-it.com/wordpress-photo-gallery/
+Donate link: https://huge-it.com/wordpress-photo-gallery/
 Tags: photo gallery, gallery, slider, image gallery, lightbox gallery, responsive gallery, wordpress gallery, content gallery, slideshow, portfolio gallery, video gallery, gallery slider,
 Requires at least: 3.0.1
-Tested up to: 4.7.1
-Stable tag: 2.0.3
+Tested up to: 4.7.2
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Photo Gallery is advanced solution for WordPress Gallery users. 7 advanced and customizable views will help to create beautiful content in minutes.
+Photo Gallery is advanced solution for WordPress Gallery users. 8 advanced and customizable views will help to create beautiful content in minutes.
 
 == Description ==
 
 **Photo Gallery**
 
-= Photo Gallery is advanced solution for WordPress Gallery users. 7 advanced and customizable views will help to create beautiful content in minutes. =
+= Photo Gallery is advanced solution for WordPress Gallery users. 8 advanced and customizable views will help to create beautiful content in minutes. =
 
-* [Wordpress Photo Gallery](http://huge-it.com/wordpress-photo-gallery/)
-* [Demo Photo Gallery](http://huge-it.com/wordpress-photo-gallery-demo-1-gallerycontent-popup/)
-* [FAQ Photo Gallery](http://huge-it.com/wordpress-photo-gallery-faq/)
-* [User Manual Photo Gallery](http://huge-it.com/wordpress-photo-gallery-user-manual/)
-* [Photo Gallery Support](http://huge-it.com/contact-us/)
+* [Wordpress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/)
+* [Demo Photo Gallery](https://huge-it.com/wordpress-photo-gallery-demo-1-gallerycontent-popup/)
+* [FAQ Photo Gallery](https://huge-it.com/wordpress-photo-gallery-faq/)
+* [User Manual Photo Gallery](https://huge-it.com/wordpress-photo-gallery-user-manual/)
+* [Photo Gallery Support](https://huge-it.com/contact-us/)
 * [Photo Gallery Github Project](https://github.com/Huge-IT/gallery-and-caption)
 
 Free, easy, adaptive Photo Gallery from Huge-IT is an ideal solution for creating site-portfolio for photographers. It is allowing beautiful demonstration of works for designers, showing products and services, and others.
 
 Photo Gallery is a modern and necessary tool to build a photo albums in a web page. Huge-IT new Photo Gallery is full of effects which help to attract the attention of visitors and just give elegancy to your site. It is a modern solution with a pure coding standards and is UI/UX friendly. 
 
-While searching for the right view for you photo collection, install our plugin and find 7 beautiful and stunning views which include: Gallery/Content Popup view, Content Slider view, Lightbox gallery, Slider Gallery, Thumbnails view, Justified view, Masonry and Mosaic views. 
+While searching for the right view for you photo collection, install our plugin and find 8 beautiful and stunning views which include: Gallery/Content Popup view, Content Slider view, Lightbox gallery, Slider Gallery, Thumbnails view, Justified view, Masonry and Mosaic views. 
 
 **Details about the views:**
 
@@ -44,6 +44,8 @@ Justified. Justified view of the Photo Gallery allows you to showcase your image
 
 * Masonry view. Masonry is very popular layout. It place the elements in most optimal position based on free vertical space, sort of like a mason fitting stones in a wall. You could have seen it in use all over the Internet.
 
+* Mosaic view. Mosaic view arranges photos within a flat rectangle layout, automatically picking sizes. It usually neatly fills the entire width of the container, whereas in comparison with Masonry view filling the entire space is not necessarily.
+
 Usage of the plugin is super easy. Ease of use is achieved by using a very minimum number of components, only those required for a particular action and  modern coding language. These will help to get rid of confusion and concentrate on the basic functions of your site. 
 
 Backend options are made in minimalistic design which is loved by many developers and users. The plugin provides rating buttons to help visitors leave their impressions by liking, disliking the photos. To save more time for loading you may set pagination or load more functionality on your gallery. As a lightbox tool you may find a new and modern designed lightbox which has several types and many configuration options. By picking up the view make sure it satisfy all your needs and has the right functionality, as every view is different and unique
@@ -54,7 +56,7 @@ Backend options are made in minimalistic design which is loved by many developer
 * Fully Responsive
 * Load More And Pagination
 * Title And Description
-* 7 Nicely Designed Views
+* 8 Nicely Designed Views
 * Hundreds Of Design Options
 * YouTube Posts
 * Vimeo Posts
@@ -63,7 +65,7 @@ Backend options are made in minimalistic design which is loved by many developer
 * Minimalistic backend design 
 
 
-If you think, that you found a bug in our [WordPress Photo Gallery](http://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
+If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Installation ==
 
@@ -95,21 +97,22 @@ If you think, that you found a bug in our [WordPress Photo Gallery](http://huge-
 
 Now you can set your Photo Gallery options, images and use our Photo Gallery.
 
-If you think, that you found a bug in our [WordPress Photo Gallery](http://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
+If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Screenshots ==
 
-1.  [WordPress Photo Gallery view 1](http://huge-it.com/wordpress-photo-gallery-demo-1-gallerycontent-popup/#plugin_demo_wrapper) - Gallery / Content Popup
-12.  [WordPress Photo Gallery view 1](http://huge-it.com/wordpress-photo-gallery-demo-1-gallerycontent-popup/#plugin_demo_wrapper) - Gallery / Content Popup
-2.  [WordPress Photo Gallery view 2](http://huge-it.com/wordpress-photo-gallery-demo-2-content-slider/#plugin_demo_wrapper) - Content Slider
-3.  [WordPress Photo Gallery view 3](http://huge-it.com/wordpress-photo-gallery-demo-3-lightbox-gallery/#plugin_demo_wrapper) - Lightbox Gallery
-4.  [WordPress Photo Gallery view 4](http://huge-it.com/wordpress-photo-gallery-demo-4-slider/#plugin_demo_wrapper) - Slider
-5.  [WordPress Photo Gallery view 5](http://huge-it.com/wordpress-photo-gallery-demo-5-thumbnails-view/#plugin_demo_wrapper) - Thumbnails
-52.  [WordPress Photo Gallery view 6](http://huge-it.com/wordpress-photo-gallery-demo-6-justified-view/#plugin_demo_wrapper) - Justified Gallery
-53.  [WordPress Photo Gallery view 7](http://huge-it.com/wordpress-photo-gallery-demo-7-masonry/#plugin_demo_wrapper) - Masonry
-53.  [WordPress Photo Gallery Lightbox](http://wordpress.org/plugins/gallery-images/) - Lightbox
-6.  [WordPress Photo Gallery](http://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page  
-7.  [WordPress Photo Gallery](http://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page  
+1.  [WordPress Photo Gallery view 1](https://huge-it.com/wordpress-photo-gallery-demo-1-gallerycontent-popup/#plugin_demo_wrapper) - Gallery / Content Popup
+12.  [WordPress Photo Gallery view 1](https://huge-it.com/wordpress-photo-gallery-demo-1-gallerycontent-popup/#plugin_demo_wrapper) - Gallery / Content Popup
+2.  [WordPress Photo Gallery view 2](https://huge-it.com/wordpress-photo-gallery-demo-2-content-slider/#plugin_demo_wrapper) - Content Slider
+3.  [WordPress Photo Gallery view 3](https://huge-it.com/wordpress-photo-gallery-demo-3-lightbox-gallery/#plugin_demo_wrapper) - Lightbox Gallery
+4.  [WordPress Photo Gallery view 4](https://huge-it.com/wordpress-photo-gallery-demo-4-slider/#plugin_demo_wrapper) - Slider
+5.  [WordPress Photo Gallery view 5](https://huge-it.com/wordpress-photo-gallery-demo-5-thumbnails-view/#plugin_demo_wrapper) - Thumbnails
+52.  [WordPress Photo Gallery view 6](https://huge-it.com/wordpress-photo-gallery-demo-6-justified-view/#plugin_demo_wrapper) - Justified Gallery
+53.  [WordPress Photo Gallery view 7](https://huge-it.com/wordpress-photo-gallery-demo-7-masonry/#plugin_demo_wrapper) - Masonry
+54.  [WordPress Photo Gallery view 8](https://huge-it.com/wordpress-photo-gallery-demo-8-mosaic/#plugin_demo_wrapper) - Mosaic
+55.  [WordPress Photo Gallery Lightbox](https://wordpress.org/plugins/gallery-images/) - Lightbox
+6.  [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page  
+7.  [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page  
     
 
 == Frequently Asked Questions ==
@@ -140,7 +143,7 @@ Right now the option is not available in plugin options, but you may request cus
 * The differences are minor but may be important for a certain type of users and websites. Photo Gallery is based on minimalistic backend design and has two new views that are not available in the previous gallery plugins : Masonry and Mosaic views are available in this gallery only, and we have also implemented the newly designed Lightbox.
 
 
-If you think, that you found a bug in our [WordPress Photo Gallery](http://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
+If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Other Notes ==
 
@@ -613,9 +616,12 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Popup size fix. Select to have fixe size for the lightbox or allow it vary due to the image dimensions.
 
 
-If you think, that you found a bug in our [WordPress Photo Gallery](http://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
+If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.0.4 =
+* We have added the 8th new view called Mosaic.
 
 = 2.0.3 =
 * 1) We have added 2 new effects in the Slider view.

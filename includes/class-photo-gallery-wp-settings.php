@@ -32,6 +32,7 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
         $this->init_controls_justified();
         $this->init_controls_slider();
         $this->init_controls_masonry();
+        $this->init_controls_mosaic();
     }
 
     /**
@@ -71,7 +72,12 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
             ),
             'masonry' => array(
                 'title' => __( 'Masonry', 'photo-gallery-wp' ),
-                                'disabled' => true,
+                'disabled' => true,
+                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+            ),
+            'mosaic' => array(
+                'title' => __( 'Mosaic', 'photo-gallery-wp' ),
+                'disabled' => true,
                 'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
             )
         );
@@ -255,6 +261,18 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
                 'panel' => 'masonry',
                 'title' => __( 'Pagination Styles', 'photo-gallery-wp' ),
             ),
+            'mosaic_content_styles' => array (
+                'panel' => 'mosaic',
+                'title' => __( 'Content Styles', 'photo-gallery-wp' ),
+            ),
+            'mosaic_image_styles' => array (
+                'panel' => 'mosaic',
+                'title' => __( 'Image Styles', 'photo-gallery-wp' ),
+            ),
+            'mosaic_title_styles' => array (
+                'panel' => 'mosaic',
+                'title' => __( 'Title Styles', 'photo-gallery-wp' ),
+            ),
         );
     }
 
@@ -271,6 +289,7 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
         $controls_justified = $this->controls_justified();
         $controls_slider = $this->controls_slider();
         $controls_masonry = $this->controls_masonry();
+        $controls_mosaic = $this->controls_mosaic();
 
         foreach ($controls_gallery_content_pop_up as $control_id => $control) {
             $this->controls[$control_id] = $control;
@@ -291,6 +310,9 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
             $this->controls[$control_id] = $control;
         }
         foreach ($controls_masonry as $control_id => $control) {
+            $this->controls[$control_id] = $control;
+        }
+        foreach ($controls_mosaic as $control_id => $control) {
             $this->controls[$control_id] = $control;
         }
 
@@ -1818,6 +1840,112 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
         $this->masonry_pagination_icons_size_in_px = $this->get_option("masonry_pagination_icons_size_in_px", '21');
         $this->masonry_pagination_icons_color = $this->get_option("masonry_pagination_icons_color", 'B82020');
         $this->masonry_pagination_position = $this->get_option("masonry_pagination_position", 'center');
+    }
+
+    private function init_controls_mosaic() {
+        $this->mosaic_show_content_in_the_center = $this->get_option("mosaic_show_content_in_the_center", 'no');
+        $this->mosaic_show_content_by = $this->get_option( 'mosaic_show_content_by', 'count' );
+        $this->mosaic_image_max_width_in_px = $this->get_option("mosaic_image_max_width_in_px", '150');
+        $this->mosaic_image_column_count = $this->get_option("mosaic_image_column_count", '5');
+        $this->mosaic_image_border_width_in_px = $this->get_option("mosaic_image_border_width_in_px", '0');
+        $this->mosaic_image_border_color = $this->get_option("mosaic_image_border_color", 'eeeeee');
+        $this->mosaic_image_border_radius = $this->get_option("mosaic_image_border_radius", '0');
+        $this->mosaic_title_show_title = $this->get_option("mosaic_title_show_title", 'yes');
+        $this->mosaic_title_font_size_in_px = $this->get_option("mosaic_title_font_size_in_px", '14');
+        $this->mosaic_title_font_color = $this->get_option("mosaic_title_font_color", '0074A2');
+        $this->mosaic_title_background_color = $this->get_option("mosaic_title_background_color", '000000');
+        $this->mosaic_title_background_opacity = $this->get_option("mosaic_title_background_opacity", '80');
+        $this->mosaic_title_font_hover_color = $this->get_option("mosaic_title_font_hover_color", 'ffffff');
+    }
+
+    private function controls_mosaic(){
+        return array (
+            'mosaic_show_content_in_the_center' => array(
+                'section' => 'mosaic_content_styles',
+                'type' => 'checkbox',
+                'default' => $this->mosaic_show_content_in_the_center,
+                'label' => __('Show Content In The Center', 'photo-gallery-wp')
+            ),
+            'mosaic_show_content_by' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'select',
+                'default' => $this->mosaic_show_content_by,
+                'label' => __( 'Show Content by', 'photo-gallery-wp' ),
+                'choices' => array(
+                    'count' => __( 'Columns count', 'photo-gallery-wp' ),
+                    'width' => __( 'Width', 'photo-gallery-wp' )
+                )
+            ),
+            'mosaic_image_max_width_in_px' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_image_max_width_in_px,
+                'label' => __('Image Max Width in px', 'photo-gallery-wp'),
+                'html_class' => ( $this->mosaic_show_content_by !== 'width' ? array('hidden') : array() )
+            ),
+            'mosaic_image_column_count' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_image_column_count,
+                'label' => __('Column count', 'photo-gallery-wp'),
+                'html_class' => ( $this->mosaic_show_content_by !== 'count' ? array('hidden') : array() )
+            ),
+            'mosaic_image_border_width_in_px' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_image_border_width_in_px,
+                'label' => __('Image Border Width in px', 'photo-gallery-wp')
+            ),
+            'mosaic_image_border_color' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'color',
+                'default' => $this->mosaic_image_border_color,
+                'label' => __('Image Border Color', 'photo-gallery-wp')
+            ),
+            'mosaic_image_border_radius' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_image_border_radius,
+                'label' => __('Border Radius', 'photo-gallery-wp')
+            ),
+            'mosaic_title_show_title' => array(
+                'section' => 'mosaic_title_styles',
+                'type' => 'checkbox',
+                'default' => $this->mosaic_title_show_title,
+                'label' => __('Show Title', 'photo-gallery-wp')
+            ),
+            'mosaic_title_font_size_in_px' => array(
+                'section' => 'mosaic_title_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_title_font_size_in_px,
+                'label' => __('Title Font Size in px', 'photo-gallery-wp')
+            ),
+            'mosaic_title_font_color' => array(
+                'section' => 'mosaic_title_styles',
+                'type' => 'color',
+                'default' => $this->mosaic_title_font_color,
+                'label' => __('Title Font Color', 'photo-gallery-wp')
+            ),
+            'mosaic_title_font_hover_color' => array(
+                'section' => 'mosaic_title_styles',
+                'type' => 'color',
+                'default' => $this->mosaic_title_font_hover_color,
+                'label' => __('Title Font Hover Color', 'photo-gallery-wp')
+            ),
+            'mosaic_title_background_color' => array(
+                'section' => 'mosaic_title_styles',
+                'type' => 'color',
+                'default' => $this->mosaic_title_background_color,
+                'label' => __('Title Background Color', 'photo-gallery-wp')
+            ),
+            'mosaic_title_background_opacity' => array(
+                'section' => 'mosaic_title_styles',
+                'type' => 'simple_slider',
+                'default' => $this->mosaic_title_background_opacity,
+                'label' => __('Title Background Opacity', 'photo-gallery-wp'),
+                'choices' => range(0,100)
+            ),
+        );
     }
 
     private function controls_masonry(){

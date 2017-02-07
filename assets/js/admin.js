@@ -142,6 +142,10 @@ jQuery(document).ready(function () {
 				jQuery(this).find('ul li input[name="content_per_page"]').attr('name', '');
 				jQuery(this).find('ul li select[name="display_type"]').attr('name', '');
 			}
+			else{
+				jQuery(this).find('ul li input#content_per_page').attr('name', 'content_per_page');
+				jQuery(this).find('ul li select#display_type').attr('name', 'display_type');
+			}
 		});
 	});
 
@@ -255,13 +259,14 @@ jQuery(document).ready(function () {
 
 		jQuery('.ph-gallery-wp-current-options').removeClass('active');
 		jQuery('#ph-gallery-wp-current-options-'+jQuery(this).val()).addClass('active');
-		if(jQuery(this).val() == 3){
+		if(jQuery(this).val() == 3 || jQuery(this).val() == 8){
 			jQuery('select#rating').parents('li.rating-li').hide();
 		}
 		else{
 			jQuery('select#rating').parents('li.rating-li').show();
 		}
 	});
+	jQuery('#photo_gallery_wp_sl_effects').change();
 jQuery('a[href*="remove_photo_gallery_wp"]').click(function(){
 		if(!confirm('Are you sure you want to delete this item?'))
 			return false;

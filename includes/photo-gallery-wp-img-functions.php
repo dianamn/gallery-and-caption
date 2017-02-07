@@ -392,6 +392,9 @@ function photo_gallery_wp_get_view_slag_by_id($id)
         case 7:
             $slug = 'masonry';
             break;
+        case 8:
+            $slug = 'mosaic';
+            break;
     }
 
     return $slug;

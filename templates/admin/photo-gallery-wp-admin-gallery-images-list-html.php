@@ -341,6 +341,9 @@ if ( isset( $_GET["addslide"] ) ) {
 											<option <?php if ( $row->photo_gallery_wp_sl_effects == '7' ) {
 												echo 'selected';
 											} ?> value="7"><?php echo __( 'Masonry', 'photo-gallery-wp' ); ?></option>
+											<option <?php if ( $row->photo_gallery_wp_sl_effects == '8' ) {
+												echo 'selected';
+											} ?> value="8"><?php echo __( 'Mosaic', 'photo-gallery-wp' ); ?></option>
 										</select>
 									</li>
 									<div id="ph-gallery-wp-current-options-0"

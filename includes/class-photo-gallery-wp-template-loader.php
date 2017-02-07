@@ -108,6 +108,11 @@ class Photo_Gallery_WP_Template_Loader {
                 require PHOTO_GALLERY_WP_TEMPLATES_PATH . DIRECTORY_SEPARATOR . 'front-end' . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'masonry' . DIRECTORY_SEPARATOR . 'masonry-gallery-view.php';
                 require PHOTO_GALLERY_WP_TEMPLATES_PATH . DIRECTORY_SEPARATOR . 'front-end' . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'masonry' . DIRECTORY_SEPARATOR . 'masonry-gallery-view-css.php';
                 break;
+			case 8:
+				$view_slug = photo_gallery_wp_get_view_slag_by_id( $galleryID );
+				require PHOTO_GALLERY_WP_TEMPLATES_PATH . DIRECTORY_SEPARATOR . 'front-end' . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'mosaic' . DIRECTORY_SEPARATOR . 'mosaic-gallery-view.php';
+				require PHOTO_GALLERY_WP_TEMPLATES_PATH . DIRECTORY_SEPARATOR . 'front-end' . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'mosaic' . DIRECTORY_SEPARATOR . 'mosaic-gallery-view-css.php';
+				break;
 		}
 
 
