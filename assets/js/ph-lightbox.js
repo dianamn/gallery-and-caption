@@ -439,6 +439,7 @@
 
         $currentElement = this.$items.eq(index);
         $title = $currentElement.find('img').attr('alt') ||
+            $currentElement.next('img').attr('alt') ||
             $currentElement.find('img').attr('title') ||
             this.settings.defaultTitle || '';
 

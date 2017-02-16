@@ -4,9 +4,9 @@ Donate link: https://huge-it.com/wordpress-photo-gallery/
 Tags: photo gallery, gallery, slider, image gallery, lightbox gallery, responsive gallery, wordpress gallery, content gallery, slideshow, portfolio gallery, video gallery, gallery slider,
 Requires at least: 3.0.1
 Tested up to: 4.7.2
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Photo Gallery is advanced solution for WordPress Gallery users. 8 advanced and customizable views will help to create beautiful content in minutes.
 
@@ -619,6 +619,11 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.0.5 =
+* 1) We have fixed the broken shortcode bug that appeared in some issues
+* 2) Fixed the reported bug with the titles that did notdisplay in Justified View
+* 3) Fixed the issue on thumbs when on hover it showed default title
 
 = 2.0.4 =
 * We have added the 8th new view called Mosaic.

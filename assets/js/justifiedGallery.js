@@ -8,7 +8,7 @@ jQuery.each(justified_obj, function (index, value) {
     if (!isNaN(value)) {
         justified_obj[index] = parseInt(value);
     }else{
-        justified_obj[index] = value == 'true';
+        justified_obj[index] = value == 'yes';
     }
 });
 (function($) {

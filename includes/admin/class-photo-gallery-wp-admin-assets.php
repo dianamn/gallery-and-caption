@@ -25,7 +25,8 @@ class Photo_Gallery_WP_Admin_Assets {
             wp_enqueue_style( "featured_plugins", Photo_Gallery_WP()->plugin_url()."/assets/style/featured-plugins.css",  false );
             wp_enqueue_style( "free-banner", Photo_Gallery_WP()->plugin_url()."/assets/style/free-banner.css",  false );
 		}
-        if( $hook == 'post.php' ) {
+		$edit_pages = array('post.php','post-new.php');
+		if ( in_array( $hook, $edit_pages ) ){
             wp_enqueue_style('shortcode-components', Photo_Gallery_WP()->plugin_url()."/assets/style/shortcode-components.css");
         }
 
@@ -43,7 +44,8 @@ class Photo_Gallery_WP_Admin_Assets {
 			wp_enqueue_script( "simple_slider_js", Photo_Gallery_WP()->plugin_url().'/assets/js/simple-slider.js', false );
 			wp_enqueue_script( 'param_block2', Photo_Gallery_WP()->plugin_url()."/assets/js/jscolor.js");
 		}
-        if( $hook == 'post.php' ){
+		$edit_pages = array('post.php','post-new.php');
+		if ( in_array( $hook, $edit_pages ) ){
             wp_enqueue_script('shortcode-components', Photo_Gallery_WP()->plugin_url()."/assets/js/shortcode-components.js", array('jquery'));
         }
 	}
