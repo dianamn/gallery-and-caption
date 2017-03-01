@@ -42,6 +42,18 @@ class Photo_Gallery_WP_Lightbox_Settings extends WPDEV_Settings_API {
 		$this->ph_lightbox_slideshow_auto = $this->get_option('ph_lightbox_slideshow_auto', 'no');
 		$this->ph_lightbox_slideshow_speed = $this->get_option('ph_lightbox_slideshow_speed', 2500);
 		$this->ph_lightbox_size_fix = $this->get_option('ph_lightbox_size_fix', 'yes');
+		$this->ph_lightbox_social_on_off = $this->get_option('ph_lightbox_social_on_off', 'no');
+		$this->ph_lightbox_social_facebook = $this->get_option('ph_lightbox_social_facebook', 'yes');
+		$this->ph_lightbox_social_twitter = $this->get_option('ph_lightbox_social_twitter', 'yes');
+		$this->ph_lightbox_social_google = $this->get_option('ph_lightbox_social_google', 'yes');
+		$this->ph_lightbox_social_pinterest = $this->get_option('ph_lightbox_social_pinterest', 'yes');
+		$this->ph_lightbox_social_linkedin = $this->get_option('ph_lightbox_social_linkedin', 'yes');
+		$this->ph_lightbox_social_tumblr = $this->get_option('ph_lightbox_social_tumblr', 'yes');
+		$this->ph_lightbox_social_reddit = $this->get_option('ph_lightbox_social_reddit', 'no');
+		$this->ph_lightbox_social_buffer = $this->get_option('ph_lightbox_social_buffer', 'no');
+		$this->ph_lightbox_social_digg = $this->get_option('ph_lightbox_social_digg', 'no');
+		$this->ph_lightbox_social_vk = $this->get_option('ph_lightbox_social_vk', 'no');
+		$this->ph_lightbox_social_yummly = $this->get_option('ph_lightbox_social_yummly', 'no');
 	}
 
 	public function init_sections(){
@@ -49,23 +61,100 @@ class Photo_Gallery_WP_Lightbox_Settings extends WPDEV_Settings_API {
 			'general' => array(
 				'title' => __('Internationalization','photo-gallery-wp'),
 				'disabled' => true,
-				'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+				'disabled_link' => 'https://goo.gl/LwtCFf'
 			),
 			'slideshow' => array(
 				'title' => __('Slideshow','photo-gallery-wp'),
 				'disabled' => true,
-				'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+				'disabled_link' => 'https://goo.gl/LwtCFf'
 			),
 			'dimensions' => array(
 				'title' => __('Dimensions','photo-gallery-wp'),
 				'disabled' => true,
-				'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+				'disabled_link' => 'https://goo.gl/LwtCFf'
+			),
+			'social_buttons' => array(
+				'title' => __('Social Buttons','photo-gallery-wp'),
+				'disabled' => true,
+				'disabled_link' => 'https://goo.gl/LwtCFf'
 			)
 		);
 	}
 
 	public function init_controls(){
 		$this->controls = array(
+			'ph_lightbox_social_on_off' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_on_off,
+				'label' => __('Social Buttons', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_facebook' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_facebook,
+				'label' => __('Facebook', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_twitter' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_twitter,
+				'label' => __('Twitter', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_google' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_google,
+				'label' => __('Google Plus', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_pinterest' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_pinterest,
+				'label' => __('Pinterest', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_linkedin' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_linkedin,
+				'label' => __('Linkedin', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_tumblr' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_tumblr,
+				'label' => __('Tumblr', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_reddit' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_reddit,
+				'label' => __('Reddit', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_buffer' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_buffer,
+				'label' => __('Buffer', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_digg' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_digg,
+				'label' => __('Digg', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_vk' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_vk,
+				'label' => __('VK', 'photo-gallery-wp')
+			),
+			'ph_lightbox_social_yummly' => array(
+				'section' => 'social_buttons',
+				'type' => 'checkbox',
+				'default' => $this->ph_lightbox_social_yummly,
+				'label' => __('Yummly', 'photo-gallery-wp')
+			),
 			'ph_lightbox_style_view' => array(
 				'section' => 'general',
 				'type' => 'select',

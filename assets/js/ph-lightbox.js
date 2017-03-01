@@ -57,19 +57,19 @@
         slideshowStop: '',
         hideControlOnEnd: false,
         watermark: false,
-        socialSharing: false,
+        socialSharing: lightbox_obj.ph_lightbox_social_on_off === 'yes',
         share: {
-            facebookButton: true,
-            twitterButton: true,
-            googleplusButton: true,
-            pinterestButton: true,
-            linkedinButton: true,
-            tumblrButton: true,
-            redditButton: true,
-            bufferButton: true,
-            diggButton: true,
-            vkButton: true,
-            yummlyButton: true
+            facebookButton: lightbox_obj.ph_lightbox_social_facebook === 'yes',
+            twitterButton: lightbox_obj.ph_lightbox_social_twitter === 'yes',
+            googleplusButton: lightbox_obj.ph_lightbox_social_google === 'yes',
+            pinterestButton: lightbox_obj.ph_lightbox_social_pinterest === 'yes',
+            linkedinButton: lightbox_obj.ph_lightbox_social_linkedin === 'yes',
+            tumblrButton: lightbox_obj.ph_lightbox_social_tumblr === 'yes',
+            redditButton: lightbox_obj.ph_lightbox_social_reddit === 'yes',
+            bufferButton: lightbox_obj.ph_lightbox_social_buffer === 'yes',
+            diggButton: lightbox_obj.ph_lightbox_social_digg === 'yes',
+            vkButton: lightbox_obj.ph_lightbox_social_vk === 'yes',
+            yummlyButton: lightbox_obj.ph_lightbox_social_yummly === 'yes'
         }
     };
 

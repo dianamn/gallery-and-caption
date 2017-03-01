@@ -549,6 +549,18 @@ if ( isset( $_GET["addslide"] ) ) {
 														echo 'selected';
 													} ?>
 														value="clip_jump_in"><?php echo __( 'Clip & Jump In', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'bounce_down' ) {
+														echo 'selected';
+													} ?>
+														value="bounce_down"><?php echo __( 'Bounce Down', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'parabola_zigzag_in' ) {
+														echo 'selected';
+													} ?>
+														value="parabola_zigzag_in"><?php echo __( 'Parabola Zigzag In', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'jump_in_rectangle_cross' ) {
+														echo 'selected';
+													} ?>
+														value="jump_in_rectangle_cross"><?php echo __( 'Jump In Rectangle Cross', 'photo-gallery-wp' ); ?></option>
 												</select>
 											</li>
 											<li>

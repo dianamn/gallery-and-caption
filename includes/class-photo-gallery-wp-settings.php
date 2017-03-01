@@ -43,42 +43,42 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
             'gallery_content_pop_up' => array(
                 'title' => __('Gallery / Content Pop Up','photo-gallery-wp'),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'content_slider' => array (
                 'title' => __( 'Content Slider', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'lightbox_gallery' => array (
                 'title' => __( 'Lightbox-Gallery', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'slider' => array (
                 'title' => __( 'Slider', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'thumbnails' => array (
                 'title' => __( 'Thumbnails', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'justified' => array (
                 'title' => __( 'Justified', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'masonry' => array(
                 'title' => __( 'Masonry', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             ),
             'mosaic' => array(
                 'title' => __( 'Mosaic', 'photo-gallery-wp' ),
                 'disabled' => true,
-                'disabled_link' => 'http://huge-it.com/wordpress-photo-gallery/'
+                'disabled_link' => 'https://goo.gl/LwtCFf'
             )
         );
     }
@@ -217,6 +217,10 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
                 'panel' => 'justified',
                 'title' => __( 'Ratings Styles', 'photo-gallery-wp' ),
             ),
+            'slider_options' => array (
+                'panel' => 'slider',
+                'title' => __( 'Slider options', 'photo-gallery-wp' ),
+            ),
             'slider_arrows' => array (
                 'panel' => 'slider',
                 'title' => __( 'Arrows', 'photo-gallery-wp' ),
@@ -321,6 +325,9 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
     private function init_controls_slider()
     {
         $this->slider_show_arrows = $this->get_option("slider_show_arrows", 2);
+        $this->slider_options_border = $this->get_option("slider_options_border", 0);
+        $this->slider_options_border_color = $this->get_option("slider_options_border_color", 'CCCCCC');
+        $this->slider_options_border_radius = $this->get_option("slider_options_border_radius", 0);
         $this->slider_arrows_buttons = $this->get_option("slider_arrows_buttons", 'arrows-0.png');
         $this->slider_show_thumbnails = $this->get_option("slider_show_thumbnails", 2);
         $this->slider_thumbnails_position = $this->get_option("slider_thumbnails_position", 'show_all');
@@ -364,6 +371,24 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
                 'default' => $this->slider_show_arrows,
                 'label' => __('Show Arrows', 'photo-gallery-wp'),
                 'help' => __('slider_show_arrows', 'photo-gallery-wp')
+            ),
+            'slider_options_border' => array(
+                'section' => 'slider_options',
+                'type' => 'number',
+                'default' => $this->slider_options_border,
+                'label' => __('Slider Border', 'photo-gallery-wp'),
+            ),
+            'slider_options_border_color' => array(
+                'section' => 'slider_options',
+                'type' => 'color',
+                'default' => $this->slider_options_border_color,
+                'label' => __('Slider Border Color', 'photo-gallery-wp'),
+            ),
+            'slider_options_border_radius' => array(
+                'section' => 'slider_options',
+                'type' => 'number',
+                'default' => $this->slider_options_border_radius,
+                'label' => __('Slider Border Radius', 'photo-gallery-wp'),
             ),
             'slider_arrows_buttons' => array(
                 'section' => 'slider_arrows',

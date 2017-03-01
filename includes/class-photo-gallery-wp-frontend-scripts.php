@@ -146,6 +146,18 @@ class Photo_Gallery_WP_Frontend_Scripts {
 			'ph_lightbox_slideshow_auto'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_slideshow_auto,
 			'ph_lightbox_slideshow_speed'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_slideshow_speed,
 			'ph_lightbox_size_fix'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_size_fix,
+			'ph_lightbox_social_on_off'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_on_off,
+			'ph_lightbox_social_facebook'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_facebook,
+			'ph_lightbox_social_twitter'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_twitter,
+			'ph_lightbox_social_google'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_google,
+			'ph_lightbox_social_pinterest'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_pinterest,
+			'ph_lightbox_social_linkedin'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_linkedin,
+			'ph_lightbox_social_tumblr'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_tumblr,
+			'ph_lightbox_social_reddit'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_reddit,
+			'ph_lightbox_social_buffer'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_buffer,
+			'ph_lightbox_social_digg'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_digg,
+			'ph_lightbox_social_vk'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_vk,
+			'ph_lightbox_social_yummly'            => Photo_Gallery_WP()->lightbox_settings->ph_lightbox_social_yummly
 		);
 
 		$ph_re_slider_options        = array(

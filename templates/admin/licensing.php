@@ -14,68 +14,68 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="photo-gallery">
     <div class="gallery-block">
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon mansory"></span>
                 <span class="text">MASONRY VIEW</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon mosaic"></span>
                 <span class="text">MOSAIC VIEW</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon advanced"></span>
                 <span class="text">Advanced View Customization</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon image"></span>
                 <span class="text">Full Image Configuration</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon resizer"></span>
                 <span class="text">Image Resizer Settings</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon color"></span>
                 <span class="text">Color and Text Styling</span>
             </a>
         </div>
 
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon youtube"></span>
                 <span class="text">YouTube Videos</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon lightbox"></span>
                 <span class="text">Lightbox Views Library</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon lightbox-option"></span>
                 <span class="text">Advanced Lightbox Options</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon video"></span>
                 <span class="text">Image and Video slideshow</span>
             </a>
         </div>
         <div class="licens">
-            <a href="http://huge-it.com/wordpress-photo-gallery">
+            <a href="https://goo.gl/LwtCFf">
                 <span class="icon vimeo"></span>
                 <span class="text">vimeo Videos</span>
             </a>

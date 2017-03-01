@@ -47,6 +47,18 @@ jQuery(document).ready(function ($) {
             var jssor_1_SlideshowTransitions = [
                 {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),x:-1,y:0.7,$Delay:80,$Cols:12,$Clip:11,$Move:true,$During:{$Left:[0.35,0.65],$Top:[0.35,0.65],$Clip:[0,0.1]},$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Left:$JssorEasing$.$EaseOutQuad,$Top:$JssorEasing$.$EaseOutJump,$Clip:$JssorEasing$.$EaseOutQuad},$Assembly:2049,$ScaleClip:0.7,$Round:{$Top:4}}
             ];
+        case 'bounce_down':
+            var jssor_1_SlideshowTransitions = [
+                {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),y:1,$Easing:$JssorEasing$.$EaseInBounce}
+            ];
+        case 'parabola_zigzag_in':
+            var jssor_1_SlideshowTransitions = [
+                {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),x:1,y:1,$Delay:60,$Cols:8,$Rows:4,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$ChessMode:{$Row:3},$Easing:{$Top:$JssorEasing$.$EaseInQuart,$Opacity:$JssorEasing$.$EaseLinear},$Assembly:260,$Opacity:2}
+            ];
+        case 'jump_in_rectangle_cross':
+            var jssor_1_SlideshowTransitions = [
+                {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),x:-1,y:-0.5,$Delay:50,$Cols:8,$Rows:4,$Formation:$JssorSlideshowFormations$.$FormationRectangleCross,$Easing:{$Left:$JssorEasing$.$EaseSwing,$Top:$JssorEasing$.$EaseInJump},$Assembly:260,$Round:{$Top:1.5}}
+            ];
             break;
     }
 if(re_slider_obj.ph_re_slider_show_thumbnails_show_all == 'default'){
