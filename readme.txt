@@ -3,8 +3,8 @@ Contributors: Huge-IT
 Donate link: https://huge-it.com/wordpress-photo-gallery/
 Tags: photo gallery, gallery, slider, image gallery, lightbox gallery, responsive gallery, wordpress gallery, content gallery, slideshow, portfolio gallery, video gallery, gallery slider,
 Requires at least: 3.0.1
-Tested up to: 4.7.2
-Stable tag: 2.0.6
+Tested up to: 4.7.3
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -619,6 +619,12 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.0.7 =
+* 1) Fixed the issue in Slider view where effects were bringing an error.
+* 2) Fixed a bug where GIFs were not displayed on front end.
+* 3) Added new effects in Slider View.
+* 4) Added 2 new options in Mosaic view (Pro).
 
 = 2.0.6 =
 * 1) We have added 3 new effects in Slider View.

@@ -109,6 +109,8 @@
     .ph_mosaic_div {
         position: relative;
         overflow: hidden;
+        margin-bottom: <?php echo absint( Photo_Gallery_WP()->settings->mosaic_image_margin_bottom_in_px ); ?>px;
+        margin-right: <?php echo absint( Photo_Gallery_WP()->settings->mosaic_image_margin_right_in_px ); ?>px;
     }
 
     .title-mosaic-image a {

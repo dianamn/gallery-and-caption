@@ -3,7 +3,7 @@
 	<div id="jssor_1" style="position: relative; top: 0; width: <?php echo $gallery[0]->sl_width; ?>px; height: <?php echo $gallery[0]->sl_height+100; ?>px; overflow: hidden; visibility: hidden;">
 		<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
 			<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-			<div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+			<div style="position:absolute;display:block;background:url('<?php echo PHOTO_GALLERY_WP_IMAGES_URL.'/slider/loading.gif'; ?>') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
 		</div>
 		<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: <?php echo $gallery[0]->sl_width; ?>px; height: <?php echo $gallery[0]->sl_height; ?>px; overflow: hidden; border-radius: <?php echo floatval(Photo_Gallery_WP()->settings->slider_options_border_radius); ?>px; border: <?php echo floatval(Photo_Gallery_WP()->settings->slider_options_border); ?>px #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->slider_options_border_color) ?> solid;">
 			<?php foreach($images as $k => $value ): ?>

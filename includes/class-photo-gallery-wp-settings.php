@@ -1873,6 +1873,8 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
         $this->mosaic_image_max_width_in_px = $this->get_option("mosaic_image_max_width_in_px", '150');
         $this->mosaic_image_column_count = $this->get_option("mosaic_image_column_count", '5');
         $this->mosaic_image_border_width_in_px = $this->get_option("mosaic_image_border_width_in_px", '0');
+        $this->mosaic_image_margin_bottom_in_px = $this->get_option("mosaic_image_margin_bottom_in_px", '0');
+        $this->mosaic_image_margin_right_in_px = $this->get_option("mosaic_image_margin_right_in_px", '0');
         $this->mosaic_image_border_color = $this->get_option("mosaic_image_border_color", 'eeeeee');
         $this->mosaic_image_border_radius = $this->get_option("mosaic_image_border_radius", '0');
         $this->mosaic_title_show_title = $this->get_option("mosaic_title_show_title", 'yes');
@@ -1914,6 +1916,18 @@ class Photo_Gallery_WP_Settings extends WPDEV_Settings_API
                 'default' => $this->mosaic_image_column_count,
                 'label' => __('Column count', 'photo-gallery-wp'),
                 'html_class' => ( $this->mosaic_show_content_by !== 'count' ? array('hidden') : array() )
+            ),
+            'mosaic_image_margin_bottom_in_px' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_image_margin_bottom_in_px,
+                'label' => __('Image Margin Bottom in px', 'photo-gallery-wp')
+            ),
+            'mosaic_image_margin_right_in_px' => array(
+                'section' => 'mosaic_image_styles',
+                'type' => 'number',
+                'default' => $this->mosaic_image_margin_right_in_px,
+                'label' => __('Image Margin Right in px', 'photo-gallery-wp')
             ),
             'mosaic_image_border_width_in_px' => array(
                 'section' => 'mosaic_image_styles',

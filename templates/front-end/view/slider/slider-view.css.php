@@ -417,7 +417,7 @@ switch(esc_html(Photo_Gallery_WP()->settings->slider_arrows_buttons)){
     height: 68px;
     border: #000 2px solid;
     box-sizing: content-box;
-    background: url('img/t01.png') -800px -800px no-repeat;
+    background: url('<?php echo PHOTO_GALLERY_WP_IMAGES_URL.'/slider/t01.png'; ?>') -800px -800px no-repeat;
 }
 
 .jssort01 .pav .c {
