@@ -81,6 +81,21 @@ switch(re_slider_obj.ph_re_slider_effects) {
             {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),y:-1,$Cols:12,$Formation:$JssorSlideshowFormations$.$FormationStraight,$ChessMode:{$Column:12}}
         ];
         break;
+    case 'shift_tb':
+        var jssor_1_SlideshowTransitions = [
+            {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),y:1,$Easing:{$Top:$Jease$.$InOutQuart,$Opacity:$Jease$.$Linear},$Opacity:2,$Brother:{$Duration:1200,y:-1,$Easing:{$Top:$Jease$.$InOutQuart,$Opacity:$Jease$.$Linear},$Opacity:2}}
+        ];
+        break;
+    case 'shift_lr':
+        var jssor_1_SlideshowTransitions = [
+            {$Duration:parseInt(re_slider_obj.ph_re_slider_change_speed),x:1,$Easing:{$Left:$Jease$.$InOutQuart,$Opacity:$Jease$.$Linear},$Opacity:2,$Brother:{$Duration:1200,x:-1,$Easing:{$Left:$Jease$.$InOutQuart,$Opacity:$Jease$.$Linear},$Opacity:2}}
+        ];
+        break;
+    case 'fly_twins':
+        var jssor_1_SlideshowTransitions = [
+            {$Duration:1500,x:0.3,$During:{$Left:[0.6,0.4]},$Easing:{$Left:$Jease$.$InQuad,$Opacity:$Jease$.$Linear},$Opacity:2,$Outside:true,$Brother:{$Duration:1000,x:-0.3,$Easing:{$Left:$Jease$.$InQuad,$Opacity:$Jease$.$Linear},$Opacity:2}}
+        ];
+        break;
 }
 if(re_slider_obj.ph_re_slider_show_thumbnails_show_all == 'default'){
     var showallthumbs = 5;

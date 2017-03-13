@@ -4,6 +4,10 @@
 .entry-content a{
 	border-bottom: none;
 }
+.slider-content {
+	border: <?php echo absint( Photo_Gallery_WP()->settings->view5_main_image_border_width_in_px ); ?>px solid #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->view5_main_image_border_color)?>;
+	border-radius: <?php echo absint( Photo_Gallery_WP()->settings->view5_main_image_border_radius ); ?>px;
+}
 #g-main-slider_<?php echo $galleryID; ?> div.slider-content {
 	position:relative;
 	width:100%;

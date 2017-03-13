@@ -573,6 +573,18 @@ if ( isset( $_GET["addslide"] ) ) {
 														echo 'selected';
 													} ?>
 														value="vertical_chess_stripe"><?php echo __( 'Vertical Chess Stripe', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'shift_tb' ) {
+														echo 'selected';
+													} ?>
+														value="shift_tb"><?php echo __( 'Shift TB', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'shift_lr' ) {
+														echo 'selected';
+													} ?>
+														value="shift_lr"><?php echo __( 'Shift LR', 'photo-gallery-wp' ); ?></option>
+													<option <?php if ( $row->gallery_list_effects_s == 'fly_twins' ) {
+														echo 'selected';
+													} ?>
+														value="fly_twins"><?php echo __( 'Fly Twins', 'photo-gallery-wp' ); ?></option>
 												</select>
 											</li>
 											<li>
