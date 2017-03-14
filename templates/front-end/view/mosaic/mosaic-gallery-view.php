@@ -6,7 +6,7 @@
 	 data-element-width="<?php echo esc_html(Photo_Gallery_WP()->settings->masonry_image_width_in_px); ?>"
 	 data-rating-type="<?php echo esc_html($like_dislike); ?>"
      data-ph-gallery-id="<?php echo absint($galleryID); ?>">
-	<div id="ph-gallery-wp-loading-icon"></div>
+	<div class="ph-gallery-wp-loading-icon"></div>
 	<div class="grid ph-gallery-wp-loading-class" style="visibility: hidden">
 		<?php
 		global $wpdb;

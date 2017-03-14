@@ -423,14 +423,11 @@
                     break;
                 case 'view2':
                 case 'view4':
-                    $('.' + this.settings.classPrefix + 'bar').append(this.objects.counter = $('<div class="barCont"></div><div id="' + this.settings.idPrefix + 'counter"></div>'));
+                    $('.' + this.settings.classPrefix + 'bar').append(this.objects.counter = $('<div class="barCont"><div id="' + this.settings.idPrefix + 'counter"><div>' + this.settings.sequence_info + ' <span id="' + this.settings.idPrefix + 'counter-current">' + (parseInt(this.index, 10) + 1) + '</span> ' +
+                        this.settings.sequenceInfo + ' <span id="' + this.settings.idPrefix + 'counter-all">' + this.$items.length + '</span></div></div></div>'));
                     break;
-                }
+            }
 
-            this.objects.counter.append(
-                this.objects.current = $('<div>' + this.settings.sequence_info + ' <span id="' + this.settings.idPrefix + 'counter-current">' + (parseInt(this.index, 10) + 1) + '</span> ' +
-                    this.settings.sequenceInfo + ' <span id="' + this.settings.idPrefix + 'counter-all">' + this.$items.length + '</span></div>')
-            );
         }
     };
 

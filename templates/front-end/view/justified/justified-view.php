@@ -1,6 +1,6 @@
 <div id="mygallery_wrapper_<?php echo $galleryID; ?>" class="clearfix gallery-img-content"
      data-rating-type="<?php echo $like_dislike; ?>" style="position: relative">
-	<div id="ph-gallery-wp-loading-icon"></div>
+	<div class="ph-gallery-wp-loading-icon"></div>
 	<div style="visibility: hidden" id="mygallery_<?php echo $galleryID; ?>" class="ph-gallery-wp-loading-class mygallery clearfix view-<?php echo $view_slug; ?>">
 		<?php
 		global $wpdb;

@@ -1,4 +1,4 @@
-<div id="ph-gallery-wp-loading-icon"></div>
+<div class="ph-gallery-wp-loading-icon"></div>
 <div style="visibility: hidden" id="g-main-slider_<?php echo $galleryID; ?>"
      class="ph-gallery-wp-loading-class gallery-img-content g-main-slider liquid-slider view-<?php echo $view_slug; ?>"
      data-pause-hover="<?php echo $gallery[0]->pause_on_hover; ?>"

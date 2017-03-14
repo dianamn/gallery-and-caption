@@ -317,7 +317,7 @@ if(Photo_Gallery_WP()->settings->lightbox_rating_count =='no'){
         max-width:100% !important;
     }
 }
-#ph-gallery-wp-loading-icon {
+.ph-gallery-wp-loading-icon {
     width: 100%;
     height: 100%;
     position: absolute;

@@ -1,7 +1,7 @@
 <section style="position: relative" id="huge_it_gallery_content_<?php echo $galleryID; ?>" class="gallery-img-content"
          data-image-behaviour="<?php echo Photo_Gallery_WP()->settings->image_natural_size_contentpopup; ?>"
          data-rating-type="<?php echo $like_dislike; ?>">
-	<div id="ph-gallery-wp-loading-icon"></div>
+	<div class="ph-gallery-wp-loading-icon"></div>
 	<div style="visibility: hidden" id="ph-g-wp_gallery_container_<?php echo $galleryID; ?>"
 	     class="ph-gallery-wp-loading-class ph-g-wp_gallery_container super-list variable-sizes clearfix view-<?php echo $view_slug; ?>"
 	     data-show-center="<?php echo Photo_Gallery_WP()->settings->view2_content_in_center; ?>">

@@ -1,6 +1,6 @@
 <section id="huge_it_gallery_content_<?php echo $galleryID; ?>" class="gallery-img-content"
          data-rating-type="<?php echo $like_dislike; ?>" style="position: relative">
-	<div id="ph-gallery-wp-loading-icon"></div>
+	<div class="ph-gallery-wp-loading-icon"></div>
 	<div style="visibility: hidden" id="ph-g-wp_gallery_container_<?php echo $galleryID; ?>"
 	     data-show-center="<?php echo Photo_Gallery_WP()->settings->view6_content_in_center; ?>"
 	     class="ph-gallery-wp-loading-class ph-g-wp_gallery_container super-list variable-sizes clearfix view-<?php echo $view_slug; ?>">
