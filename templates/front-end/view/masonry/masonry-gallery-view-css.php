@@ -1,7 +1,6 @@
 <?php $galleryID.$pID = esc_html($galleryID.$pID); ?>
 <style>
     .grid {
-        background: #ffffff;
         max-width: 1200px;
         margin: 0 auto;
     }

@@ -130,4 +130,92 @@
         color: #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->mosaic_title_font_hover_color); ?>;
         text-decoration: none;
     }
+
+
+    //
+    .grid {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .ph-gallery-wp-loading-icon {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        background: url(<?php echo PHOTO_GALLERY_WP_IMAGES_URL.'/loading/loading-'.$loading_type.'.svg'; ?>) center top ;
+        background-repeat: no-repeat;
+        background-size: 60px auto;
+    }
+
+    /* clearfix */
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .paginate8 {
+        font-size: <?php echo floatval(Photo_Gallery_WP()->settings->masonry_pagination_font_size_in_px); ?>px;
+        color: #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->masonry_pagination_font_color); ?>;
+    }
+
+    .pagination_align {
+        <?php
+switch (Photo_Gallery_WP()->settings->masonry_pagination_position) {
+    case 'left':
+       ?>text-align: left;<?php
+        break;
+    case 'right':
+       ?>text-align: right;<?php
+        break;
+    case 'center':
+        ?>text-align: center;<?php
+        break;
+}
+ ?>
+
+    }
+
+    .paginate8 i {
+        font-size: <?php echo floatval(Photo_Gallery_WP()->settings->masonry_pagination_icons_size_in_px); ?>px;
+        color: #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->masonry_pagination_icons_color); ?>;
+    }
+
+    .load_more8 {
+        margin: 10px 0;
+        position:relative;
+        text-align:<?php if(Photo_Gallery_WP()->settings->masonry_load_more_position == 'left') {echo 'left';}
+			elseif (Photo_Gallery_WP()->settings->masonry_load_more_position == 'center') { echo 'center'; }
+			elseif(Photo_Gallery_WP()->settings->masonry_load_more_position == 'right') { echo 'right'; }?>;
+        width:100%;
+    }
+
+    .load_more_button8 {
+        border-radius: 10px;
+        display:inline-block;
+        padding:5px 15px;
+        font-size:<?php echo floatval(Photo_Gallery_WP()->settings->masonry_load_more_font_size_in_px); ?>px !important;;
+        color:<?php echo '#'.sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->masonry_load_more_font_color); ?> !important;;
+        background:<?php echo '#'.sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->masonry_load_more_button_color); ?> !important;
+        cursor:pointer;
+    }
+
+    .load_more_button8:hover{
+        color:<?php echo '#'.sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->masonry_load_more_font_font_hover_color); ?> !important;
+        background:<?php echo '#'.sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->masonry_load_more_background_hover_color); ?> !important;
+    }
+
+    .loading8 {
+        display:none;
+    }
+
+    .clear{
+        clear:both;
+    }
+
+    .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?>{
+        opacity: <?php echo floatval(Photo_Gallery_WP()->settings->masonry_ratings_background_color_opacity/100); ?> ;
+    }
+    //
 </style>
