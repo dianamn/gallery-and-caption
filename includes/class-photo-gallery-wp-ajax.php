@@ -983,43 +983,43 @@ class Photo_Gallery_WP_Ajax
                     <?php
                     switch ( $imagerowstype ) {
                         case 'image': ?>
-                            <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
-                                <img src="<?php echo $row->image_url; ?>" alt="">
+                            <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
+                                <img src="<?php echo esc_url($row->image_url); ?>" alt="">
                             </a>
                             <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
                                 <div class="title-mosaic-image">
-                                    <a title="<?php echo $row->name; ?>" href="<?php echo $row->sl_url; ?>"
-                                       target="_blank"><?php echo $row->name; ?></a>
+                                    <a title="<?php echo esc_html($row->name); ?>" href="<?php echo esc_html($row->sl_url); ?>"
+                                       target="_blank"><?php echo esc_html($row->name); ?></a>
                                 </div>
                             <?php }
                             break;
                         case 'video':
-                            $videourl = photo_gallery_wp_get_video_id_from_url( $row->image_url );
+                            $videourl = photo_gallery_wp_get_video_id_from_url( esc_url($row->image_url) );
                             if ( $videourl[1] == 'youtube' ) {
                                 ?>
-                                <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
+                                <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
                                     <img src="http://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
                                          alt="">
                                 </a>
                                 <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
                                     <div class="title-mosaic-image">
-                                        <a title="<?php echo str_replace( '__5_5_5__', '%', $row->name ); ?>"
-                                           href="<?php echo $row->sl_url; ?>"
-                                           target="_blank"><?php echo str_replace( '__5_5_5__', '%', $row->name ); ?></a>
+                                        <a title="<?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?>"
+                                           href="<?php echo esc_url($row->sl_url); ?>"
+                                           target="_blank"><?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?></a>
                                     </div>
                                 <?php }
                             } else {
                                 $hash   = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
                                 $imgsrc = $hash[0]['thumbnail_large'];
                                 ?>
-                                <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
+                                <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
                                     <img src="<?php echo esc_attr( $imgsrc ); ?>" alt="">
                                 </a>
                                 <?php if ( Photo_Gallery_WP()->settings->mosaic_title_show_title == 'yes' ) { ?>
                                     <div class="title-mosaic-image">
-                                        <a title="<?php echo str_replace( '__5_5_5__', '%', $row->name ); ?>"
-                                           href="<?php echo $row->sl_url; ?>"
-                                           target="_blank"><?php echo str_replace( '__5_5_5__', '%', $row->name ); ?></a>
+                                        <a title="<?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?>"
+                                           href="<?php echo esc_url($row->sl_url); ?>"
+                                           target="_blank"><?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?></a>
                                     </div>
                                     <?php
                                 }
