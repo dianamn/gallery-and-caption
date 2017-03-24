@@ -486,6 +486,42 @@ if ( isset( $_GET["addslide"] ) ) {
 											</li>
 										</ul>
 									</div>
+
+                                    <div id="ph-gallery-wp-current-options-8"
+                                         class="ph-gallery-wp-current-options <?php if ( $row->photo_gallery_wp_sl_effects == 8 ) {
+                                             echo ' active';
+                                         } ?>">
+                                        <ul id="view7">
+                                            <li>
+                                                <label
+                                                        for="display_type"><?php echo __( 'Displaying Content', 'photo-gallery-wp' ); ?></label>
+                                                <select id="display_type" name="display_type">
+
+                                                    <option <?php if ( $row->display_type == 0 ) {
+                                                        echo 'selected';
+                                                    } ?>
+                                                            value="0"><?php echo __( 'Pagination', 'photo-gallery-wp' ); ?></option>
+                                                    <option <?php if ( $row->display_type == 1 ) {
+                                                        echo 'selected';
+                                                    } ?>
+                                                            value="1"><?php echo __( 'Load More', 'photo-gallery-wp' ); ?></option>
+                                                    <option <?php if ( $row->display_type == 2 ) {
+                                                        echo 'selected';
+                                                    } ?>
+                                                            value="2"><?php echo __( 'Show All', 'photo-gallery-wp' ); ?></option>
+                                                </select>
+                                            </li>
+                                            <li id="content_per_page">
+                                                <label
+                                                        for="content_per_page"><?php echo __( 'Images Per Page', 'photo-gallery-wp' ); ?></label>
+                                                <input type="text" name="content_per_page" id="content_per_page"
+                                                       value="<?php echo esc_attr( $row->content_per_page ); ?>"
+                                                       class="text_area"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
 									<div id="ph-gallery-wp-current-options-3"
 										 class="ph-gallery-wp-current-options <?php if ( $row->photo_gallery_wp_sl_effects == 3 ) {
 											 echo ' active';

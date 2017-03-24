@@ -22,6 +22,9 @@ class Photo_Gallery_WP_Ajax
         add_action('wp_ajax_nopriv_photo_gallery_wp_load_images_masonry', array($this, 'load_images_masonry'));
         add_action('wp_ajax_nopriv_photo_gallery_wp_load_blog_view', array($this, 'load_blog_view'));
         add_action('wp_ajax_nopriv_photo_gallery_wp_like_dislike', array($this, 'like_dislike'));
+
+        add_action('wp_ajax_photo_gallery_wp_load_images_mosaic', array($this, 'load_images_mosaic'));
+        add_action('wp_ajax_nopriv_photo_gallery_wp_load_images_mosaic', array($this, 'load_images_mosaic'));
     }
 
     /**
@@ -927,6 +930,96 @@ class Photo_Gallery_WP_Ajax
                                         <a title="<?php echo str_replace( '__5_5_5__', '%', $row->name ); ?>"
                                            href="<?php echo $row->sl_url; ?>"
                                            target="_blank"><?php echo str_replace( '__5_5_5__', '%', $row->name ); ?></a>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            break;
+                    }
+                    ?>
+                </div>
+                </div>
+                <?php
+            endforeach;
+            wp_die();
+            return ob_get_clean();
+        }
+    }
+
+
+
+    public function load_images_mosaic() {
+
+        if (isset($_POST['task']) && $_POST['task'] == "load_images_mosaic") {
+            if ( isset( $_POST['galleryImgMosaicLoadNonce'] ) ) {
+                $galleryImgMosaicLoadNonce = esc_html( $_POST['galleryImgMosaicLoadNonce'] );
+                if ( ! wp_verify_nonce( $galleryImgMosaicLoadNonce, 'galleryImgMosaicLoadNonce' ) ) {
+                    wp_die( 'Security check fail' );
+                }
+            }
+            global $wpdb;
+            global $huge_it_ip;
+            if ( ! isset( $_POST["ph_gallery_id"] ) || ! absint( $_POST['ph_gallery_id'] ) || absint( $_POST['ph_gallery_id'] ) != $_POST['ph_gallery_id'] ) {
+                wp_die( '"ph_gallery_id" parameter is required to be not negative integer' );
+            }
+            $ph_gallery_id = absint( $_POST["ph_gallery_id"] );
+            if ( ! isset( $_POST["content_per_page"] ) || ! absint( $_POST['content_per_page'] ) || absint( $_POST['content_per_page'] ) != $_POST['content_per_page'] ) {
+                wp_die( '"content_per_page" parameter is required to be not negative integer' );
+            }
+            $content_per_page = absint( $_POST["content_per_page"] );
+            $current_page     = absint( $_POST['current_page'] );
+            $start            = $current_page * $content_per_page - $content_per_page;
+            $query            = $wpdb->prepare( "SELECT * FROM " . $wpdb->prefix . "photo_gallery_wp_images WHERE gallery_id=%d ORDER BY ordering LIMIT %d,%d", $ph_gallery_id, $start, $content_per_page );
+            $group_key1       = $start;
+            $rows             = $wpdb->get_results( $query );
+            ob_start();
+            foreach ( $rows as $key => $row ) :
+                $imagerowstype = $row->sl_type;
+                if ( $row->sl_type == '' ) {
+                    $imagerowstype = 'image';
+                }
+                ?>
+                <div class="ph_mosaic_div">
+                    <?php
+                    switch ( $imagerowstype ) {
+                        case 'image': ?>
+                            <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
+                                <img src="<?php echo esc_url($row->image_url); ?>" alt="">
+                            </a>
+                            <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
+                                <div class="title-mosaic-image">
+                                    <a title="<?php echo esc_html($row->name); ?>" href="<?php echo esc_html($row->sl_url); ?>"
+                                       target="_blank"><?php echo esc_html($row->name); ?></a>
+                                </div>
+                            <?php }
+                            break;
+                        case 'video':
+                            $videourl = photo_gallery_wp_get_video_id_from_url( esc_url($row->image_url) );
+                            if ( $videourl[1] == 'youtube' ) {
+                                ?>
+                                <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
+                                    <img src="http://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
+                                         alt="">
+                                </a>
+                                <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
+                                    <div class="title-mosaic-image">
+                                        <a title="<?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?>"
+                                           href="<?php echo esc_url($row->sl_url); ?>"
+                                           target="_blank"><?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?></a>
+                                    </div>
+                                <?php }
+                            } else {
+                                $hash   = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
+                                $imgsrc = $hash[0]['thumbnail_large'];
+                                ?>
+                                <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
+                                    <img src="<?php echo esc_attr( $imgsrc ); ?>" alt="">
+                                </a>
+                                <?php if ( Photo_Gallery_WP()->settings->mosaic_title_show_title == 'yes' ) { ?>
+                                    <div class="title-mosaic-image">
+                                        <a title="<?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?>"
+                                           href="<?php echo esc_url($row->sl_url); ?>"
+                                           target="_blank"><?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?></a>
                                     </div>
                                     <?php
                                 }

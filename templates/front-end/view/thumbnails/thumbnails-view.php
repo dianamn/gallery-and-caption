@@ -1,6 +1,6 @@
 <section id="thumbwrapper<?= $galleryID; ?>" class="gallery-img-content"
          data-rating-type="<?php echo $like_dislike; ?>" style="position: relative">
-	<div id="ph-gallery-wp-loading-icon"></div>
+	<div class="ph-gallery-wp-loading-icon"></div>
 	<input type="hidden" class="pagenum" value="1"/>
 	<ul style="visibility: hidden" id="huge_it_gallery" class="ph-gallery-wp-loading-class huge_it_gallery view-<?php echo $view_slug; ?>">
 		<li id="fullPreview"></li>

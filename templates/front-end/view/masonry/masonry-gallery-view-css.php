@@ -1,12 +1,11 @@
 <?php $galleryID.$pID = esc_html($galleryID.$pID); ?>
 <style>
     .grid {
-        background: #ffffff;
         max-width: 1200px;
         margin: 0 auto;
     }
 
-    #ph-gallery-wp-loading-icon {
+    .ph-gallery-wp-loading-icon {
         width: 100%;
         height: 100%;
         position: absolute;

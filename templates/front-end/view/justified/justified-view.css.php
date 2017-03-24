@@ -327,7 +327,7 @@ if(Photo_Gallery_WP()->settings->just_rating_count =='no'){
       break;
       }
       ?>
-#ph-gallery-wp-loading-icon {
+.ph-gallery-wp-loading-icon {
     width: 100%;
     height: 100%;
     position: absolute;
