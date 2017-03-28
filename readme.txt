@@ -4,7 +4,7 @@ Donate link: https://huge-it.com/wordpress-photo-gallery/
 Tags: gallery, content gallery, gallery image, image gallery, images gallery, lightbox gallery, media gallery, photo gallery, responsive gallery, thumbnail gallery, wordpress gallery, youtube gallery
 Requires at least: 3.0.1
 Tested up to: 4.7.3
-Stable tag: 2.0.8
+Stable tag: 2.0.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,17 +52,45 @@ Backend options are made in minimalistic design which is loved by many developer
 
 ### Main Features
 
-* Unlimited Amount Of Galleries And Images
-* Fully Responsive
-* Load More And Pagination
-* Title And Description
+**Unlimited Amount Of Galleries And Images**
+
+Photo Gallery allows to add unlimited galleries with photos and showcase them on pages, as well as posts. There is no limit in Lite version. The Photo Gallery plugin comes as very light plugin and you are free to add a lot of images and photos to the gallery too.
+
+**Fully Responsive**
+
+Photo Gallery plugin is fully responsive and appears beautiful on mobile devices. You may enjoy scrolling through hoto galleries and images and view them on finger-click. Galleries and images appear to be mobile friendly.
+
+**Load More And Pagination**
+
+With Photo Gallery plugin you may add load more functionality to your galleries and images. Options allow you either add pagination, so that you can click NEXT and PREVIOUS buttons when going through images or use a load more button , so that next collection of galleries would pop below.
+
+**Title And Description**
+
+Photo Gallery allows users to add both titles and descriptions. Descriptions appear to be more detailed.
+
 * 8 Nicely Designed Views
-* Hundreds Of Design Options
-* YouTube Posts
-* Vimeo Posts
-* Lightbox Popup With Many Options
-* Friendly UI/UX Coding Standards 
-* Minimalistic backend design 
+
+**The most unique feature of this photo gallery plugin appears to be its collection of beautiful views. This plugin comes with 8 views , that meet all the modern website design requirements. The good news is that all these views are available in Lite version of the plugin.**
+
+**Hundreds Of Design Options**
+
+We constantly update the plugin and add new features and options in order to help users to expand the functionality of their photo gallery. 
+
+**YouTube and Vimeo Posts**
+
+Photo Gallery allows to showcase videos from YouTube and Vimeo too. This is a great idea to add some spice to your photo gallery with detailed video instructions, for example.
+
+**Lightbox Popup With Many Options**
+
+This plugin used to have a basic lightbox , which is still available in the plugin under the name OLD LIGHTBOX. But we have made a NEW LIGHTBOX , which comes by default. This is really a nice and advanced tool for WordPress Photo Gallery users. Why? Because it has a lot of options and functionality to offer and some options are available on this plugin only. The list is really big, starting from big collection of top-social sharing icons and buttons and finishing with watermark and advertisement solutions. 
+
+**Friendly UI/UX Coding Standards**
+
+The Team Huge-IT helps users by bringing plugins that are being tested multiple times by different users. We test the plugins on different devices and programs. This plugin is meeting the most recent UX/UI standards for sure.
+
+**Minimalistic backend design**
+
+Minimalist back-end and admin panel of photo gallery plugin appear to be very simple, in order to help users ti find and navigate through options more easily.
 
 
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
@@ -141,6 +169,66 @@ Right now the option is not available in plugin options, but you may request cus
 = What is the difference between Image Gallery and Photo Gallery plugins that you offer? =
 
 * The differences are minor but may be important for a certain type of users and websites. Photo Gallery is based on minimalistic backend design and has two new views that are not available in the previous gallery plugins : Masonry and Mosaic views are available in this gallery only, and we have also implemented the newly designed Lightbox.
+
+
+= I want to add Photo Gallery to my website Widget area, how may I accomplish it? =
+
+* Once created your photo gallery, you should copy the shortcode then open Appearance > Widgets > then drag Huge-IT Photo Gallery plugin from left side to right one selecting the appropriate place.
+
+
+= Is there any chance to translate Your Gallery into any other language? =
+
+* Please follow the link: https://translate.wordpress.org/projects/wp-plugins/ gallery -and-caption, here you may select the language you want to translate Photo Gallery plugin. 
+
+
+= Is there any chance to use Photo Gallery on customer's website? =
+
+* Yes, you may use Gallery Plugin on your customer website, you may use a free version of the gallery but if needed more customization you can upgrade to pro version. 
+
+
+= Who can use Photo Gallery created by Huge-IT? =
+
+* Those who want to demonstrate images, design works, business portfolios then Photo Gallery can be a great way to achieve desired results. 
+
+
+= Does your Gallery user friendly? =
+
+* Yes, the gallery is user friendly. There is no need to have programming skills to use Photo Gallery as the plugin provides simple admin interface.
+
+
+= Does Photo Gallery support HTML in description area? =
+
+* You may use HTML in the description area for each image in Photo Gallery plugin.  
+
+
+= Does your gallery work on different devices such as tablet, smartphones? =
+
+* The Photo Gallery built by Huge-IT works on iOS, Android smartphones, tablets. We take care of your website appearance so that each gallery to be available for everyone.
+
+
+= What should I do if I have huge variety of gallery on my website to load my gallery faster? =
+
+* Photo Gallery has two options called Pagination and Load More button. You may easily  apply one of the options to your gallery which will separate created projects and images within gallery will load faster. 
+
+
+= Does the gallery provide option to upload videos when needed? =
+
+* Yes, Photo Gallery has “Add Video” button and when clicking on it you may add your desired videos from Vimeo/YouTube and save the video gallery . Adding video to the plugin is accessible in the premium version only. 
+
+
+= What should I do if I am not able to install the purchased zip file of Photo Gallery plugin? =
+
+* If you fail to install gallery from your admin section WordPress website then try to add Photo Gallery via FTP adding the zip file in the following folder: photo- gallery -wp directory to the /wp-content/plugins/ directory then activate gallery in the Plugin dashboard. 
+
+
+= After using the free version of Photo Gallery I want to upgrade to the paid version but I do not want to rebuild my gallery how to avoid from rebuilding? =
+
+* There is no need to build gallery again, you should delete free version of Photo Gallery then install the paid one and all your gallery will remain, as all your projects are saved in database. 
+
+
+= If my gallery is distorted or the plugin is not functioning what should I do? =
+
+* If you faced any kind of technical issue, please inform our support team and they will sort the problem regarding Photo Gallery plugin within 24 hours.
 
 
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
@@ -615,10 +703,43 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 * Popup size fix. Select to have fixe size for the lightbox or allow it vary due to the image dimensions.
 
+* Besides the mentioned options above, you have a chance to go deep and discover more advanced tools , that come with photo gallery plugin. 
+
+* Photo Gallery plugin produced by Huge-IT suggests various useful tools to build the most stunning gallery ever. It suggests 8 engaging views to apply for images. You may showcase both images/videos  create fully engaging gallery which will demonstrate your projects nicely and attract all your visitors.
+
+* Due to Ratings option in Photo Gallery you may make a website more engaging; that is select Like/Dislike button or Herat one. With these two buttons your website visitors may show their opinion over your projects displayed in gallery so you could know their attitude toward your works. 
+
+* There is a Show Loading Icon and by enabling this option it may show load icon before your gallery images will appear on your page. This option can be perfect tool if you have many images inside gallery 
+
+* What comes to Displaying Content option this is prepared to separate gallery images by Pagination option or Load More. 
+
+* Within the plugin Photo Gallery has  Lightbox Options section. This is prepared for those views which allows gallery images to be opened in Lightbox. In Lightbox Options you may customize how the gallery images opened. There is 4 lightbox styles with 9 animation types which gives you vast amount of choice to make gallery looks perfectly.
+
+* Photo Gallery enables social sharing icons to share gallery images to your favorite platform. 
+
+* Photo Gallery plugin provides Image Behaviour option which prevents gallery images to look distorted or squashed. Just select Natural and enjoy the appearance of your created gallery . 
+
+* If there will be any other technical issues with Photo Gallery plugin please contact our support team. They will assist you to solve any kind of issue with gallery plugin quickly.
+
+* The great thing with Gallery plugin is that those who want to have more style options can do it with paid version. General Options provide the tools to customize gallery title, change size for each image in gallery and apply various colors to load more, Rating and Pagination icons. 
+
+* Huge-IT always tries to provide new innovative and modern tools to make your website look beautiful. In Photo Gallery you may find new Views like Masonry, Mosaic which shows gallery images in a perfect way.  Both versions free and paid one of Photo Gallery plugin allows to add unlimited numbers of images and produce as many gallery as you need. 
+
+* Huge-IT designed a responsive Photo Gallery due to which your gallery images can be watched using different size gadgets. The backend of Photo Gallery plugin is minimalistic which means that it will be easier for you to use the plugin. 
+
+* Photo Gallery plugin acquires a new relesed modern lightbox which you may evaluate in free version as well. New Lightbox Option will make your gallery images to appear in a perfect way when clicking on it.
+
 
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.0.9 =
+* 1) Fixed the issue where 2 shortcodes bringing conflict with class IDs
+* 2) We have added Images per page option
+* 3) We have added Displaying Content option (load more, pagination, show all)
+* 4) We have solved the loading icon bug(when user needed to reload page)
+* 5) We have fixed the issue regarding the count of the Images per page on Mosaic view
 
 = 2.0.8 =
 * 1) Added new effects in Slider View.
