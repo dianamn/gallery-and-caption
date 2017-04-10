@@ -128,7 +128,7 @@ switch ($like_dislike) {
     color: #<?php echo Photo_Gallery_WP()->settings->lightbox_likedislike_font_color; ?>;
     display: none;
 }
-.element_<?php echo $galleryID; ?>:hover  .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?>{
+.ph_element_<?php echo $galleryID; ?>:hover  .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?>{
     display: table;
 }
 .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> .ph-g-wp_gallery_like_wrapper ,
@@ -231,7 +231,7 @@ switch ($like_dislike) {
     z-index: 99;
     display: none;
 }
-.element_<?php echo $galleryID; ?>:hover  .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?>{
+.ph_element_<?php echo $galleryID; ?>:hover  .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?>{
     display: block;
 }
 .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> .ph-g-wp_gallery_like_wrapper  {
