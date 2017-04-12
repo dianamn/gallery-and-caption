@@ -81,187 +81,203 @@ class Photo_Gallery_WP_Lightbox_Settings extends WPDEV_Settings_API {
 		);
 	}
 
-	public function init_controls(){
-		$this->controls = array(
-			'ph_lightbox_social_on_off' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_on_off,
-				'label' => __('Social Buttons', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_facebook' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_facebook,
-				'label' => __('Facebook', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_twitter' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_twitter,
-				'label' => __('Twitter', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_google' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_google,
-				'label' => __('Google Plus', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_pinterest' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_pinterest,
-				'label' => __('Pinterest', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_linkedin' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_linkedin,
-				'label' => __('Linkedin', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_tumblr' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_tumblr,
-				'label' => __('Tumblr', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_reddit' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_reddit,
-				'label' => __('Reddit', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_buffer' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_buffer,
-				'label' => __('Buffer', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_digg' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_digg,
-				'label' => __('Digg', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_vk' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_vk,
-				'label' => __('VK', 'photo-gallery-wp')
-			),
-			'ph_lightbox_social_yummly' => array(
-				'section' => 'social_buttons',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_social_yummly,
-				'label' => __('Yummly', 'photo-gallery-wp')
-			),
-			'ph_lightbox_style_view' => array(
-				'section' => 'general',
-				'type' => 'select',
-				'default' => $this->ph_lightbox_style_view,
-				'choices' => array (
-					4 => '4',
-					3 => '3',
-					2 => '2',
-					1 => '1',
-				),
-				'label' => __('Lightbox style','photo-gallery-wp')
-			),
-			'ph_slide_animation_type' => array(
-				'section' => 'general',
-				'type' => 'select',
-				'default' => $this->ph_slide_animation_type,
-				'choices' => array (
-					8 => '9',
-					7 => '8',
-					6 => '7',
-					5 => '6',
-					4 => '5',
-					3 => '4',
-					2 => '3',
-					1 => '2',
-					0 => '1',
-				),
-				'label' => __('Slide Animation Type','photo-gallery-wp')
-				),
-			'ph_lightbox_speed' => array(
-				'section' => 'general',
-				'type' => 'number',
-				'default' => $this->ph_lightbox_speed,
-				'label' => __('Speed', 'photo-gallery-wp')
-			),
-			'ph_lightbox_slider_animation' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_slider_animation,
-				'label' => __('Slider Animation', 'photo-gallery-wp')
-			),
-			'ph_lightbox_overlay_close' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_overlay_close,
-				'label' => __('Overlay Close', 'photo-gallery-wp')
-			),
-			'ph_lightbox_loop' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_loop,
-				'label' => __('Loop', 'photo-gallery-wp')
-			),
-			'ph_lightbox_esc_key_close' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_esc_key_close,
-				'label' => __('Esc Key close', 'photo-gallery-wp')
-			),
-			'ph_lightbox_keypress_navigation' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_keypress_navigation,
-				'label' => __('Keyboard navigation', 'photo-gallery-wp')
-			),
-			'ph_lightbox_arrows' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_arrows,
-				'label' => __('Arrows', 'photo-gallery-wp')
-			),
-			'ph_lightbox_download_image' => array(
-				'section' => 'general',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_download_image,
-				'label' => __('Download', 'photo-gallery-wp')
-			),
-			'ph_lightbox_default_title' => array(
-				'section' => 'general',
-				'type' => 'text',
-				'default' => $this->ph_lightbox_default_title,
-				'label' => __('Default Title', 'photo-gallery-wp')
-			),
-			'ph_lightbox_slideshow_on' => array(
-				'section' => 'slideshow',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_slideshow_on,
-				'label' => __('Slideshow', 'photo-gallery-wp')
-			),
-			'ph_lightbox_slideshow_auto' => array(
-				'section' => 'slideshow',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_slideshow_auto,
-				'label' => __('Slideshow auto', 'photo-gallery-wp')
-			),
-			'ph_lightbox_slideshow_speed' => array(
-				'section' => 'slideshow',
-				'type' => 'number',
-				'default' => $this->ph_lightbox_slideshow_speed,
-				'label' => __('Slideshow Speed', 'photo-gallery-wp')
-			),
-			'ph_lightbox_size_fix' => array(
-				'section' => 'dimensions',
-				'type' => 'checkbox',
-				'default' => $this->ph_lightbox_size_fix,
-				'label' => __('Popup size fix', 'photo-gallery-wp')
-			),
-		);
-	}
+    public function init_controls(){
+        $this->controls = array(
+            'ph_lightbox_social_on_off' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_on_off,
+                'label' => __('Social Buttons', 'photo-gallery-wp'),
+                'help' => __('Check to activate social sharing buttons.', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_facebook' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_facebook,
+                'label' => __('Facebook', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_twitter' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_twitter,
+                'label' => __('Twitter', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_google' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_google,
+                'label' => __('Google Plus', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_pinterest' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_pinterest,
+                'label' => __('Pinterest', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_linkedin' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_linkedin,
+                'label' => __('Linkedin', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_tumblr' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_tumblr,
+                'label' => __('Tumblr', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_reddit' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_reddit,
+                'label' => __('Reddit', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_buffer' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_buffer,
+                'label' => __('Buffer', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_digg' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_digg,
+                'label' => __('Digg', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_vk' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_vk,
+                'label' => __('VK', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_social_yummly' => array(
+                'section' => 'social_buttons',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_social_yummly,
+                'label' => __('Yummly', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_style_view' => array(
+                'section' => 'general',
+                'type' => 'select',
+                'default' => $this->ph_lightbox_style_view,
+                'choices' => array (
+                    4 => '4',
+                    3 => '3',
+                    2 => '2',
+                    1 => '1',
+                ),
+                'label' => __('Lightbox style','photo-gallery-wp'),
+                'help' => __('Choose the type of your popup', 'photo-gallery-wp')
+            ),
+            'ph_slide_animation_type' => array(
+                'section' => 'general',
+                'type' => 'select',
+                'default' => $this->ph_slide_animation_type,
+                'choices' => array (
+                    8 => '9',
+                    7 => '8',
+                    6 => '7',
+                    5 => '6',
+                    4 => '5',
+                    3 => '4',
+                    2 => '3',
+                    1 => '2',
+                    0 => '1',
+                ),
+                'label' => __('Slide Animation Type','photo-gallery-wp'),
+                'help' => __('Choose the slide animation type', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_speed' => array(
+                'section' => 'general',
+                'type' => 'number',
+                'default' => $this->ph_lightbox_speed,
+                'label' => __('Speed', 'photo-gallery-wp'),
+                'help' => __('Set the speed of opening the popup in milliseconds..', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_slider_animation' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_slider_animation,
+                'label' => __('Slider Animation', 'photo-gallery-wp'),
+                'help' => __('Choose whether to display the animation', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_overlay_close' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_overlay_close,
+                'label' => __('Overlay Close', 'photo-gallery-wp'),
+                'help' => __('Choose to close the content by clicking on the overlay.', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_loop' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_loop,
+                'label' => __('Loop', 'photo-gallery-wp'),
+                'help' => __('Loop content. If switched on give the ability to move from the last image to the first image while navigation..', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_esc_key_close' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_esc_key_close,
+                'label' => __('Esc Key close', 'photo-gallery-wp'),
+                'help' => __('Choose to close the content by pressing esc.', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_keypress_navigation' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_keypress_navigation,
+                'label' => __('Keyboard navigation', 'photo-gallery-wp'),
+                'help' => __('Set to change the images with keyboard buttons.', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_arrows' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_arrows,
+                'label' => __('Arrows', 'photo-gallery-wp'),
+                'help' => __('Choose whether to display arrows', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_download_image' => array(
+                'section' => 'general',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_download_image,
+                'label' => __('Download', 'photo-gallery-wp'),
+                'help' => __('Choose whether to let download image', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_default_title' => array(
+                'section' => 'general',
+                'type' => 'text',
+                'default' => $this->ph_lightbox_default_title,
+                'label' => __('Default Title', 'photo-gallery-wp'),
+                'help' => __('Choose whether to display default title', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_slideshow_on' => array(
+                'section' => 'slideshow',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_slideshow_on,
+                'label' => __('Slideshow', 'photo-gallery-wp'),
+                'help' => __('Select to enable slideshow.', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_slideshow_auto' => array(
+                'section' => 'slideshow',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_slideshow_auto,
+                'label' => __('Slideshow auto', 'photo-gallery-wp'),
+                'help' => __('If true it works automatically', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_slideshow_speed' => array(
+                'section' => 'slideshow',
+                'type' => 'number',
+                'default' => $this->ph_lightbox_slideshow_speed,
+                'label' => __('Slideshow Speed', 'photo-gallery-wp'),
+                'help' => __('Speed of slideshow in milliseconds', 'photo-gallery-wp')
+            ),
+            'ph_lightbox_size_fix' => array(
+                'section' => 'dimensions',
+                'type' => 'checkbox',
+                'default' => $this->ph_lightbox_size_fix,
+                'label' => __('Popup size fix', 'photo-gallery-wp'),
+                'help' => __('Choose to fix the popup width and high.', 'photo-gallery-wp')
+            ),
+        );
+    }
 }
