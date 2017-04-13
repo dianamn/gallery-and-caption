@@ -141,6 +141,7 @@ img[class*=video_cover] {
     overflow: hidden;
     cursor: pointer;
     border: #000 1px solid;
+    background-color: #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->slider_bullets_background_hover); ?> !important;
 }
 .jssorb01 div { background-color: #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->slider_bullets_background); ?> !important; >; }
 .jssorb01 div:hover { background-color: #<?php echo sanitize_hex_color_no_hash(Photo_Gallery_WP()->settings->slider_bullets_background_hover); ?> !important; >; }
@@ -449,5 +450,6 @@ switch(esc_html(Photo_Gallery_WP()->settings->slider_arrows_buttons)){
     width: 72px;
     height: 72px;
 }
+
 
 </style>
