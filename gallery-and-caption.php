@@ -4,8 +4,8 @@
 Plugin Name: Huge IT Photo Gallery
 Plugin URI: https://huge-it.com/wordpress-photo-gallery/
 Description: Photo Gallery is advanced solution for WordPress Gallery users. 7 advanced and customizable views will help to create beautiful content in minutes.
-Version: 2.0.9
-Author: Huge-IT
+Version: 2.1.0
+Author: Photo Gallery by Huge-IT
 Author URI: https://huge-it.com/
 License: GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -22,7 +22,7 @@ if ( ! class_exists( 'Photo_Gallery_WP' ) ) :
          * Version of plugin
          * @var String
          */
-        public $version = "2.0.9";
+        public $version = "2.1.0";
 
         /**
          * Instance of Gallery_Img_Admin class to manage admin

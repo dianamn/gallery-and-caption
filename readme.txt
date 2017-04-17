@@ -1,18 +1,18 @@
-=== Gallery ===
-Contributors: Huge-IT
+=== Gallery – Photo Gallery and Image Gallery ===
+Contributors: Huge-IT, galleryteam
 Donate link: https://huge-it.com/wordpress-photo-gallery/
-Tags: gallery, content gallery, gallery image, image gallery, images gallery, lightbox gallery, media gallery, photo gallery, responsive gallery, thumbnail gallery, wordpress gallery, youtube gallery
+Tags: gallery, image gallery, photo gallery, wordpress gallery, youtube gallery
 Requires at least: 3.0.1
 Tested up to: 4.7.3
-Stable tag: 2.0.9
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Gallery is advanced solution for WordPress Gallery users. 8 advanced and customizable views will help to create beautiful content in minutes.
+Photo Gallery is advanced solution for Photo Gallery users. 8 advanced and customizable views will help to create beautiful content in minutes.
 
 == Description ==
 
-**Gallery**
+**Photo Gallery**
 
 = Photo Gallery is advanced solution for WordPress Gallery users. 8 advanced and customizable views will help to create beautiful content in minutes. =
 
@@ -733,6 +733,12 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.1.0 =
+* 1) Fixed the issue in Ligthbox Gallery where ratings option did not work.
+* 2) Fixed the issue in Slider view where options did not check the current image on dots/bullets.
+* 3) Fixed the issue in Lightbox view where like and rating images would not show.
+
 
 = 2.0.9 =
 * 1) Fixed the issue where 2 shortcodes bringing conflict with class IDs
