@@ -1,5 +1,20 @@
 <?php $galleryID.$pID = esc_html($galleryID.$pID); ?>
 <style>
+    .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    .ph-g-wp_gallery_like_wrapper {
+        float: left;
+    }
+
+    .huge_it_gallery_dislike_wrapper {
+        float: right;
+        margin-left: 5px;
+    }
+
     .grid {
         max-width: 1200px;
         margin: 0 auto;
@@ -346,4 +361,23 @@ case "dislike":
     <?php
         break;
         }?>
+
+
+
+    .hugeiticons-heart{
+        font-size: 32px !important;
+        position: absolute !important;
+        top: 4px !important;
+        right: 4px !important;
+    }
+
+    .huge_it_like_thumb{
+        position: absolute;
+        top: 7px;
+        color: #333;
+        right: 16px;
+        font-size: 14px;
+    }
+
+
    </style>

@@ -29,8 +29,9 @@ class Photo_Gallery_WP_Ajax
 
     /**
      * Load Content For Lazy Loading
-    */
-    public function load_images_content() {
+     */
+    public function load_images_content()
+    {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_content") {
             if (isset($_POST['photoGalleryWpContentLoadNonce'])) {
                 $photoGalleryWpContentLoadNonce = esc_html($_POST['photoGalleryWpContentLoadNonce']);
@@ -72,7 +73,7 @@ class Photo_Gallery_WP_Ajax
                     $descnohtml = strip_tags(
                         str_replace('__5_5_5__', '%', $row->description));
                     $result = substr($descnohtml, 0, 50);
-                    if($video_name == '' && (empty($row->sl_url) || $row->sl_url == '') )
+                    if ($video_name == '' && (empty($row->sl_url) || $row->sl_url == ''))
                         $no_title = 'no-title';
                     else
                         $no_title = '';
@@ -95,9 +96,9 @@ class Photo_Gallery_WP_Ajax
                                 ), false));
                             } ?>
                             <?php if ($row->image_url != ';') {
-                            $video = '<img id="wd-cl-img' . $key . '" src="' . $imgurl . '" alt="" />';
+                            $video = '<a href="#' . $id . '" title="' . $video_name . '"><img id="wd-cl-img' . $key . '" src="' . $imgurl . '" alt="" /></a>';
                         } else {
-                            $video = '<img id="wd-cl-img' . $key . '" src="images/noimage.jpg" alt="" />';
+                            $video = '<a href="#' . $id . '" title="' . $video_name . '"><img id="wd-cl-img' . $key . '" src="images/noimage.jpg" alt="" /></a>';
                         } ?>
                             <?php
                             break;
@@ -111,7 +112,7 @@ class Photo_Gallery_WP_Ajax
                                 } else {
                                     $thumb_pic = $row->thumb_url;
                                 }
-                                $video = '<img src="' . $thumb_pic . '" alt="" />';
+                                $video = '<a href="#' . $id . '" title="' . $video_name . '"><img src="' . $thumb_pic . '" alt="" /></a>';
                             } else {
                                 $hash = unserialize(wp_remote_fopen("http://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
                                 if (empty($row->thumb_url)) {
@@ -119,7 +120,7 @@ class Photo_Gallery_WP_Ajax
                                 } else {
                                     $imgsrc = $row->thumb_url;
                                 }
-                                $video = '<img src="' . $imgsrc . '" alt="" />';
+                                $video = '<a href="#' . $id . '" title="' . $video_name . '"><img src="' . $imgsrc . '" alt="" /></a>';
                             }
                             ?>
                             <?php
@@ -193,16 +194,14 @@ class Photo_Gallery_WP_Ajax
                            </div>';
                     }
 ///////////////////////////////
-                    $output .= '<div class="ph_element '.$no_title.' ph_element_' . $idofgallery . ' " tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
+                    $title = ($row->name != "") ? '<div class="mask-text"><h2>' . $row->name . '</h2><span class="text-category"></span></div>' : '<div class="mask-text"><span class="text-category"></span></div>';
+                    $output .= '<div class="view ' . $_POST["view_style"] . ' ph_element ' . $no_title . ' ph_element_' . $idofgallery . ' " tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
                     $output .= '<input type="hidden" class="pagenum" value="' . $page . '" />';
-                    $output .= '<div class="image-block image-block_' . $idofgallery . '">';
+                    $output .= '<div class="' . $_POST["view_style"] . '-wrapper view-wrapper ">';
                     $output .= $video;
-                    $output .= '<div class="ph-g-wp-gallery-image-overlay"><a href="#' . $id . '" title="' . $video_name . '"></a>' . $likeCont . '
+                    $output .= '<div class=" mask"><a href="#' . $id . '" title="' . $video_name . '">' . $title . '</a><a  class="" href="#' . $id . '" title="' . $video_name . '"><div class="mask-bg"></div></a></div>' . $likeCont . '
                          </div>';
                     $output .= '</div>';
-                    $output .= '<div class="title-block_' . $idofgallery . '" title="' . $video_name . '">';
-                    $output .= '<h3>' . $video_name . '</h3>';
-                    $output .= $button;
                     $output .= '</div>';
                     $output .= '</div>';
                 }
@@ -262,6 +261,12 @@ class Photo_Gallery_WP_Ajax
                     if ($row->sl_type == '') {
                         $imagerowstype = 'image';
                     }
+
+                    $desc = '<span class="text-category">' . $row->description . '</span>';
+                    $target = ($row->link_target == "on") ? "'_blank'" : "'_self'";
+                    $url = "'$row->sl_url'";
+                    $title = ($row->name != "") ? '<div class="mask-text"><h2 onclick="event.stopPropagation(); event.preventDefault();window.open(' . $url . ', ' . $target . ')">' . $row->name . '</h2>' . $desc . '</div>' : '<div class="mask-text">' . $desc . '</div>';
+
                     switch ($imagerowstype) {
                         case 'image':
                             ?>
@@ -273,7 +278,7 @@ class Photo_Gallery_WP_Ajax
                                         get_option('ht_view6_width'),
                                         ''
                                     ), false
-                                    )) . '" alt="' . $video_name . '" /></a>';
+                                    )) . '" alt="' . $video_name . '" /><div class="mask">' . $title . '<div class="mask-bg"></div></div></a>';
                             } else {
                                 $video = '<img id="wd-cl-img' . $key . '" src="images/noimage.jpg" alt="" />';
                             } ?>
@@ -285,24 +290,26 @@ class Photo_Gallery_WP_Ajax
                             $videourl = photo_gallery_wp_get_video_id_from_url($row->image_url);
                             if ($videourl[1] == 'youtube') {
                                 if (empty($row->thumb_url)) {
-                                    $thumb_pic = 'http://img.youtube.com/vi/' . $videourl[0] . '/mqdefault.jpg';
+                                    $thumb_pic = 'https://img.youtube.com/vi/' . $videourl[0] . '/mqdefault.jpg';
                                 } else {
                                     $thumb_pic = $row->thumb_url;
                                 }
-                                $video = '<a  class="ph-lightbox" class="giyoutube huge_it_videogallery_item gallery_group'.$idofgallery.'"  href="https://www.youtube.com/embed/' . $videourl[0] . '" title="' . $video_name . '">
+                                $video = '<a  class="ph-lightbox" class="giyoutube huge_it_videogallery_item gallery_group' . $idofgallery . '"  href="https://www.youtube.com/embed/' . $videourl[0] . '" title="' . $video_name . '">
                                             <img src="' . $thumb_pic . '" alt="' . $video_name . '" />
                                             <div class="play-icon ' . $videourl[1] . '-icon"></div>
+                                            <div class="mask">' . $title . '<div class="mask-bg"></div></div>
                                         </a>';
                             } else {
-                                $hash = unserialize(wp_remote_fopen("http://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
                                 if (empty($row->thumb_url)) {
                                     $imgsrc = $hash[0]['thumbnail_large'];
                                 } else {
                                     $imgsrc = $row->thumb_url;
                                 }
-                                $video = '<a  class="ph-lightbox" class="givimeo huge_it_videogallery_item gallery_group'.$idofgallery.'" href="http://player.vimeo.com/video/' . $videourl[0] . '" title="' . $video_name . '">
+                                $video = '<a  class="ph-lightbox" class="givimeo huge_it_videogallery_item gallery_group' . $idofgallery . '" href="https://vimeo.com/' . $videourl[0] . '" title="' . $video_name . '">
                                     <img src="' . $imgsrc . '" alt="" />
                                     <div class="play-icon ' . $videourl[1] . '-icon"></div>
+                                    <div class="mask">' . $title . '<div class="mask-bg"></div></div>
                                 </a>';
                             }
                             ?>
@@ -319,10 +326,10 @@ class Photo_Gallery_WP_Ajax
                             $target = '';
                         }
                         $linkimg = '<div class="title-block_' . $idofgallery . '" title="' . $video_name . '">';
-                        if($link != '' || !empty($link))
+                        if ($link != '' || !empty($link))
                             $linkimg .= '<a href="' . $link . '"' . $target . '>';
                         $linkimg .= $video_name;
-                        if($link != '' || !empty($link))
+                        if ($link != '' || !empty($link))
                             $linkimg .= '</a>';
                         $linkimg .= '</div>';
                     } else {
@@ -386,13 +393,12 @@ class Photo_Gallery_WP_Ajax
                            </div>';
                     }
 ///////////////////////////////
-                    $output .= '<div class="ph_element ph_element_' . $idofgallery . '" tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
+                    $output .= '<div class="view ' . $_POST["view_style"] . ' ph_element ph_element_' . $idofgallery . '" tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
                     $output .= '<input type="hidden" class="pagenum" value="' . $page . '" />';
-                    $output .= '<div class="image-block_' . $idofgallery . '">';
+                    $output .= '<div class="' . $_POST["view_style"] . '-wrapper view-wrapper">';
                     $output .= $video;
-                    $output .= $linkimg;
-                    $output .= $likeCont;
                     $output .= '</div>';
+                    $output .= $likeCont;
                     $output .= '</div>';
                 }
                 echo json_encode(array("success" => $output));
@@ -603,6 +609,13 @@ class Photo_Gallery_WP_Ajax
                     if ($row->sl_type == '') {
                         $imagerowstype = 'image';
                     }
+
+                    $desc = '<span class="text-category">' . $row->description . '</span>';
+                    $target = ($row->link_target == "on") ? '_blank' : '_self';
+                    $link = "event.stopPropagation(); event.preventDefault();window.open('" . $row->sl_url . "', '" . $target . "')";
+                    $title_h2 = ($row->name != "") ? '<h2 onclick="' . $link . '">' . $row->name . '</h2>' : "";
+                    $title = '<div class="mask-text">' . $title_h2 . $desc . '</div>';
+
                     switch ($imagerowstype) {
                         case 'image':
                             if (get_option('image_natural_size_thumbnail') == 'resize') {
@@ -610,18 +623,30 @@ class Photo_Gallery_WP_Ajax
                             } else {
                                 $imgperfix = $imgurl[0];
                             }
-                            $video = '<a class="ph-lightbox gallery_group' . $idofgallery . '" href="' . $row->image_url . '" title="' . $video_name . '"></a>
-                            <img  src="' . $imgperfix . '" alt="' . $video_name . '" />';
+                            $video = ' 
+                            <a class="ph-lightbox giyoutube huge_it_gallery_item gallery_group' . $idofgallery . '"  href="https://www.youtube.com/embed/' . $videourl[0] . '" title="' . str_replace("__5_5_5__", "%", $row->name) . '">
+                            <img  src="' . $imgperfix . '" alt="' . $video_name . '" /><a class="ph-lightbox gallery_group' . $idofgallery . '" href="' . $row->image_url . '" title="' . $video_name . '">
+                            <div class="mask">' . $title . '
+                            <div class="mask-bg"></div></div>
+                            </a>';
                             break;
                         case 'video':
                             if ($videourl[1] == 'youtube') {
-                                $video = '<a class="ph-lightbox giyoutube huge_it_gallery_item gallery_group' . $idofgallery . '"  href="https://www.youtube.com/embed/' . $videourl[0] . '" title="' . str_replace("__5_5_5__", "%", $row->name) . '"></a>
-                                    <img alt="' . str_replace("__5_5_5__", "%", $row->name) . '" src="http://img.youtube.com/vi/' . $videourl[0] . '/mqdefault.jpg"  />';
+                                $video = ' 
+                                <a class="ph-lightbox giyoutube huge_it_gallery_item gallery_group' . $idofgallery . '"  href="https://www.youtube.com/embed/' . $videourl[0] . '" title="' . str_replace("__5_5_5__", "%", $row->name) . '">
+                                <img alt="' . str_replace("__5_5_5__", "%", $row->name) . '" src="https://img.youtube.com/vi/' . $videourl[0] . '/mqdefault.jpg"  />
+                                <div class="mask">' . $title . '
+                            <div class="mask-bg"></div></div>
+                                </a> ';
                             } else {
-                                $hash = unserialize(wp_remote_fopen("http://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
                                 $imgsrc = $hash[0]['thumbnail_large'];
-                                $video = '<a class="ph-lightbox givimeo huge_it_gallery_item gallery_group' . $idofgallery . '" href="http://player.vimeo.com/video/' . $videourl[0] . '" title="' . str_replace("__5_5_5__", "%", $row->name) . '"></a>
-                                    <img alt="' . str_replace("__5_5_5__", "%", $row->name) . '" src="' . $imgsrc . '"  />';
+                                $video = '
+                                <a class="ph-lightbox givimeo huge_it_gallery_item gallery_group' . $idofgallery . '" href="https://vimeo.com/' . $videourl[0] . '" title="' . str_replace("__5_5_5__", "%", $row->name) . '">
+                                <img alt="' . str_replace("__5_5_5__", "%", $row->name) . '" src="' . $imgsrc . '"  />
+                                <div class="mask">' . $title . '
+                            <div class="mask-bg"></div></div>
+                                </a>';
                             }
                             ?>
                             <?php
@@ -687,25 +712,12 @@ class Photo_Gallery_WP_Ajax
                     }
 ///////////////////////////////
                     $output .= '
-                <li class="huge_it_big_li">
+                <div class="huge_it_big_li view ' . $_POST["view_style"] . '">
+                <div class="' . $_POST["view_style"] . '-wrapper view-wrapper">
                      ' . $likeCont . '<input type="hidden" class="pagenum" value="' . $page . '" />
                         ' . $video . '
-                    <div class="overLayer"></div>
-                    <div class="infoLayer">
-                        <ul>
-                            <li>
-                                <h2>
-                                    ' . $video_name . '
-                                </h2>
-                            </li>
-                            <li>
-                                <p>
-                                    ' . $_POST['thumbtext'] . '
-                                </p>
-                            </li>
-                        </ul>
                     </div>
-                </li>
+                </div>
             ';
                 }
                 echo json_encode(array("success" => $output));
@@ -859,85 +871,84 @@ class Photo_Gallery_WP_Ajax
         }
     }
 
-    public function load_images_masonry() {
+    public function load_images_masonry()
+    {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_masonry") {
-            if ( isset( $_POST['galleryImgMasonryLoadNonce'] ) ) {
-                $galleryImgMasonryLoadNonce = esc_html( $_POST['galleryImgMasonryLoadNonce'] );
-                if ( ! wp_verify_nonce( $galleryImgMasonryLoadNonce, 'galleryImgMasonryLoadNonce' ) ) {
-                    wp_die( 'Security check fail' );
+            if (isset($_POST['galleryImgMasonryLoadNonce'])) {
+                $galleryImgMasonryLoadNonce = esc_html($_POST['galleryImgMasonryLoadNonce']);
+                if (!wp_verify_nonce($galleryImgMasonryLoadNonce, 'galleryImgMasonryLoadNonce')) {
+                    wp_die('Security check fail');
                 }
             }
             global $wpdb;
             global $huge_it_ip;
-            if ( ! isset( $_POST["ph_gallery_id"] ) || ! absint( $_POST['ph_gallery_id'] ) || absint( $_POST['ph_gallery_id'] ) != $_POST['ph_gallery_id'] ) {
-                wp_die( '"ph_gallery_id" parameter is required to be not negative integer' );
+            if (!isset($_POST["ph_gallery_id"]) || !absint($_POST['ph_gallery_id']) || absint($_POST['ph_gallery_id']) != $_POST['ph_gallery_id']) {
+                wp_die('"ph_gallery_id" parameter is required to be not negative integer');
             }
-            $ph_gallery_id = absint( $_POST["ph_gallery_id"] );
-            if ( ! isset( $_POST["content_per_page"] ) || ! absint( $_POST['content_per_page'] ) || absint( $_POST['content_per_page'] ) != $_POST['content_per_page'] ) {
-                wp_die( '"content_per_page" parameter is required to be not negative integer' );
+            $ph_gallery_id = absint($_POST["ph_gallery_id"]);
+            if (!isset($_POST["content_per_page"]) || !absint($_POST['content_per_page']) || absint($_POST['content_per_page']) != $_POST['content_per_page']) {
+                wp_die('"content_per_page" parameter is required to be not negative integer');
             }
-            $content_per_page = absint( $_POST["content_per_page"] );
-            $current_page     = absint( $_POST['current_page'] );
-            $start            = $current_page * $content_per_page - $content_per_page;
-            $query            = $wpdb->prepare( "SELECT * FROM " . $wpdb->prefix . "photo_gallery_wp_images WHERE gallery_id=%d ORDER BY ordering LIMIT %d,%d", $ph_gallery_id, $start, $content_per_page );
-            $group_key1       = $start;
-            $rows             = $wpdb->get_results( $query );
+            $content_per_page = absint($_POST["content_per_page"]);
+            $current_page = absint($_POST['current_page']);
+            $start = $current_page * $content_per_page - $content_per_page;
+            $query = $wpdb->prepare("SELECT * FROM " . $wpdb->prefix . "photo_gallery_wp_images WHERE gallery_id=%d ORDER BY ordering LIMIT %d,%d", $ph_gallery_id, $start, $content_per_page);
+            $group_key1 = $start;
+            $rows = $wpdb->get_results($query);
             ob_start();
-            foreach ( $rows as $key => $row ) :
+            foreach ($rows as $key => $row) :
                 $imagerowstype = $row->sl_type;
-                if ( $row->sl_type == '' ) {
+                if ($row->sl_type == '') {
                     $imagerowstype = 'image';
                 }
                 ?>
-                <div class="grid-item">
-                    <?php
-                    switch ( $imagerowstype ) {
-                        case 'image': ?>
-                            <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
-                                <img src="<?php echo $row->image_url; ?>" alt="">
-                            </a>
-                            <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
-                                <div class="title-masonry-image">
-                                    <a title="<?php echo $row->name; ?>" href="<?php echo $row->sl_url; ?>"
-                                       target="_blank"><?php echo $row->name; ?></a>
-                                </div>
-                            <?php }
-                            break;
-                        case 'video':
-                            $videourl = photo_gallery_wp_get_video_id_from_url( $row->image_url );
-                            if ( $videourl[1] == 'youtube' ) {
-                                ?>
+                <div class="grid-item view <?= $_POST["view_style"] ?>">
+                    <div class="<?= $_POST["view_style"] ?>-wrapper view-wrapper">
+                        <?php
+                        $desc = '<span class="text-category">' . $row->description . '</span>';
+
+                        $target = ($row->link_target == "on") ? "'_blank'" : "'_self'";
+                        $url = "'$row->sl_url'";
+                        $title_h2 = ($row->name != "") ? '<h2 onclick="event.stopPropagation(); event.preventDefault();window.open(' . $url . ', ' . $target . ')">' . $row->name . '</h2>' : "";
+                        $title = '<div class="mask-text">' . $title_h2 . $desc . '</div>';
+                        switch ($imagerowstype) {
+                            case 'image': ?>
                                 <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
-                                    <img src="http://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
-                                         alt="">
-                                </a>
-                                <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
-                                    <div class="title-masonry-image">
-                                        <a title="<?php echo str_replace( '__5_5_5__', '%', $row->name ); ?>"
-                                           href="<?php echo $row->sl_url; ?>"
-                                           target="_blank"><?php echo str_replace( '__5_5_5__', '%', $row->name ); ?></a>
+                                    <img src="<?php echo $row->image_url; ?>" alt="">
+                                    <div class="mask"><?= $title ?>
+                                        <div class="mask-bg"></div>
                                     </div>
-                                <?php }
-                            } else {
-                                $hash   = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
-                                $imgsrc = $hash[0]['thumbnail_large'];
-                                ?>
-                                <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
-                                    <img src="<?php echo esc_attr( $imgsrc ); ?>" alt="">
                                 </a>
-                                <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
-                                    <div class="title-masonry-image">
-                                        <a title="<?php echo str_replace( '__5_5_5__', '%', $row->name ); ?>"
-                                           href="<?php echo $row->sl_url; ?>"
-                                           target="_blank"><?php echo str_replace( '__5_5_5__', '%', $row->name ); ?></a>
-                                    </div>
+                                <?php
+                                break;
+                            case 'video':
+                                $videourl = photo_gallery_wp_get_video_id_from_url($row->image_url);
+                                if ($videourl[1] == 'youtube') {
+                                    ?>
+                                    <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
+                                        <img src="https://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
+                                             alt="">
+                                        <div class="mask"><?= $title ?>
+                                            <div class="mask-bg"></div>
+                                        </div>
+                                    </a>
+                                    <?php
+                                } else {
+                                    $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                    $imgsrc = $hash[0]['thumbnail_large'];
+                                    ?>
+                                    <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
+                                        <img src="<?php echo esc_attr($imgsrc); ?>" alt="">
+                                        <div class="mask"><?= $title ?>
+                                            <div class="mask-bg"></div>
+                                        </div>
+                                    </a>
                                     <?php
                                 }
-                            }
-                            break;
-                    }
-                    ?>
-                </div>
+                                break;
+                        }
+                        ?>
+                    </div>
                 </div>
                 <?php
             endforeach;
@@ -947,87 +958,88 @@ class Photo_Gallery_WP_Ajax
     }
 
 
-
-    public function load_images_mosaic() {
-
+    public function load_images_mosaic()
+    {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_mosaic") {
-            if ( isset( $_POST['galleryImgMosaicLoadNonce'] ) ) {
-                $galleryImgMosaicLoadNonce = esc_html( $_POST['galleryImgMosaicLoadNonce'] );
-                if ( ! wp_verify_nonce( $galleryImgMosaicLoadNonce, 'galleryImgMosaicLoadNonce' ) ) {
-                    wp_die( 'Security check fail' );
+            if (isset($_POST['galleryImgMosaicLoadNonce'])) {
+                $galleryImgMosaicLoadNonce = esc_html($_POST['galleryImgMosaicLoadNonce']);
+                if (!wp_verify_nonce($galleryImgMosaicLoadNonce, 'galleryImgMosaicLoadNonce')) {
+                    wp_die('Security check fail');
                 }
             }
             global $wpdb;
             global $huge_it_ip;
-            if ( ! isset( $_POST["ph_gallery_id"] ) || ! absint( $_POST['ph_gallery_id'] ) || absint( $_POST['ph_gallery_id'] ) != $_POST['ph_gallery_id'] ) {
-                wp_die( '"ph_gallery_id" parameter is required to be not negative integer' );
+            if (!isset($_POST["ph_gallery_id"]) || !absint($_POST['ph_gallery_id']) || absint($_POST['ph_gallery_id']) != $_POST['ph_gallery_id']) {
+                wp_die('"ph_gallery_id" parameter is required to be not negative integer');
             }
-            $ph_gallery_id = absint( $_POST["ph_gallery_id"] );
-            if ( ! isset( $_POST["content_per_page"] ) || ! absint( $_POST['content_per_page'] ) || absint( $_POST['content_per_page'] ) != $_POST['content_per_page'] ) {
-                wp_die( '"content_per_page" parameter is required to be not negative integer' );
+            $ph_gallery_id = absint($_POST["ph_gallery_id"]);
+            if (!isset($_POST["content_per_page"]) || !absint($_POST['content_per_page']) || absint($_POST['content_per_page']) != $_POST['content_per_page']) {
+                wp_die('"content_per_page" parameter is required to be not negative integer');
             }
-            $content_per_page = absint( $_POST["content_per_page"] );
-            $current_page     = absint( $_POST['current_page'] );
-            $start            = $current_page * $content_per_page - $content_per_page;
-            $query            = $wpdb->prepare( "SELECT * FROM " . $wpdb->prefix . "photo_gallery_wp_images WHERE gallery_id=%d ORDER BY ordering LIMIT %d,%d", $ph_gallery_id, $start, $content_per_page );
-            $group_key1       = $start;
-            $rows             = $wpdb->get_results( $query );
+            $content_per_page = absint($_POST["content_per_page"]);
+            $current_page = absint($_POST['current_page']);
+            $start = $current_page * $content_per_page - $content_per_page;
+            $query = $wpdb->prepare("SELECT * FROM " . $wpdb->prefix . "photo_gallery_wp_images WHERE gallery_id=%d ORDER BY ordering LIMIT %d,%d", $ph_gallery_id, $start, $content_per_page);
+            $group_key1 = $start;
+            $rows = $wpdb->get_results($query);
             ob_start();
-            foreach ( $rows as $key => $row ) :
+            foreach ($rows as $key => $row) :
                 $imagerowstype = $row->sl_type;
-                if ( $row->sl_type == '' ) {
+                if ($row->sl_type == '') {
                     $imagerowstype = 'image';
                 }
                 ?>
-                <div class="ph_mosaic_div">
-                    <?php
-                    switch ( $imagerowstype ) {
-                        case 'image': ?>
-                            <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
-                                <img src="<?php echo esc_url($row->image_url); ?>" alt="">
-                            </a>
-                            <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
-                                <div class="title-mosaic-image">
-                                    <a title="<?php echo esc_html($row->name); ?>" href="<?php echo esc_html($row->sl_url); ?>"
-                                       target="_blank"><?php echo esc_html($row->name); ?></a>
-                                </div>
-                            <?php }
-                            break;
-                        case 'video':
-                            $videourl = photo_gallery_wp_get_video_id_from_url( esc_url($row->image_url) );
-                            if ( $videourl[1] == 'youtube' ) {
-                                ?>
+                <div class="ph_mosaic_div view <?= $_POST["view_style"] ?>">
+                    <div class="<?= $_POST["view_style"] ?>-wrapper view-wrapper">
+                        <?php
+                        $desc = '<span class="text-category">' . $row->description . '</span>';
+                        $target = ($row->link_target == "on") ? "'_blank'" : "'_self'";
+                        $url = "'$row->sl_url'";
+                        if($row->name != ""){
+
+                            $title = '<div class="mask-text"><h2 onclick="event.stopPropagation(); event.preventDefault();window.open(' . $url . ', ' . $target . ')">' . $row->name . '</h2>' . $desc . '</div>';
+                        }
+                        else{
+                            $title = '<div class="mask-text">' . $desc . '</div>';
+                        }
+                        switch ($imagerowstype) {
+                            case 'image': ?>
                                 <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
-                                    <img src="http://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
-                                         alt="">
-                                </a>
-                                <?php if ( Photo_Gallery_WP()->settings->masonry_title_show_title == 'yes' ) { ?>
-                                    <div class="title-mosaic-image">
-                                        <a title="<?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?>"
-                                           href="<?php echo esc_url($row->sl_url); ?>"
-                                           target="_blank"><?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?></a>
+                                    <img src="<?php echo esc_url($row->image_url); ?>" alt="">
+                                    <div class="mask"><?= $title ?>
+                                        <div class="mask-bg"></div>
                                     </div>
-                                <?php }
-                            } else {
-                                $hash   = unserialize( wp_remote_fopen( "http://vimeo.com/api/v2/video/" . $videourl[0] . ".php" ) );
-                                $imgsrc = $hash[0]['thumbnail_large'];
-                                ?>
-                                <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
-                                    <img src="<?php echo esc_attr( $imgsrc ); ?>" alt="">
                                 </a>
-                                <?php if ( Photo_Gallery_WP()->settings->mosaic_title_show_title == 'yes' ) { ?>
-                                    <div class="title-mosaic-image">
-                                        <a title="<?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?>"
-                                           href="<?php echo esc_url($row->sl_url); ?>"
-                                           target="_blank"><?php echo esc_html(str_replace( '__5_5_5__', '%', $row->name )); ?></a>
-                                    </div>
+                                <?php
+                                break;
+                            case 'video':
+                                $videourl = photo_gallery_wp_get_video_id_from_url(esc_url($row->image_url));
+                                if ($videourl[1] == 'youtube') {
+                                    ?>
+                                    <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
+                                        <img src="https://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
+                                             alt="">
+                                        <div class="mask"><?= $title ?>
+                                            <div class="mask-bg"></div>
+                                        </div>
+                                    </a>
+                                    <?php
+                                } else {
+                                    $hash = unserialize(wp_remote_fopen("https://vimeo.com/api/v2/video/" . $videourl[0] . ".php"));
+                                    $imgsrc = $hash[0]['thumbnail_large'];
+                                    ?>
+                                    <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
+                                        <img src="<?php echo esc_attr($imgsrc); ?>" alt="">
+                                        <div class="mask"><?= $title ?>
+                                            <div class="mask-bg"></div>
+                                        </div>
+                                    </a>
                                     <?php
                                 }
-                            }
-                            break;
-                    }
-                    ?>
-                </div>
+                                break;
+                        }
+                        ?>
+                    </div>
                 </div>
                 <?php
             endforeach;
@@ -1038,8 +1050,9 @@ class Photo_Gallery_WP_Ajax
 
     /**
      * Like Dislike
-    */
-    public function like_dislike()
+     */
+    public
+    function like_dislike()
     {
         if (isset($_POST['task']) && $_POST['task'] == "like") {
             $huge_it_ip = '';
