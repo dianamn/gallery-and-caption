@@ -197,7 +197,7 @@ class Photo_Gallery_WP_Ajax
                     $title = ($row->name != "") ? '<div class="mask-text"><h2>' . $row->name . '</h2><span class="text-category"></span></div>' : '<div class="mask-text"><span class="text-category"></span></div>';
                     $output .= '<div class="view ' . $_POST["view_style"] . ' ph_element ' . $no_title . ' ph_element_' . $idofgallery . ' " tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
                     $output .= '<input type="hidden" class="pagenum" value="' . $page . '" />';
-                    $output .= '<div class="' . $_POST["view_style"] . '-wrapper view-wrapper ">';
+                    $output .= '<div class="' . $_POST["view_style"] . '-wrapper view-wrapper ph-g-wp-gallery-image-overlay">';
                     $output .= $video;
                     $output .= '<div class=" mask"><a href="#' . $id . '" title="' . $video_name . '">' . $title . '</a><a  class="" href="#' . $id . '" title="' . $video_name . '"><div class="mask-bg"></div></a></div>' . $likeCont . '
                          </div>';
@@ -995,11 +995,10 @@ class Photo_Gallery_WP_Ajax
                         $desc = '<span class="text-category">' . $row->description . '</span>';
                         $target = ($row->link_target == "on") ? "'_blank'" : "'_self'";
                         $url = "'$row->sl_url'";
-                        if($row->name != ""){
+                        if ($row->name != "") {
 
                             $title = '<div class="mask-text"><h2 onclick="event.stopPropagation(); event.preventDefault();window.open(' . $url . ', ' . $target . ')">' . $row->name . '</h2>' . $desc . '</div>';
-                        }
-                        else{
+                        } else {
                             $title = '<div class="mask-text">' . $desc . '</div>';
                         }
                         switch ($imagerowstype) {
