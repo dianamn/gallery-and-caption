@@ -5,6 +5,7 @@ if (!defined('ABSPATH')) {
 global $wpdb;
 $gallery_wp_nonce = wp_create_nonce('huge_it_gallery_nonce');
 $photo_gallery_wp_nonce_add_galery = wp_create_nonce('photo_gallery_wp_nonce_add_galery');
+
 if (isset($_GET['id']) && $_GET['id'] != '') {
     $id = intval($_GET['id']);
 }

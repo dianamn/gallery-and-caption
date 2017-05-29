@@ -19,11 +19,8 @@ class Photo_Gallery_WP_Galleries
         do_action('photo_gallery_wp_before_galleries');
         switch ($task) {
             case 'edit_cat':
-                if (isset($_REQUEST['huge_it_gallery_nonce'])) {
-                    $wp_nonce = $_REQUEST['huge_it_gallery_nonce'];
-                    if (!wp_verify_nonce($wp_nonce, 'huge_it_gallery_nonce')) {
-                        wp_die('Security check fail');
-                    }
+                if (!isset($_REQUEST['huge_it_gallery_nonce']) || !wp_verify_nonce($_REQUEST['huge_it_gallery_nonce'], 'huge_it_gallery_nonce')) {
+                    wp_die('Security check fail');
                 }
                 if ($id) {
                     $this->edit_gallery($id);
@@ -38,12 +35,7 @@ class Photo_Gallery_WP_Galleries
                 }
                 break;
             case 'apply':
-                if (isset($_REQUEST['huge_it_gallery_nonce_save_galery'])) {
-                    $huge_it_gallery_nonce_save_galery = $_REQUEST['huge_it_gallery_nonce_save_galery'];
-                    if (!wp_verify_nonce($huge_it_gallery_nonce_save_galery, 'huge_it_gallery_nonce_save_galery')) {
-                        wp_die('Security check fail');
-                    }
-                }
+                
                 if ($id) {
                     $this->save_gallery_data($id);
                     $this->edit_gallery($id);
@@ -112,11 +104,8 @@ class Photo_Gallery_WP_Galleries
         if (isset($_GET["removeslide"])) {
             $idfordelete = esc_html($_GET["removeslide"]);
         }
-        if (isset($_REQUEST['gallery_nonce_remove_image'])) {
-            $gallery_nonce_remove_image = $_REQUEST['gallery_nonce_remove_image'];
-            if (!wp_verify_nonce($gallery_nonce_remove_image, 'gallery_nonce_remove_image' . $idfordelete)) {
-                wp_die('Security check fail');
-            }
+        if (isset($_REQUEST['gallery_nonce_remove_image']) && !wp_verify_nonce($_REQUEST['gallery_nonce_remove_image'], 'gallery_nonce_remove_image' . $idfordelete)) {
+            wp_die('Security check fail edit');
         }
         global $wpdb;
         if (isset($_POST["photo_gallery_wp_sl_effects"])) {
@@ -141,8 +130,7 @@ class Photo_Gallery_WP_Galleries
         if (isset($_GET["addslide"])) {
             if ($_GET["addslide"] == 1) {
                 $table_name = $wpdb->prefix . "photo_gallery_wp_images";
-                $sql_2 = "
-INSERT INTO 
+                $sql_2 = "INSERT INTO 
 `" . $table_name . "` ( `name`, `gallery_id`, `description`, `image_url`, `sl_url`, `ordering`, `published`, `published_in_sl_width`) VALUES
 ( '', '" . $row->id . "', '', '', '', 'par_TV', 2, '1' )";
                 $wpdb->query($sql_2);

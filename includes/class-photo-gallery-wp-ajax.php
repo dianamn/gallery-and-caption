@@ -33,11 +33,8 @@ class Photo_Gallery_WP_Ajax
     public function load_images_content()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_content") {
-            if (isset($_POST['photoGalleryWpContentLoadNonce'])) {
-                $photoGalleryWpContentLoadNonce = esc_html($_POST['photoGalleryWpContentLoadNonce']);
-                if (!wp_verify_nonce($photoGalleryWpContentLoadNonce, 'photo_gallery_wp_content_load_nonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['photoGalleryWpContentLoadNonce']) || !wp_verify_nonce($_POST['photoGalleryWpContentLoadNonce'], 'photo_gallery_wp_content_load_nonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -135,7 +132,7 @@ class Photo_Gallery_WP_Ajax
                         } else {
                             $target = '';
                         }
-                        $button = '<div class="button-block"><a href="' . $link . '" ' . $target . ' >' . $_POST['linkbutton'] . '</a></div>';
+                        $button = '<div class="button-block"><a href="' . $link . '" ' . $target . ' >' . esc_html($_POST['linkbutton']) . '</a></div>';
                     }
                     ?>
                     <?php
@@ -195,9 +192,9 @@ class Photo_Gallery_WP_Ajax
                     }
 ///////////////////////////////
                     $title = ($row->name != "") ? '<div class="mask-text"><h2>' . $row->name . '</h2><span class="text-category"></span></div>' : '<div class="mask-text"><span class="text-category"></span></div>';
-                    $output .= '<div class="view ' . $_POST["view_style"] . ' ph_element ' . $no_title . ' ph_element_' . $idofgallery . ' " tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
+                    $output .= '<div class="view ' . esc_html($_POST["view_style"]) . ' ph_element ' . $no_title . ' ph_element_' . $idofgallery . ' " tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
                     $output .= '<input type="hidden" class="pagenum" value="' . $page . '" />';
-                    $output .= '<div class="' . $_POST["view_style"] . '-wrapper view-wrapper ph-g-wp-gallery-image-overlay">';
+                    $output .= '<div class="' . esc_html($_POST["view_style"]) . '-wrapper view-wrapper ph-g-wp-gallery-image-overlay">';
                     $output .= $video;
                     $output .= '<div class=" mask"><a href="#' . $id . '" title="' . $video_name . '">' . $title . '</a><a  class="" href="#' . $id . '" title="' . $video_name . '"><div class="mask-bg"></div></a></div>' . $likeCont . '
                          </div>';
@@ -217,11 +214,8 @@ class Photo_Gallery_WP_Ajax
     public function load_images_lightbox()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_lightbox") {
-            if (isset($_POST['galleryImgLightboxLoadNonce'])) {
-                $galleryImgLightboxLoadNonce = esc_html($_POST['galleryImgLightboxLoadNonce']);
-                if (!wp_verify_nonce($galleryImgLightboxLoadNonce, 'gallery_img_lightbox_load_nonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['galleryImgLightboxLoadNonce']) || !wp_verify_nonce($_POST['galleryImgLightboxLoadNonce'], 'gallery_img_lightbox_load_nonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -393,9 +387,9 @@ class Photo_Gallery_WP_Ajax
                            </div>';
                     }
 ///////////////////////////////
-                    $output .= '<div class="view ' . $_POST["view_style"] . ' ph_element ph_element_' . $idofgallery . '" tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
+                    $output .= '<div class="view ' . esc_html($_POST["view_style"]) . ' ph_element ph_element_' . $idofgallery . '" tabindex="0" data-symbol="' . $video_name . '"  data-category="alkaline-earth">';
                     $output .= '<input type="hidden" class="pagenum" value="' . $page . '" />';
-                    $output .= '<div class="' . $_POST["view_style"] . '-wrapper view-wrapper">';
+                    $output .= '<div class="' . esc_html($_POST["view_style"]) . '-wrapper view-wrapper">';
                     $output .= $video;
                     $output .= '</div>';
                     $output .= $likeCont;
@@ -413,11 +407,8 @@ class Photo_Gallery_WP_Ajax
     public function load_images_justified()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_image_justified") {
-            if (isset($_POST['galleryImgJustifiedLoadNonce'])) {
-                $galleryImgJustifiedLoadNonce = esc_html($_POST['galleryImgJustifiedLoadNonce']);
-                if (!wp_verify_nonce($galleryImgJustifiedLoadNonce, 'gallery_img_justified_load_nonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['galleryImgJustifiedLoadNonce']) || !wp_verify_nonce($_POST['galleryImgJustifiedLoadNonce'], 'gallery_img_justified_load_nonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -568,11 +559,8 @@ class Photo_Gallery_WP_Ajax
     public function load_images_thumbnail()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_image_thumbnail") {
-            if (isset($_POST['galleryImgThumbnailLoadNonce'])) {
-                $galleryImgThumbnailLoadNonce = esc_html($_POST['galleryImgThumbnailLoadNonce']);
-                if (!wp_verify_nonce($galleryImgThumbnailLoadNonce, 'gallery_img_thumbnail_load_nonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['galleryImgThumbnailLoadNonce']) && !wp_verify_nonce($_POST['galleryImgThumbnailLoadNonce'], 'gallery_img_thumbnail_load_nonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -712,8 +700,8 @@ class Photo_Gallery_WP_Ajax
                     }
 ///////////////////////////////
                     $output .= '
-                <div class="huge_it_big_li view ' . $_POST["view_style"] . '">
-                <div class="' . $_POST["view_style"] . '-wrapper view-wrapper">
+                <div class="huge_it_big_li view ' . esc_html($_POST["view_style"]) . '">
+                <div class="' . esc_html($_POST["view_style"]) . '-wrapper view-wrapper">
                      ' . $likeCont . '<input type="hidden" class="pagenum" value="' . $page . '" />
                         ' . $video . '
                     </div>
@@ -732,11 +720,8 @@ class Photo_Gallery_WP_Ajax
     public function load_blog_view()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_blog_view") {
-            if (isset($_POST['galleryImgBlogLoadNonce'])) {
-                $galleryImgBlogLoadNonce = esc_html($_POST['galleryImgBlogLoadNonce']);
-                if (!wp_verify_nonce($galleryImgBlogLoadNonce, 'gallery_img_blog_load_nonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['galleryImgBlogLoadNonce']) || !wp_verify_nonce($_POST['galleryImgBlogLoadNonce'], 'gallery_img_blog_load_nonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -874,11 +859,8 @@ class Photo_Gallery_WP_Ajax
     public function load_images_masonry()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_masonry") {
-            if (isset($_POST['galleryImgMasonryLoadNonce'])) {
-                $galleryImgMasonryLoadNonce = esc_html($_POST['galleryImgMasonryLoadNonce']);
-                if (!wp_verify_nonce($galleryImgMasonryLoadNonce, 'galleryImgMasonryLoadNonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['galleryImgMasonryLoadNonce']) || !wp_verify_nonce($_POST['galleryImgMasonryLoadNonce'], 'galleryImgMasonryLoadNonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -902,8 +884,8 @@ class Photo_Gallery_WP_Ajax
                     $imagerowstype = 'image';
                 }
                 ?>
-                <div class="grid-item view <?= $_POST["view_style"] ?>">
-                    <div class="<?= $_POST["view_style"] ?>-wrapper view-wrapper">
+                <div class="grid-item view <?= esc_html($_POST["view_style"]) ?>">
+                    <div class="<?= esc_html($_POST["view_style"]) ?>-wrapper view-wrapper">
                         <?php
                         $desc = '<span class="text-category">' . $row->description . '</span>';
 
@@ -958,14 +940,12 @@ class Photo_Gallery_WP_Ajax
     }
 
 
-    public function load_images_mosaic()
+    public
+    function load_images_mosaic()
     {
         if (isset($_POST['task']) && $_POST['task'] == "load_images_mosaic") {
-            if (isset($_POST['galleryImgMosaicLoadNonce'])) {
-                $galleryImgMosaicLoadNonce = esc_html($_POST['galleryImgMosaicLoadNonce']);
-                if (!wp_verify_nonce($galleryImgMosaicLoadNonce, 'galleryImgMosaicLoadNonce')) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_POST['galleryImgMosaicLoadNonce']) || !wp_verify_nonce($_POST['galleryImgMosaicLoadNonce'], 'galleryImgMosaicLoadNonce')) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             global $huge_it_ip;
@@ -989,8 +969,8 @@ class Photo_Gallery_WP_Ajax
                     $imagerowstype = 'image';
                 }
                 ?>
-                <div class="ph_mosaic_div view <?= $_POST["view_style"] ?>">
-                    <div class="<?= $_POST["view_style"] ?>-wrapper view-wrapper">
+                <div class="ph_mosaic_div view <?= esc_html($_POST["view_style"]) ?>">
+                    <div class="<?= esc_html($_POST["view_style"]) ?>-wrapper view-wrapper">
                         <?php
                         $desc = '<span class="text-category">' . $row->description . '</span>';
                         $target = ($row->link_target == "on") ? "'_blank'" : "'_self'";

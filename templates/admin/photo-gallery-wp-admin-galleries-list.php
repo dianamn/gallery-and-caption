@@ -7,7 +7,7 @@ $gallery_wp_nonce = wp_create_nonce('huge_it_gallery_nonce');
 $photo_gallery_wp_nonce_add_galery = wp_create_nonce('photo_gallery_wp_nonce_add_galery');
 $huge_it_gallery_nonce_remove_galery = wp_create_nonce('huge_it_gallery_nonce_remove_galery');
 ?>
-<div class="wrap" style="    border: 1px solid #fe7b46; margin-top:0px;padding:10px;">
+<div class="wrap" style="border: 1px solid #fe7b46; margin-top:0px;padding:10px;">
     <?php $path_site = plugins_url("../images", __FILE__); ?>
     <div style="clear: both;"></div>
     <div id="poststuff">
@@ -23,7 +23,7 @@ $huge_it_gallery_nonce_remove_galery = wp_create_nonce('huge_it_gallery_nonce_re
                         <label style="vertical-align: top;" for="search_input">Search: </label>
                         <?php if (isset($_GET['search_keyword']) && $_GET['search_keyword'] != ""): ?>
                             <input id="search_input" type="text" name="search_keyword"
-                                   value="<?php echo $_GET['search_keyword'] ?>">
+                                   value="<?php echo esc_html($_GET['search_keyword']) ?>">
                         <?php else: ?>
                             <input id="search_input" type="text" name="search_keyword">
                         <?php endif; ?>
