@@ -65,11 +65,11 @@ class Photo_Gallery_WP_Admin
         add_action('wp_loaded', array($this, 'wp_loaded_video'));
         add_action('wp_loaded', array($this, 'wp_loaded_duplicate_gallery'));
         add_action('wp_loaded', array($this, 'wp_loaded_remove_photo_gallery_wp'));
-        add_action( 'wpdev_settings_photo_gallery_wp_admin_menu', array( $this, 'admin_menu_after_settings' ) );
+        add_action('wpdev_settings_photo_gallery_wp_admin_menu', array($this, 'admin_menu_after_settings'));
 
-        add_action( 'wpdev_settings_photo_gallery_wp_header', array( $this, 'free_banner' ) );
-        add_action( 'photo_gallery_wp_before_featured_plugins', array( $this, 'free_banner' ) );
-        add_action( 'photo_gallery_wp_before_galleries', array( $this, 'free_banner' ) );
+        add_action('wpdev_settings_photo_gallery_wp_header', array($this, 'free_banner'));
+        add_action('photo_gallery_wp_before_featured_plugins', array($this, 'free_banner'));
+        add_action('photo_gallery_wp_before_galleries', array($this, 'free_banner'));
     }
 
     /**
@@ -82,9 +82,10 @@ class Photo_Gallery_WP_Admin
         $this->albums = new Photo_Gallery_WP_Albums();
     }
 
-    public function admin_menu_after_settings(){
+    public function admin_menu_after_settings()
+    {
         ++$this->settings_page_count;
-        if( $this->settings_page_count !== 2 )
+        if ($this->settings_page_count !== 2)
             return;
         $this->pages['featured_plugins'] = add_submenu_page('photo_gallery_wp_gallery', __('Featured Plugins', 'photo-gallery-wp'), __('Featured Plugins', 'photo-gallery-wp'), 'manage_options', 'huge_it_ph_gallery_featured_plugins', array(
             Photo_Gallery_WP()->admin->featured_plugins,
@@ -114,16 +115,15 @@ class Photo_Gallery_WP_Admin
     public function wp_loaded()
     {
 
-        if (isset($_REQUEST['photo_gallery_wp_nonce_add_galery'])) {
-            $photo_gallery_wp_nonce_add_galery = $_REQUEST['photo_gallery_wp_nonce_add_galery'];
-            if (!wp_verify_nonce($photo_gallery_wp_nonce_add_galery, 'photo_gallery_wp_nonce_add_galery')) {
-                wp_die('Security check fail');
-            }
-        }
+
         global $wpdb;
         if (isset($_GET['task'])) {
             $task = sanitize_text_field($_GET['task']);
             if ($task == 'add_cat') {
+                if (!isset($_REQUEST['photo_gallery_wp_nonce_add_galery']) || !wp_verify_nonce($_REQUEST['photo_gallery_wp_nonce_add_galery'], 'photo_gallery_wp_nonce_add_galery')) {
+                    wp_die('Security check fail add');
+                }
+
                 $table_name = $wpdb->prefix . "photo_gallery_wp_gallerys";
                 $sql_2 = "
 INSERT INTO 
@@ -193,15 +193,13 @@ INSERT INTO
         if (isset($_GET["id"])) {
             $id = absint($_GET["id"]);
         }
-        if (isset($_REQUEST['photo_gallery_wp_duplicate_nonce'])) {
-            $gallery_edit_nonce = $_REQUEST['photo_gallery_wp_duplicate_nonce'];
-            if (!wp_verify_nonce($gallery_edit_nonce, 'photo_gallery_wp_nonce_duplicate_gallery' . $id)) {
-                wp_die('Security check fail');
-            }
-        }
+
         if (isset($_GET['page']) && $_GET['page'] == 'photo_gallery_wp_gallery') {
             if (photo_gallery_wp_get_gallery_task()) {
                 if (photo_gallery_wp_get_gallery_task() == 'duplicate_photo_gallery_wp_image') {
+                    if (!isset($_REQUEST['photo_gallery_wp_duplicate_nonce']) || !wp_verify_nonce($_REQUEST['photo_gallery_wp_duplicate_nonce'], 'photo_gallery_wp_nonce_duplicate_gallery' . $id)) {
+                        wp_die('Security check fail');
+                    }
                     global $wpdb;
                     $table_name = $wpdb->prefix . "photo_gallery_wp_gallerys";
                     $query = $wpdb->prepare("SELECT * FROM " . $table_name . " WHERE id=%d", $id);
@@ -256,11 +254,8 @@ INSERT INTO
     {
         if (isset($_GET["task"]) && $_GET["task"] == 'remove_photo_gallery_wp') {
             $id = absint($_GET["id"]);
-            if (isset($_REQUEST['photo_gallery_wp_nonce_remove_gallery'])) {
-                $photo_gallery_wp_nonce_remove_gallery = $_REQUEST['photo_gallery_wp_nonce_remove_gallery'];
-                if (!wp_verify_nonce($photo_gallery_wp_nonce_remove_gallery, 'photo_gallery_wp_nonce_remove_gallery' . $id)) {
-                    wp_die('Security check fail');
-                }
+            if (!isset($_REQUEST['photo_gallery_wp_nonce_remove_gallery']) || !wp_verify_nonce($_REQUEST['photo_gallery_wp_nonce_remove_gallery'], 'photo_gallery_wp_nonce_remove_gallery' . $id)) {
+                wp_die('Security check fail');
             }
             global $wpdb;
             $sql_remov_tag = $wpdb->prepare("DELETE FROM " . $wpdb->prefix . "photo_gallery_wp_gallerys WHERE id = %d", $id);
@@ -276,12 +271,14 @@ INSERT INTO
         }
     }
 
-    public function licensing_page(){
-        require Photo_Gallery_WP()->plugin_path().'/templates/admin/licensing.php';
+    public function licensing_page()
+    {
+        require Photo_Gallery_WP()->plugin_path() . '/templates/admin/licensing.php';
     }
 
-    public function free_banner(){
-        require Photo_Gallery_WP()->plugin_path().'/templates/admin/free-banner.php';
+    public function free_banner()
+    {
+        require Photo_Gallery_WP()->plugin_path() . '/templates/admin/free-banner.php';
     }
 }
 

@@ -16,39 +16,69 @@ function Ph_Gallery_Mosaic(id) {
     _this.colomnCount = parseInt(_this.container.attr('data-colomn-count'));
 
 
-
     _this.addEventListeners = function () {
         _this.loadMoreBtn.on('click', _this.loadMoreClick);
         jQuery(window).resize(_this.resizeEvent);
     };
     _this.loadMoreClick = function () {
         var currentPage = _this.container.attr('data-current-page');
+        var prevPage = _this.container.attr('data-current-page') - 1;
         var data = {
             action: 'photo_gallery_wp_load_images_mosaic',
             content_per_page: _this.contentPerPage,
             task: 'load_images_mosaic',
             ph_gallery_id: _this.phGalleryId,
-            current_page: currentPage
+            current_page: currentPage,
+            view_style: jQuery("input[name='view_style']").val()
         };
         _this.loadingIcon.show();
         _this.loadMoreBtn.hide();
         jQuery.post(adminUrl, data, function (response) {
             if (response) {
-                _this.container.find('ph-g-wp-mosaic_'+ _this.phGalleryId + ' #ph_mosaic_photos').css('width','100%');
-                _this.container.find('#ph_mosaic_photos').append(response);
+
+                var mos_arr = [];
+
+                jQuery(".mosaicflow__column").each(function (i, val) {
+                    mos_arr.push(jQuery(this).html());
+                });
+
+                jQuery("#mosaic_images_section_" + prevPage).empty();
+                jQuery("#mosaic_images_section_" + prevPage).parent().prepend("<div id='mosaic_images_section_" + currentPage + "'></div>");
+                jQuery("#mosaic_images_section_" + prevPage).remove();
+
+                _this.container.find('ph-g-wp-mosaic_' + _this.phGalleryId + ' #ph_mosaic_photos').css('width', '100%');
+                // _this.container.find('.grid').empty();
+                jQuery.each(mos_arr, function (key, val) {
+                    if (val.length) {
+                        _this.container.find('#mosaic_images_section_' + currentPage).append(val);
+                    }
+                });
+                console.log(currentPage);
+                console.log(prevPage);
+                _this.container.find('#mosaic_images_section_' + currentPage).hide();
+                _this.container.find('#mosaic_images_section_' + currentPage).append(response);
+                setTimeout(function () {
+                    jQuery('#mosaic_images_section_' + currentPage).mosaicflow();
+                    _this.container.find('#mosaic_images_section_' + currentPage).show();
+                }, 200);
+
                 _this.container.find('img').on('load', function () {
-                    setTimeout(function(){
+                    setTimeout(function () {
                         jQuery('.ph-lightbox').lightbox();
-                    },50);
+                    }, 50);
+                    jQuery('.view-fifth ').each(function () {
+                        jQuery(this).hoverdir();
+                    });
+
                 });
                 _this.loadMoreBtn.show();
                 _this.loadingIcon.hide();
-                _this.container.attr('data-current-page',parseInt(_this.container.attr('data-current-page'))+1);
-                if (_this.container.attr('data-current-page') == _this.pagesCount+1 ) {
+                _this.container.attr('data-current-page', parseInt(_this.container.attr('data-current-page')) + 1);
+                if (_this.container.attr('data-current-page') == _this.pagesCount + 1) {
                     _this.loadMoreBtn.hide();
                 }
             }
-            else{
+            else {
                 alert('Load More Fail');
             }
         });
@@ -56,7 +86,7 @@ function Ph_Gallery_Mosaic(id) {
     _this.init = function () {
         _this.addEventListeners();
     };
-    if (parseInt(_this.pagesCount)==1 ) {
+    if (parseInt(_this.pagesCount) == 1) {
         _this.loadMoreBtn.hide();
     }
     _this.init();
@@ -67,9 +97,6 @@ jQuery(document).ready(function () {
         var id = jQuery(this).attr('id');
         galleries[i] = new Ph_Gallery_Mosaic(id);
     });
-
-
-
 
 });
 

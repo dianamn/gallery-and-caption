@@ -1,4 +1,4 @@
-<style>
+<?= "<style>" ?>
 	section #huge_it_gallery {
 		padding: <?php echo Photo_Gallery_WP()->settings->thumb_box_padding; ?>px !important;
 		min-width: 100%;
@@ -152,7 +152,7 @@
 	/*/////Like/Dislike Styles BEGIN//////like/dislike//////*/
 	.ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?>{
 		position: absolute;
-		top: 80%;
+		top: 0;
 		right: 10px;
 		z-index: 999;
 		display: none;
@@ -226,9 +226,7 @@
 		left: -20px;
 		color:#<?php echo Photo_Gallery_WP()->settings->thumb_likedislike_thumb_color; ?>;
 	}
-	.ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> .huge_it_hide{
-		display: none !important;
-	}
+
 	.ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> .like_thumb_active{
 		color: #<?php echo Photo_Gallery_WP()->settings->thumb_likedislike_thumb_active_color; ?> !important;
 	}
@@ -346,4 +344,15 @@
 	background-repeat: no-repeat;
 	background-size: 60px auto;
 }
-</style>
+
+.view {float:none;display:inline-block;}
+.view img{
+    margin: 0 auto !important;
+}
+
+ .view-second h2, .view-third h2{
+    border-bottom: 1px solid #333 !important;
+    margin:20px 10px 0 10px !important;
+}
+
+<?= "</style>" ?>

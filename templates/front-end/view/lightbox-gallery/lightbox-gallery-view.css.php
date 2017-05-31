@@ -326,4 +326,8 @@ if(Photo_Gallery_WP()->settings->lightbox_rating_count =='no'){
     background-repeat: no-repeat;
     background-size: 60px auto;
 }
+
+.view-wrapper img{
+    height:auto;
+}
 </style>

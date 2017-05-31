@@ -465,6 +465,9 @@ case "dislike":
 #huge_it_gallery_content_<?php echo $galleryID; ?> .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> {
 	float: right;
 	color: #<?php echo Photo_Gallery_WP()->settings->popup_likedislike_font_color; ?>;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #huge_it_gallery_content_<?php echo $galleryID; ?> .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> .ph-g-wp_gallery_like_wrapper,
@@ -692,6 +695,9 @@ case "dislike":
 /*/////Like/Dislike Styles BEGIN//////Heart//////*/
 #huge_it_gallery_content_<?php echo $galleryID; ?> .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> {
 	float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #huge_it_gallery_content_<?php echo $galleryID; ?> .ph-g-wp_gallery_like_cont_<?php echo $galleryID.$pID; ?> .ph-g-wp_gallery_like_wrapper {
@@ -884,3 +890,4 @@ if(Photo_Gallery_WP()->settings->popup_rating_count=='no'){
 }
 
 </style>
+

@@ -1,93 +1,99 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
+
+$license = array(
+    array(
+        "title" => "Masonry view",
+        "text" => "Fans of modern UX/UI design and geeks of social networks such as Pinterest and Tumbler will
+                        value this view a lot. Masonry view is a great solution for bloggers",
+        "icon" => "-36px -480px"
+    ),
+    array(
+        "title" => "Mosaic view",
+        "text" => "Arrange your galleries together in responsive thumbs that remind a mosaic. This dynamic view
+                        stretches the thumbs and adjusts them beautifully.",
+        "icon" => "-137px -488px"
+    ),
+    array(
+        "title" => "Advanced View Customization",
+        "text" => "Unlock all the settings of gallery views, allowing to edit and customize the views, size, effects, buttons, navigation tools, colors and more.",
+        "icon" => "-26px -285px"
+    ),
+    array(
+        "title" => "Full Image Configuration",
+        "text" => "Unlock the advanced configuration settings, so that you could use the plugin fully, configure all the corners of images and videos to your taste.",
+        "icon" => "-132px -288px"
+    ),
+    array(
+        "title" => "Image Resizer Settings",
+        "text" => "Unlock the options allowing to play around images, thumbs and edit all the corners of media using advanced resizer settings",
+        "icon" => "-229px -286px"
+    ),
+    array(
+        "title" => "Color and Text Styling",
+        "text" => "Unlock more options allowing to edit, add or customize every text and color of the plugin with multiple solutions",
+        "icon" => "-315px -286px"
+    ),
+    array(
+        "title" => "YouTube Videos",
+        "text" => "Of course, it’s great to know that the Gallery is very useful not only for fans of the photos, but as well as for the owners of videos",
+        "icon" => "-25px -386px"
+    ),
+    array(
+        "title" => "Lightbox Views Library",
+        "text" => "Some view types of our wonderful Gallery uses quite new designed Lightbox/Popup tool and additional 4 Styles for it",
+        "icon" => "-141px -383px"
+    ), array(
+        "title" => "Advanced Lightbox Options",
+        "text" => "2 Type of Lightbox with tons of social sharing options, zooming, framing, navigation and sliding effects will make users love the plugin.",
+        "icon" => "-243px -384px"
+    ),
+    array(
+        "title" => "Image and Video slideshow",
+        "text" => "Showcase Images and Videos in Stunning Slideshows with advanced options, styles and effects",
+        "icon" => "-335px -387px"
+    ),
+    array(
+        "title" => "vimeo Videos",
+        "text" => "In the paid version apart from photos Gallery plugin it allows you to add links from Vimeo too and connect them with your website",
+        "icon" => "-411px -316px"
+    )
+);
 ?>
-<div style="width: 95%;">
-    <p>
-        <?php _e('You are using the Lite version of the Photo Gallery for WordPress. If you want to get more awesome options,
-		advanced features, settings to customize every area of the plugin, then check out the Full License plugin. The
-		full version of the plugin is available in 3 different packages of one-time payment.','ph-gallery-img'); ?>
+
+
+<div class="responsive grid">
+    <?php foreach ($license as $key => $val) { ?>
+        <div class="col column_1_of_3">
+            <div class="header">
+                <div class="col-icon" style="background-position: <?= $val["icon"] ?>; ">
+                </div>
+                <?= $val["title"] ?>
+            </div>
+            <p><?= $val["text"] ?></p>
+            <div class="col-footer">
+                <a href="https://huge-it.com/wordpress-photo-gallery/" class="a-upgrate">Upgrade</a>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
+
+<div class="license-footer">
+    <p class="footer-text">
+        You are using the Lite version of the Forms Plugin for WordPress. If you want to get more awesome options,
+        advanced features, settings to customize every area of the plugin, then check out the Full License plugin.
+        The full version of the plugin is available in 3 different packages of one-time payment.
     </p>
-</div>
-
-<div class="photo-gallery">
-    <div class="gallery-block">
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon mansory"></span>
-                <span class="text">MASONRY VIEW</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon mosaic"></span>
-                <span class="text">MOSAIC VIEW</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon advanced"></span>
-                <span class="text">Advanced View Customization</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon image"></span>
-                <span class="text">Full Image Configuration</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon resizer"></span>
-                <span class="text">Image Resizer Settings</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon color"></span>
-                <span class="text">Color and Text Styling</span>
-            </a>
-        </div>
-
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon youtube"></span>
-                <span class="text">YouTube Videos</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon lightbox"></span>
-                <span class="text">Lightbox Views Library</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon lightbox-option"></span>
-                <span class="text">Advanced Lightbox Options</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon video"></span>
-                <span class="text">Image and Video slideshow</span>
-            </a>
-        </div>
-        <div class="licens">
-            <a href="https://goo.gl/LwtCFf">
-                <span class="icon vimeo"></span>
-                <span class="text">vimeo Videos</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-<div style="width: 95%;">
-    <p><?php _e('After the purchasing the commercial version follow this steps:','ph-gallery-img'); ?></p>
-    <ol>
-        <li><?php _e('Deactivate Huge IT Photo Gallery Plugin','ph-gallery-img'); ?></li>
-        <li><?php _e('Delete Huge IT Photo Gallery Plugin','ph-gallery-img'); ?></li>
-        <li><?php _e('Install the downloaded commercial version of the plugin','ph-gallery-img'); ?></li>
-    </ol>
+    <p class="this-steps max-width">
+        After the purchasing the commercial version folllo this steps
+    </p>
+    <ul class="steps">
+        <li>Deactivate Huge IT Forms Plugin</li>
+        <li>Delete Huge IT Forms</li>
+        <li>Install the downloaded commercial version of the plugin</li>
+    </ul>
+    <a href="https://huge-it.com/wordpress-photo-gallery/" target="_blank">Purchase a License</a>
 </div>
