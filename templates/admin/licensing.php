@@ -83,16 +83,17 @@ $license = array(
 
 <div class="license-footer">
     <p class="footer-text">
-        You are using the Lite version of the Forms Plugin for WordPress. If you want to get more awesome options,
+        You are using the Lite version of the Photo Gallery Plugin for WordPress. If you want to get more awesome
+        options,
         advanced features, settings to customize every area of the plugin, then check out the Full License plugin.
         The full version of the plugin is available in 3 different packages of one-time payment.
     </p>
     <p class="this-steps max-width">
-        After the purchasing the commercial version folllo this steps
+        After the purchasing the commercial version follow this steps
     </p>
     <ul class="steps">
-        <li>Deactivate Huge IT Forms Plugin</li>
-        <li>Delete Huge IT Forms</li>
+        <li>Deactivate Huge IT Photo Gallery Plugin</li>
+        <li>Delete Huge IT Photo Gallery</li>
         <li>Install the downloaded commercial version of the plugin</li>
     </ul>
     <a href="https://huge-it.com/wordpress-photo-gallery/" target="_blank">Purchase a License</a>
