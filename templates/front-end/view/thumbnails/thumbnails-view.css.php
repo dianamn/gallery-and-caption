@@ -1,4 +1,4 @@
-<?= "<style>" ?>
+<?php echo "<style>"; ?>
 	section #huge_it_gallery {
 		padding: <?php echo Photo_Gallery_WP()->settings->thumb_box_padding; ?>px !important;
 		min-width: 100%;
@@ -355,4 +355,4 @@
     margin:20px 10px 0 10px !important;
 }
 
-<?= "</style>" ?>
+<?php echo "</style>"; ?>

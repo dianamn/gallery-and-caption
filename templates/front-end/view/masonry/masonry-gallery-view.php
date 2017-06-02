@@ -22,7 +22,7 @@ switch ($gallery[0]->hover_effect) {
 }
 ?>
 
-<input type="hidden" name="view_style" value="<?= $hover_class ?>">
+<input type="hidden" name="view_style" value="<?php echo $hover_class; ?>">
 
 <div id="ph-g-wp-masonry_<?php echo $galleryID; ?>"
      class="ph-g-wp_gallery_container view-<?php echo esc_html($view_slug); ?> gallery-img-content"
@@ -46,8 +46,8 @@ switch ($gallery[0]->hover_effect) {
                 $imagerowstype = 'image';
             }
             ?>
-            <div class="grid-item view  <?= $hover_class; ?>">
-                <div class="<?= $hover_class; ?>-wrapper view-wrapper">
+            <div class="grid-item view  <?php echo $hover_class; ?>">
+                <div class="<?php echo $hover_class; ?>-wrapper view-wrapper">
                     <?php
                     switch ($imagerowstype) {
                     case 'image': ?>
@@ -84,9 +84,9 @@ switch ($gallery[0]->hover_effect) {
                                 <div class="mask">
                                     <div class="mask-text">
                                         <?php if ($row->name != "") { ?>
-                                            <h2 <?php if ($row->sl_url != ""){ ?>onclick="event.stopPropagation(); event.preventDefault();window.open('<?= $row->sl_url ?>', '<?= $target ?>')" <?php } ?>><?= $row->name ?></h2>
+                                            <h2 <?php if ($row->sl_url != ""){ ?>onclick="event.stopPropagation(); event.preventDefault();window.open('<?php echo $row->sl_url; ?>', '<?php echo $target; ?>')" <?php } ?>><?php echo $row->name; ?></h2>
                                         <?php } ?>
-                                        <span class="text-category"><?= $row->description ?></span>
+                                        <span class="text-category"><?php echo $row->description; ?></span>
                                     </div>
 
                                     <div class="mask-bg"></div>

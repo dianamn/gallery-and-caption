@@ -22,8 +22,8 @@ switch ($gallery[0]->hover_effect) {
 }
 ?>
 
-    <input type="hidden" name="view_style" value="<?= $hover_class ?>">
-    <section id="thumbwrapper<?= $galleryID; ?>" class="gallery-img-content"
+    <input type="hidden" name="view_style" value="<?php echo $hover_class; ?>">
+    <section id="thumbwrapper<?php echo $galleryID; ?>" class="gallery-img-content"
              data-rating-type="<?php echo $like_dislike; ?>" style="position: relative">
         <div class="ph-gallery-wp-loading-icon"></div>
         <input type="hidden" class="pagenum" value="1"/>
@@ -31,7 +31,7 @@ switch ($gallery[0]->hover_effect) {
              class="ph-gallery-wp-loading-class huge_it_gallery view-<?php echo $view_slug; ?>">
             <li id="fullPreview"></li>
            
-            <input type="hidden" id="total" value="<?= $total; ?>"/>
+            <input type="hidden" id="total" value="<?php echo $total; ?>"/>
             <?php foreach ($page_images as $key => $row) {
                 if (!isset($_COOKIE['Like_' . $row->id . ''])) {
                     $_COOKIE['Like_' . $row->id . ''] = '';
@@ -46,8 +46,8 @@ switch ($gallery[0]->hover_effect) {
                 $num4 = $wpdb->prepare("SELECT `image_status`,`ip`,`cook` FROM " . $wpdb->prefix . "photo_gallery_wp_like_dislike WHERE image_id = %d AND `cook` = '" . $_COOKIE['Dislike_' . $row->id . ''] . "'", (int)$row->id);
                 $res5 = $wpdb->get_row($num4);
                 $imgurl = explode(";", $row->image_url); ?>
-                <div class="huge_it_big_li view  <?= $hover_class; ?>">
-                    <div class="<?= $hover_class; ?>-wrapper view-wrapper">
+                <div class="huge_it_big_li view  <?php echo $hover_class; ?>">
+                    <div class="<?php echo $hover_class; ?>-wrapper view-wrapper">
                         <?php
                         $imagerowstype = $row->sl_type;
                         if ($row->sl_type == '') {
@@ -69,9 +69,9 @@ switch ($gallery[0]->hover_effect) {
                                     <div class="mask">
                                         <div class="mask-text">
                                             <?php if ($row->name != "") { ?>
-                                                <h2 onclick="event.stopPropagation(); event.preventDefault();window.open('<?= $row->sl_url ?>', '<?= $target ?>')"><?= $row->name ?></h2>
+                                                <h2 onclick="event.stopPropagation(); event.preventDefault();window.open('<?php echo $row->sl_url; ?>', '<?php echo $target; ?>')"><?php echo $row->name; ?></h2>
                                             <?php } ?>
-                                            <span class="text-category"><?= $row->description ?></span>
+                                            <span class="text-category"><?php echo $row->description; ?></span>
                                         </div>
                                         <div class="mask-bg"></div>
                                     </div>
@@ -95,9 +95,9 @@ switch ($gallery[0]->hover_effect) {
                                         <div class="mask">
                                             <div class="mask-text">
                                                 <?php if ($row->name != "") { ?>
-                                                    <h2 onclick="event.stopPropagation(); event.preventDefault();window.open('<?= $row->sl_url ?>', '<?= $target ?>')"><?= $row->name ?></h2>
+                                                    <h2 onclick="event.stopPropagation(); event.preventDefault();window.open('<?php echo $row->sl_url; ?>', '<?php echo $target; ?>')"><?php echo $row->name; ?></h2>
                                                 <?php } ?>
-                                                <span class="text-category"><?= $row->description ?></span>
+                                                <span class="text-category"><?php echo $row->description; ?></span>
                                             </div>
 
                                             <div class="mask-bg"></div>
@@ -118,9 +118,9 @@ switch ($gallery[0]->hover_effect) {
                                         <div class="mask">
                                             <div class="mask-text">
                                                 <?php if ($row->name != "") { ?>
-                                                    <h2 onclick="event.stopPropagation(); event.preventDefault();window.open('<?= $row->sl_url ?>', '<?= $target ?>')"><?= $row->name ?></h2>
+                                                    <h2 onclick="event.stopPropagation(); event.preventDefault();window.open('<?php echo $row->sl_url; ?>', '<?php echo $target; ?>')"><?php echo $row->name; ?></h2>
                                                 <?php } ?>
-                                                <span class="text-category"><?= $row->description ?></span>
+                                                <span class="text-category"><?php echo $row->description; ?></span>
                                             </div>
                                             <div class="mask-bg"></div>
                                         </div>
@@ -214,7 +214,7 @@ switch ($gallery[0]->hover_effect) {
             ?>
             <div class="load_more3">
                 <div class="load_more_button3"
-                     data-thumbnail-nonce-value="<?php echo $gallery_img_thumbnail_load_nonce; ?>"><?= Photo_Gallery_WP()->settings->video_view7_loadmore_text; ?></div>
+                     data-thumbnail-nonce-value="<?php echo $gallery_img_thumbnail_load_nonce; ?>"><?php echo Photo_Gallery_WP()->settings->video_view7_loadmore_text; ?></div>
                 <div class="loading3"><img
                             src="<?php if (Photo_Gallery_WP()->settings->video_view7_loading_type == '1') {
                                 echo PHOTO_GALLERY_WP_IMAGES_URL . '/front_images/arrows/loading1.gif';
