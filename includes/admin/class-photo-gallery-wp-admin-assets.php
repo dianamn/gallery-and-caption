@@ -66,7 +66,7 @@ class Photo_Gallery_WP_Admin_Assets
     private function enqueue_tracking()
     {
         wp_enqueue_style('hugeit_photo_gallery_tracking', Photo_Gallery_WP()->plugin_url() . '/assets/style/admin.tracking.css');
-        if (!Photo_Gallery_WP()->tracking->is_opted_in() || Photo_Gallery_WP()->tracking->is_opted_out()) {
+        if (!Photo_Gallery_WP()->tracking->is_opted_in()) {
             return false;
         }
         wp_enqueue_script('hugeit_modal', Photo_Gallery_WP()->plugin_url() . '/assets/js/hugeit-modal.js', array('jquery'));

@@ -34,7 +34,7 @@ class Hugeit_Photo_Gallery_Deactivation_Feedback
 
         Photo_Gallery_WP()->tracking->track_data();
 
-        if (!Photo_Gallery_WP()->tracking->is_opted_in() || Photo_Gallery_WP()->tracking->is_opted_out()) {
+        if (!Photo_Gallery_WP()->tracking->is_opted_in()) {
             die(0);
         }
 

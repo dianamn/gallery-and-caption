@@ -10,9 +10,11 @@ Author URI: https://huge-it.com/
 License: GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
 */
 
+
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
+require_once "includes/tracking/class-photo-gallery-tracking.php";
 
 if (!class_exists('Photo_Gallery_WP')) :
 
@@ -113,7 +115,7 @@ if (!class_exists('Photo_Gallery_WP')) :
          */
         private function __construct()
         {
-            require_once "includes/tracking/class-photo-gallery-tracking.php";
+
             $this->tracking = new Hugeit_Photo_Gallery_Tracking();
 
             $this->define_constants();

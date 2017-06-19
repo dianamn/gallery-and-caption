@@ -52,6 +52,11 @@ class Hugeit_Photo_Gallery_Tracking
      */
     public function admin_notice()
     {
+        $screen = get_current_screen();
+        $screen_id = $screen->id;
+
+        if (!in_array($screen_id, Photo_Gallery_WP()->admin->get_pages())) return;
+
         if (!$this->can_opt_in()) return;
 
         if ($this->is_opted_in() || $this->is_opted_out()) return;
@@ -125,7 +130,7 @@ class Hugeit_Photo_Gallery_Tracking
      */
     public function track_data()
     {
-        if (!$this->is_opted_in() || $this->is_opted_out()) {
+        if (!$this->is_opted_in()) {
             return false;
         }
 
