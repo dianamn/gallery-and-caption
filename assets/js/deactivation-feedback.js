@@ -11,7 +11,7 @@ jQuery(document).ready(function () {
     jQuery('body').on('click', '#the-list tr[data-slug=' + hugeitPhotogalleryL10n.slug + '] .deactivate a', function (e) {
         e.preventDefault();
 
-        hugeitModal.show(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
+        hugeitModalPhotoGallery.show(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
         deactivationURL = jQuery(this).attr('href');
 
         return false;
@@ -24,13 +24,13 @@ jQuery(document).ready(function () {
             comment = jQuery('textarea[name=' + hugeitPhotogalleryL10n.slug + '-deactivation-comment]').val(),
             nonce = jQuery('#hugeit-photo-gallery-deactivation-nonce').val();
         if (checkedOption.length || comment.length) {
-            hugeitModal.hide(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
+            hugeitModalPhotoGallery.hide(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
             sendDeactivationFeedback(checkedOption.val(), comment, nonce);
             setTimeout(function () {
                 window.location.replace(deactivationURL);
             }, 0);
         } else {
-            hugeitModal.hide(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
+            hugeitModalPhotoGallery.hide(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
             window.location.replace(deactivationURL);
         }
 
@@ -40,7 +40,7 @@ jQuery(document).ready(function () {
     cancelDeactivationLink.on('click', function (e) {
         e.preventDefault();
 
-        hugeitModal.hide(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
+        hugeitModalPhotoGallery.hide(hugeitPhotogalleryL10n.slug + '-deactivation-feedback');
 
         return false;
     });

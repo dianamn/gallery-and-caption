@@ -4,7 +4,7 @@
 class Hugeit_Photo_Gallery_Tracking
 {
     /**
-     * Hugeit_Slider_Tracking constructor.
+     * Hugeit_Photo_Gallery_Tracking constructor.
      */
     public function __construct()
     {
@@ -130,6 +130,7 @@ class Hugeit_Photo_Gallery_Tracking
      */
     public function track_data()
     {
+
         if (!$this->is_opted_in()) {
             return false;
         }
