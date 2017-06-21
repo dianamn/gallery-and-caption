@@ -3,8 +3,8 @@
  */
 "use strict";
 jQuery(document).ready(function () {
-    var confirmDeactivationLink = jQuery(".hugeit-deactivate-plugin"),
-        cancelDeactivationLink = jQuery(".hugeit-cancel-deactivation"),
+    var confirmDeactivationLink = jQuery(".hugeit-deactivate-plugin-photo-gallery"),
+        cancelDeactivationLink = jQuery(".hugeit-cancel-deactivation-photo-gallery"),
         deactivationURL;
 
 

@@ -74,7 +74,7 @@ class Photo_Gallery_WP_Admin_Assets
         wp_localize_script('hugeit_photo_gallery_deactivation_feedback', 'hugeitPhotogalleryL10n', array(
             'slug' => Photo_Gallery_WP()->get_slug()
         ));
-        wp_enqueue_style('hugeit_modal', Photo_Gallery_WP()->plugin_url() . '/assets/style/hugeit-modal.css');
+        wp_enqueue_style('hugeit_modal_photo_gallery', Photo_Gallery_WP()->plugin_url() . '/assets/style/hugeit-modal.css');
     }
 
     public function localize_scripts()

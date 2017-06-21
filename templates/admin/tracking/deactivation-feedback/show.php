@@ -56,8 +56,10 @@
             </div>
         </div>
         <div class="-hugeit-modal-content-footer">
-            <a href="#" class="hugeit-deactivate-plugin"><?php _e('Deactivate', 'hugeit-photo-gallery') ?></a>
-            <a href="#" class="hugeit-cancel-deactivation"><?php _e('Cancel', 'hugeit-photo-gallery') ?></a>
+            <a href="#"
+               class="hugeit-deactivate-plugin-photo-gallery"><?php _e('Deactivate', 'hugeit-photo-gallery') ?></a>
+            <a href="#"
+               class="hugeit-cancel-deactivation-photo-gallery"><?php _e('Cancel', 'hugeit-photo-gallery') ?></a>
         </div>
     </div>
 </div>
