@@ -10,9 +10,11 @@ Author URI: https://huge-it.com/
 License: GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
 */
 
+
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
+require_once "includes/tracking/class-photo-gallery-tracking.php";
 
 if (!class_exists('Photo_Gallery_WP')) :
 
@@ -25,11 +27,35 @@ if (!class_exists('Photo_Gallery_WP')) :
          */
         public $version = "2.1.0";
 
+
+        /**
+         * @var int
+         */
+        private $project_id = 21;
+
+        /**
+         * @var string
+         */
+        private $project_plan = 'free';
+
+        /**
+         * @var string
+         */
+        private $slug = 'gallery-and-caption';
+
+
+        /**
+         * @var Hugeit_Photo_Gallery_Tracking
+         */
+        public $tracking;
+
+
         /**
          * Instance of Gallery_Img_Admin class to manage admin
          * @var Photo_Gallery_WP_Admin instancew
          */
         public $admin = null;
+
 
         /**
          * Instance of Photo_Gallery_WP_Template_Loader class to manage admin
@@ -89,6 +115,9 @@ if (!class_exists('Photo_Gallery_WP')) :
          */
         private function __construct()
         {
+
+            $this->tracking = new Hugeit_Photo_Gallery_Tracking();
+
             $this->define_constants();
             $this->includes();
             $this->init_hooks();
@@ -106,6 +135,8 @@ if (!class_exists('Photo_Gallery_WP')) :
             register_activation_hook(__FILE__, array('Photo_Gallery_WP_Install', 'install'));
             add_action('init', array($this, 'init'), 0);
             add_action('plugins_loaded', array($this, 'load_plugin_textdomain'));
+            add_action('init', array($this, 'schedule_tracking'), 0);
+            add_filter('cron_schedules', array($this, 'custom_cron_job_recurrence'));
 
         }
 
@@ -174,6 +205,7 @@ if (!class_exists('Photo_Gallery_WP')) :
             include_once('includes/class-photo-gallery-wp-gallery-widget.php');
             include_once('includes/class-photo-gallery-wp-shortcode.php');
             include_once('includes/class-photo-gallery-wp-frontend-scripts.php');
+            require_once "includes/tracking/class-photo-gallery-deactivation-feedback.php";
             if ($this->is_request('admin')) {
                 include_once('includes/admin/class-photo-gallery-wp-admin-functions.php');
                 include_once('includes/admin/class-photo-gallery-wp-admin.php');
@@ -183,6 +215,46 @@ if (!class_exists('Photo_Gallery_WP')) :
                 include_once('includes/admin/class-photo-gallery-wp-albums.php');
             }
         }
+
+
+        public function schedule_tracking()
+        {
+            if (!wp_next_scheduled('hugeit_photo_gallery_opt_in_cron')) {
+                $this->tracking->track_data();
+                wp_schedule_event(current_time('timestamp'), 'hugeit-photo-gallery-weekly', 'hugeit_photo_gallery_opt_in_cron');
+            }
+        }
+
+        public function custom_cron_job_recurrence($schedules)
+        {
+            $schedules['hugeit-photo-gallery-weekly'] = array(
+                'display' => __('Once per week', 'hugeit-photo-gallery'),
+                'interval' => 604800
+            );
+            return $schedules;
+        }
+
+        /**
+         * @return int
+         */
+        public function get_project_id()
+        {
+            return $this->project_id;
+        }
+
+        /**
+         * @return string
+         */
+        public function get_project_plan()
+        {
+            return $this->project_plan;
+        }
+
+        public function get_slug()
+        {
+            return $this->slug;
+        }
+
 
         /**
          * Load plugin text domain
@@ -200,6 +272,7 @@ if (!class_exists('Photo_Gallery_WP')) :
             // Before init action.
             do_action('before_Gallery_Img_init');
 
+            new Hugeit_Photo_Gallery_Deactivation_Feedback();
 
             $this->template_loader = new Photo_Gallery_WP_Template_Loader();
             if ($this->is_request('admin')) {

@@ -73,6 +73,14 @@ class Photo_Gallery_WP_Admin
     }
 
     /**
+     * @return mixed
+     */
+    public function get_pages()
+    {
+        return $this->pages;
+    }
+
+    /**
      * Initialize Image Gallery's admin
      */
     protected function init()

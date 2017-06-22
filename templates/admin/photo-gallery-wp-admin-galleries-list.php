@@ -112,19 +112,19 @@ $huge_it_gallery_nonce_remove_galery = wp_create_nonce('huge_it_gallery_nonce_re
                     <tr <?php if ($k % 2 == 0) {
                         echo "class='has-background'";
                     } ?>>
-                        <td><?= $k + 1 ?></td>
+                        <td><?php echo $k + 1; ?></td>
                         <td>
-                            <a href="admin.php?page=photo_gallery_wp_gallery&task=edit_cat&id=<?= $item->id ?>&huge_it_gallery_nonce=<?= wp_create_nonce('huge_it_gallery_nonce') ?>"><?= esc_html(stripslashes($item->name)); ?></a>
+                            <a href="admin.php?page=photo_gallery_wp_gallery&task=edit_cat&id=<?php echo $item->id; ?>&huge_it_gallery_nonce=<?php echo wp_create_nonce('huge_it_gallery_nonce'); ?>"><?php echo esc_html(stripslashes($item->name)); ?></a>
                         </td>
-                        <td> (<?= $item->images_count ?>)</td>
+                        <td> (<?php echo $item->images_count; ?>)</td>
                         <td>
-                            <a href="admin.php?page=photo_gallery_wp_gallery&task=duplicate_photo_gallery_wp_image&id=<?= $item->id ?>&photo_gallery_wp_duplicate_nonce=<?= wp_create_nonce('photo_gallery_wp_nonce_duplicate_gallery' . $item->id) ?>"
+                            <a href="admin.php?page=photo_gallery_wp_gallery&task=duplicate_photo_gallery_wp_image&id=<?php echo $item->id; ?>&photo_gallery_wp_duplicate_nonce=<?php echo wp_create_nonce('photo_gallery_wp_nonce_duplicate_gallery' . $item->id); ?>"
                                class="ph-gallery-wp-duplicate-link">
                                 <span class="ph-gallery-wp-duplicate-icon"></span>
                             </a>
                         </td>
                         <td>
-                            <a href="admin.php?page=photo_gallery_wp_gallery&task=remove_photo_gallery_wp&id=<?= $item->id ?>&photo_gallery_wp_nonce_remove_gallery=<?= wp_create_nonce('photo_gallery_wp_nonce_remove_gallery' . $item->id) ?>"
+                            <a href="admin.php?page=photo_gallery_wp_gallery&task=remove_photo_gallery_wp&id=<?php echo $item->id; ?>&photo_gallery_wp_nonce_remove_gallery=<?php echo wp_create_nonce('photo_gallery_wp_nonce_remove_gallery' . $item->id); ?>"
                                class="ph-gallery-wp-delete-link"><span class="ph-gallery-wp-delete-icon"></span></a>
                         </td>
                     </tr>

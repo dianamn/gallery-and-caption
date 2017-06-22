@@ -884,8 +884,8 @@ class Photo_Gallery_WP_Ajax
                     $imagerowstype = 'image';
                 }
                 ?>
-                <div class="grid-item view <?= esc_html($_POST["view_style"]) ?>">
-                    <div class="<?= esc_html($_POST["view_style"]) ?>-wrapper view-wrapper">
+                <div class="grid-item view <?php echo esc_html($_POST["view_style"]); ?>">
+                    <div class="<?php echo esc_html($_POST["view_style"]); ?>-wrapper view-wrapper">
                         <?php
                         $desc = '<span class="text-category">' . $row->description . '</span>';
 
@@ -897,7 +897,7 @@ class Photo_Gallery_WP_Ajax
                             case 'image': ?>
                                 <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
                                     <img src="<?php echo $row->image_url; ?>" alt="">
-                                    <div class="mask"><?= $title ?>
+                                    <div class="mask"><?php echo $title; ?>
                                         <div class="mask-bg"></div>
                                     </div>
                                 </a>
@@ -910,7 +910,7 @@ class Photo_Gallery_WP_Ajax
                                     <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
                                         <img src="https://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
                                              alt="">
-                                        <div class="mask"><?= $title ?>
+                                        <div class="mask"><?php echo $title; ?>
                                             <div class="mask-bg"></div>
                                         </div>
                                     </a>
@@ -921,7 +921,7 @@ class Photo_Gallery_WP_Ajax
                                     ?>
                                     <a href="<?php echo $row->image_url; ?>" class="ph-lightbox">
                                         <img src="<?php echo esc_attr($imgsrc); ?>" alt="">
-                                        <div class="mask"><?= $title ?>
+                                        <div class="mask"><?php echo $title; ?>
                                             <div class="mask-bg"></div>
                                         </div>
                                     </a>
@@ -969,8 +969,8 @@ class Photo_Gallery_WP_Ajax
                     $imagerowstype = 'image';
                 }
                 ?>
-                <div class="ph_mosaic_div view <?= esc_html($_POST["view_style"]) ?>">
-                    <div class="<?= esc_html($_POST["view_style"]) ?>-wrapper view-wrapper">
+                <div class="ph_mosaic_div view <?php echo esc_html($_POST["view_style"]); ?>">
+                    <div class="<?php echo esc_html($_POST["view_style"]); ?>-wrapper view-wrapper">
                         <?php
                         $desc = '<span class="text-category">' . $row->description . '</span>';
                         $target = ($row->link_target == "on") ? "'_blank'" : "'_self'";
@@ -985,7 +985,7 @@ class Photo_Gallery_WP_Ajax
                             case 'image': ?>
                                 <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
                                     <img src="<?php echo esc_url($row->image_url); ?>" alt="">
-                                    <div class="mask"><?= $title ?>
+                                    <div class="mask"><?php echo $title; ?>
                                         <div class="mask-bg"></div>
                                     </div>
                                 </a>
@@ -998,7 +998,7 @@ class Photo_Gallery_WP_Ajax
                                     <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
                                         <img src="https://img.youtube.com/vi/<?php echo $videourl[0]; ?>/mqdefault.jpg"
                                              alt="">
-                                        <div class="mask"><?= $title ?>
+                                        <div class="mask"><?php echo $title; ?>
                                             <div class="mask-bg"></div>
                                         </div>
                                     </a>
@@ -1009,7 +1009,7 @@ class Photo_Gallery_WP_Ajax
                                     ?>
                                     <a href="<?php echo esc_url($row->image_url); ?>" class="ph-lightbox">
                                         <img src="<?php echo esc_attr($imgsrc); ?>" alt="">
-                                        <div class="mask"><?= $title ?>
+                                        <div class="mask"><?php echo $title; ?>
                                             <div class="mask-bg"></div>
                                         </div>
                                     </a>

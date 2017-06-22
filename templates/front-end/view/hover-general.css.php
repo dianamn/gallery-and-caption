@@ -1,4 +1,4 @@
-<?= "<style>" ?>
+<?php echo "<style>"; ?>
 
 /*===== general options =========*/
 a {
@@ -593,4 +593,4 @@ div#all {
     color: #fff;
 }
 
-<?= "</style>" ?>
+<?php echo "</style>"; ?>
