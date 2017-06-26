@@ -61,7 +61,7 @@ class Photo_Gallery_WP_Admin
     {
         $this->init();
         add_action('admin_menu', array($this, 'admin_menu'));
-//        add_action('wp_loaded', array($this, 'wp_loaded'));
+        add_action('wp_loaded', array($this, 'wp_loaded'));
         add_action('wp_loaded', array($this, 'wp_loaded_video'));
         add_action('wp_loaded', array($this, 'wp_loaded_duplicate_gallery'));
         add_action('wp_loaded', array($this, 'wp_loaded_remove_photo_gallery_wp'));
@@ -121,7 +121,7 @@ class Photo_Gallery_WP_Admin
     }
 
 
-    /*public function wp_loaded()
+    public function wp_loaded()
     {
 
 
@@ -151,7 +151,7 @@ INSERT INTO
                 }
             }
         }
-    }*/
+    }
 
     public function wp_loaded_video()
     {

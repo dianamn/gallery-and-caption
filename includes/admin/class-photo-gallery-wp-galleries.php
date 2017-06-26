@@ -41,9 +41,6 @@ class Photo_Gallery_WP_Galleries
                     $this->edit_gallery($id);
                 }
                 break;
-            case 'add_cat':
-                $this->add_gallery();
-                break;
             default:
                 $this->show_galleries_page();
                 break;
@@ -53,32 +50,6 @@ class Photo_Gallery_WP_Galleries
     /**
      * Shows Gallery Main Page
      */
-
-    public function add_gallery()
-    {
-        global $wpdb;
-        if (!isset($_REQUEST['photo_gallery_wp_nonce_add_galery']) || !wp_verify_nonce($_REQUEST['photo_gallery_wp_nonce_add_galery'], 'photo_gallery_wp_nonce_add_galery')) {
-            wp_die('Security check fail add');
-        }
-
-        $table_name = $wpdb->prefix . "photo_gallery_wp_gallerys";
-        $sql_2 = "
-INSERT INTO 
-`" . $table_name . "` ( `name`, `sl_height`, `sl_width`, `pause_on_hover`, `gallery_list_effects_s`, `description`, `param`, `sl_position`, `ordering`, `published`, `photo_gallery_wp_sl_effects`) VALUES
-( 'New gallery', '375', '600', 'on', 'cubeH', '4000', '1000', 'center', '1', '300', '4')";
-        $wpdb->query($sql_2);
-        $query = "SELECT * FROM " . $wpdb->prefix . "photo_gallery_wp_gallerys order by id ASC";
-        $rowsldcc = $wpdb->get_results($query);
-        $last_key = key(array_slice($rowsldcc, -1, 1, true));
-
-
-        foreach ($rowsldcc as $key => $rowsldccs) {
-            if ($last_key == $key) {
-                header('Location: admin.php?page=photo_gallery_wp_gallery&id=' . $rowsldccs->id . '&task=apply');
-            }
-        }
-    }
-
     public function show_galleries_page()
     {
         if (isset($_COOKIE['gallery_deleted'])) {
