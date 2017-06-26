@@ -255,6 +255,11 @@ if (!class_exists('Photo_Gallery_WP')) :
             return $this->slug;
         }
 
+        public function get_version()
+        {
+            return $this->version;
+        }
+
 
         /**
          * Load plugin text domain

@@ -135,6 +135,8 @@ class Hugeit_Photo_Gallery_Tracking
             return false;
         }
 
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+
         $all_plugins = array();
         $plugins = get_plugins();
         foreach ($plugins as $plugin_slug => $plugin_info) {

@@ -95,6 +95,7 @@ class Photo_Gallery_WP_Admin
         ++$this->settings_page_count;
         if ($this->settings_page_count !== 2)
             return;
+        $this->pages['albums'] = add_submenu_page('photo_gallery_wp_gallery', __('Albums <span class="album_pro">PRO</span>', 'photo-gallery-wp'), __('Albums <span class="album_pro">PRO</span>', 'photo-gallery-wp'), 'manage_options', 'huge_it_ph_gallery_albums', array($this, 'photo_gallery_album_page'));
         $this->pages['featured_plugins'] = add_submenu_page('photo_gallery_wp_gallery', __('Featured Plugins', 'photo-gallery-wp'), __('Featured Plugins', 'photo-gallery-wp'), 'manage_options', 'huge_it_ph_gallery_featured_plugins', array(
             Photo_Gallery_WP()->admin->featured_plugins,
             'show_page'
@@ -282,6 +283,11 @@ INSERT INTO
     public function licensing_page()
     {
         require Photo_Gallery_WP()->plugin_path() . '/templates/admin/licensing.php';
+    }
+
+    public function photo_gallery_album_page()
+    {
+        require Photo_Gallery_WP()->plugin_path() . '/templates/admin/photo-gallery-albums.php';
     }
 
     public function free_banner()

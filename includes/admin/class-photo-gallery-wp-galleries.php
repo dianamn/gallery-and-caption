@@ -35,7 +35,7 @@ class Photo_Gallery_WP_Galleries
                 }
                 break;
             case 'apply':
-                
+
                 if ($id) {
                     $this->save_gallery_data($id);
                     $this->edit_gallery($id);
