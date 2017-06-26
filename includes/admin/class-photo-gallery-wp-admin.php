@@ -61,7 +61,7 @@ class Photo_Gallery_WP_Admin
     {
         $this->init();
         add_action('admin_menu', array($this, 'admin_menu'));
-        add_action('wp_loaded', array($this, 'wp_loaded'));
+//        add_action('wp_loaded', array($this, 'wp_loaded'));
         add_action('wp_loaded', array($this, 'wp_loaded_video'));
         add_action('wp_loaded', array($this, 'wp_loaded_duplicate_gallery'));
         add_action('wp_loaded', array($this, 'wp_loaded_remove_photo_gallery_wp'));
@@ -95,6 +95,7 @@ class Photo_Gallery_WP_Admin
         ++$this->settings_page_count;
         if ($this->settings_page_count !== 2)
             return;
+        $this->pages['albums'] = add_submenu_page('photo_gallery_wp_gallery', __('Albums PRO', 'photo-gallery-wp'), __('Albums PRO', 'photo-gallery-wp'), 'manage_options', 'huge_it_ph_gallery_albums', array($this, 'photo_gallery_album_page'));
         $this->pages['featured_plugins'] = add_submenu_page('photo_gallery_wp_gallery', __('Featured Plugins', 'photo-gallery-wp'), __('Featured Plugins', 'photo-gallery-wp'), 'manage_options', 'huge_it_ph_gallery_featured_plugins', array(
             Photo_Gallery_WP()->admin->featured_plugins,
             'show_page'
@@ -120,7 +121,7 @@ class Photo_Gallery_WP_Admin
     }
 
 
-    public function wp_loaded()
+    /*public function wp_loaded()
     {
 
 
@@ -150,7 +151,7 @@ INSERT INTO
                 }
             }
         }
-    }
+    }*/
 
     public function wp_loaded_video()
     {
@@ -282,6 +283,11 @@ INSERT INTO
     public function licensing_page()
     {
         require Photo_Gallery_WP()->plugin_path() . '/templates/admin/licensing.php';
+    }
+
+    public function photo_gallery_album_page()
+    {
+        require Photo_Gallery_WP()->plugin_path() . '/templates/admin/photo-gallery-albums.php';
     }
 
     public function free_banner()
