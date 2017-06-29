@@ -29,6 +29,7 @@ class Photo_Gallery_WP_Admin_Assets
             wp_enqueue_style("simple_slider_css", Photo_Gallery_WP()->plugin_url() . "/assets/style/simple-slider_sl.css", false);
             wp_enqueue_style("featured_plugins", Photo_Gallery_WP()->plugin_url() . "/assets/style/featured-plugins.css", false);
             wp_enqueue_style("free-banner", Photo_Gallery_WP()->plugin_url() . "/assets/style/free-banner.css", false);
+            wp_enqueue_style('hugeit_photo_gallery_tracking', Photo_Gallery_WP()->plugin_url() . '/assets/style/admin.tracking.css');
 
         }
         $edit_pages = array('post.php', 'post-new.php');
@@ -44,7 +45,7 @@ class Photo_Gallery_WP_Admin_Assets
             $this->enqueue_tracking();
         }
 
-        wp_enqueue_style('hugeit_photo_gallery_tracking', Photo_Gallery_WP()->plugin_url() . '/assets/style/admin.tracking.css');
+
     }
 
     public function admin_scripts($hook)
