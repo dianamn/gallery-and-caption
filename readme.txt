@@ -4,7 +4,7 @@ Donate link: https://huge-it.com/wordpress-photo-gallery/
 Tags: gallery, image gallery, photo gallery, wordpress gallery, youtube gallery
 Requires at least: 3.0.1
 Tested up to: 4.8
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -733,6 +733,9 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 If you think, that you found a bug in our [WordPress Photo Gallery](https://huge-it.com/wordpress-photo-gallery/) plugin or have any question contact us at [info@huge-it.com](mailto:info@huge-it.com)
 
 == Changelog ==
+
+= 2.1.2 =
+* We had to make an update because multiple users reported in forum a CSS conflict with older versions of WordPress.
 
 = 2.1.1 =
 * 1) We have added Albums functionality.
