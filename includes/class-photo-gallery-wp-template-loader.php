@@ -80,11 +80,14 @@ class Photo_Gallery_WP_Template_Loader
         }
 
 
-        wp_register_script('hoverdir.js', Photo_Gallery_WP()->plugin_url() . '/assets/albums/js/jquery.hoverdir.js', array('jquery'), '1.0.0', true);
-        wp_enqueue_script('hoverdir.js');
+        if (in_array($view, array(0, 4, 5, 7, 8))) {
+            wp_register_script('hoverdir.js', Photo_Gallery_WP()->plugin_url() . '/assets/albums/js/jquery.hoverdir.js', array('jquery'), '1.0.0', true);
+            wp_enqueue_script('hoverdir.js');
 
-        wp_register_script('hover_custom.js', Photo_Gallery_WP()->plugin_url() . '/assets/albums/js/modernizr.custom.97074.js', array('jquery'), '1.0.0', true);
-        wp_enqueue_script('hover_custom.js');
+            wp_register_script('hover_custom.js', Photo_Gallery_WP()->plugin_url() . '/assets/albums/js/modernizr.custom.97074.js', array('jquery'), '1.0.0', true);
+            wp_enqueue_script('hover_custom.js');
+        }
+
 
         require PHOTO_GALLERY_WP_TEMPLATES_PATH . DIRECTORY_SEPARATOR . 'front-end' . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'hover-general.css.php';
 
