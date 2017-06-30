@@ -138,8 +138,6 @@
         text-decoration: none;
     }
 
-    /
-    /
     .grid {
         max-width: 1200px;
         margin: 0 auto;
@@ -247,14 +245,14 @@ case 'left':
         display: flex !important;
     }
 
-    .hugeiticons-heart{
+    .hugeiticons-heart {
         font-size: 32px !important;
         position: absolute !important;
         top: 4px !important;
         right: 4px !important;
     }
 
-    .huge_it_like_thumb{
+    .huge_it_like_thumb {
         position: absolute;
         top: 7px;
         color: #333;
@@ -262,6 +260,5 @@ case 'left':
         font-size: 14px;
     }
 
-    /
-    /
+   
 </style>
