@@ -221,7 +221,6 @@ if (!class_exists('Photo_Gallery_WP')) :
         {
             if (!wp_next_scheduled('hugeit_photo_gallery_opt_in_cron')) {
                 $this->tracking->track_data();
-                wp_clear_scheduled_hook('hugeit_photo_gallery_opt_in_cron');
                 wp_schedule_event(current_time('timestamp'), 'hugeit-photo-gallery-weekly', 'hugeit_photo_gallery_opt_in_cron');
             }
         }
