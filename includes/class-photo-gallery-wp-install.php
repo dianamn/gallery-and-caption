@@ -110,9 +110,9 @@ INSERT INTO `$table_name` (`id`, `name`, `sl_height`, `sl_width`, `pause_on_hove
             $wpdb->query("ALTER TABLE " . $wpdb->prefix . "photo_gallery_wp_gallerys ADD content_per_page integer DEFAULT '5' ");
         }
 
-        if ($forHoverEffect != 1) {
+//        if ($forHoverEffect != 1) {
             $wpdb->query("ALTER TABLE `" . $wpdb->prefix . "photo_gallery_wp_gallerys` ADD `hover_effect` int( 1 ) NOT NULL default 0 after `description`");
-        }
+        //}
 
 
         ///////////////////////////////////////////////////////////////////////

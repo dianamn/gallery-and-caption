@@ -1,78 +1,59 @@
 <?php
-
 /*
 Plugin Name: Huge IT Photo Gallery
 Plugin URI: https://huge-it.com/wordpress-photo-gallery/
 Description: Photo Gallery is advanced solution for WordPress Gallery users. 7 advanced and customizable views will help to create beautiful content in minutes.
-Version: 2.1.0
-Author: Photo Gallery by Huge-IT
+Version: 2.1.2
+Author: Huge-IT
 Author URI: https://huge-it.com/
 License: GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
 */
-
-
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 require_once "includes/tracking/class-photo-gallery-tracking.php";
-
 if (!class_exists('Photo_Gallery_WP')) :
-
     final class Photo_Gallery_WP
     {
-
         /**
          * Version of plugin
          * @var String
          */
-        public $version = "2.1.0";
-
-
+        public $version = "2.1.2";
         /**
          * @var int
          */
         private $project_id = 21;
-
         /**
          * @var string
          */
         private $project_plan = 'free';
-
         /**
          * @var string
          */
         private $slug = 'gallery-and-caption';
-
-
         /**
          * @var Hugeit_Photo_Gallery_Tracking
          */
         public $tracking;
-
-
         /**
          * Instance of Gallery_Img_Admin class to manage admin
          * @var Photo_Gallery_WP_Admin instancew
          */
         public $admin = null;
-
-
         /**
          * Instance of Photo_Gallery_WP_Template_Loader class to manage admin
          * @var Photo_Gallery_WP_Template_Loader instance
          */
         public $template_loader = null;
-
         /**
          * @var Photo_Gallery_WP_Settings
          */
         public $settings;
-
         /**
          * @var Photo_Gallery_WP_Lightbox_Settings
          */
         public $lightbox_settings;
-
         /**
          * The single instance of the class.
          *
@@ -115,9 +96,7 @@ if (!class_exists('Photo_Gallery_WP')) :
          */
         private function __construct()
         {
-
             $this->tracking = new Hugeit_Photo_Gallery_Tracking();
-
             $this->define_constants();
             $this->includes();
             $this->init_hooks();
@@ -137,7 +116,6 @@ if (!class_exists('Photo_Gallery_WP')) :
             add_action('plugins_loaded', array($this, 'load_plugin_textdomain'));
             add_action('init', array($this, 'schedule_tracking'), 0);
             add_filter('cron_schedules', array($this, 'custom_cron_job_recurrence'));
-
         }
 
         /**
@@ -216,7 +194,6 @@ if (!class_exists('Photo_Gallery_WP')) :
             }
         }
 
-
         public function schedule_tracking()
         {
             if (!wp_next_scheduled('hugeit_photo_gallery_opt_in_cron')) {
@@ -260,7 +237,6 @@ if (!class_exists('Photo_Gallery_WP')) :
             return $this->version;
         }
 
-
         /**
          * Load plugin text domain
          */
@@ -276,9 +252,7 @@ if (!class_exists('Photo_Gallery_WP')) :
         {
             // Before init action.
             do_action('before_Gallery_Img_init');
-
             new Hugeit_Photo_Gallery_Deactivation_Feedback();
-
             $this->template_loader = new Photo_Gallery_WP_Template_Loader();
             if ($this->is_request('admin')) {
                 $this->admin = new Photo_Gallery_WP_Admin();
@@ -318,9 +292,7 @@ if (!class_exists('Photo_Gallery_WP')) :
             return plugins_url('', __FILE__);
         }
     }
-
 endif;
-
 function Photo_Gallery_WP()
 {
     return Photo_Gallery_WP::instance();
