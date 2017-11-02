@@ -20,6 +20,7 @@ if (!class_exists('Photo_Gallery_WP')) :
          * @var String
          */
         public $version = "2.1.2";
+
         /**
          * @var int
          */
