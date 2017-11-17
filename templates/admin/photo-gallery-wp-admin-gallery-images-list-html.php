@@ -807,14 +807,13 @@ if (isset($_GET["addslide"])) {
                                     <ul>
                                         <?php for ($i = 1; $i < 5; ++$i): ?>
                                             <li>
-                                                <?php if ($i == $row->gallery_loader_type): ?>
-                                                    <input id="ph-gallery-wp-loading-img-<?php echo $i; ?> >"
-                                                           type="radio" name="gallery_loader_type"
-                                                           value="<?php echo $i; ?>" checked/>
-                                                <?php else: ?>
-                                                    <input id="ph-gallery-wp-loading-img-<?php echo $i; ?>" type="radio"
-                                                           name="gallery_loader_type" value="<?php echo $i; ?>"/>
-                                                <?php endif; ?>
+
+                                                <input id="ph-gallery-wp-loading-img-<?php echo $i; ?>"
+                                                       type="radio" name="gallery_loader_type"
+                                                       value="<?php echo $i; ?>" <?php if ($i == $row->gallery_loader_type) {
+                                                    echo "checked";
+                                                } ?>/>
+
 
                                                 <label for="ph-gallery-wp-loading-img-<?php echo $i; ?>">
                                                     <div>

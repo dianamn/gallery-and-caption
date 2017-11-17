@@ -101,6 +101,8 @@ $huge_it_gallery_nonce_remove_galery = wp_create_nonce('huge_it_gallery_nonce_re
                     <th scope="col" id="prod_count" style="width:40px;">
                         <span><?php echo __('Images', 'photo-gallery-wp'); ?></span><span
                                 class="sorting-indicator"></span></th>
+                    <th style="width:40px"><span><?php echo __('Shortcode', 'gallery-images'); ?></span><span
+                                class="sorting-indicator"></span></th>
                     <th style="width:40px"><span><?php echo __('Duplicate', 'gallery-images'); ?></span><span
                                 class="sorting-indicator"></span></th>
                     <th style="width:40px"><span><?php echo __('Delete', 'gallery-images'); ?></span><span
@@ -117,6 +119,7 @@ $huge_it_gallery_nonce_remove_galery = wp_create_nonce('huge_it_gallery_nonce_re
                             <a href="admin.php?page=photo_gallery_wp_gallery&task=edit_cat&id=<?php echo $item->id; ?>&huge_it_gallery_nonce=<?php echo wp_create_nonce('huge_it_gallery_nonce'); ?>"><?php echo esc_html(stripslashes($item->name)); ?></a>
                         </td>
                         <td> (<?php echo $item->images_count; ?>)</td>
+                        <td> [photo_gallery_wp id="<?php echo $item->id; ?>"]</td>
                         <td>
                             <a href="admin.php?page=photo_gallery_wp_gallery&task=duplicate_photo_gallery_wp_image&id=<?php echo $item->id; ?>&photo_gallery_wp_duplicate_nonce=<?php echo wp_create_nonce('photo_gallery_wp_nonce_duplicate_gallery' . $item->id); ?>"
                                class="ph-gallery-wp-duplicate-link">

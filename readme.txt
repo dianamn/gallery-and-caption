@@ -25,13 +25,13 @@ Photo Gallery is advanced solution for Photo Gallery users. 8 advanced and custo
 
 Free, easy, adaptive Photo Gallery from Huge-IT is an ideal solution for creating site-portfolio for photographers. It is allowing beautiful demonstration of works for designers, showing products and services, and others.
 
-Photo Gallery is a modern and necessary tool to build a photo albums in a web page. Huge-IT new Photo Gallery is full of effects which help to attract the attention of visitors and just give elegancy to your site. It is a modern solution with a pure coding standards and is UI/UX friendly. 
+Photo Gallery is a modern and necessary tool to build a photo albums in a web page. Huge-IT new Photo Gallery is full of effects which help to attract the attention of visitors and just give elegancy to your site. It is a modern solution with a pure coding standards and is UI/UX friendly.
 
-While searching for the right view for you photo collection, install our plugin and find 8 beautiful and stunning views which include: Gallery/Content Popup view, Content Slider view, Lightbox gallery, Slider Gallery, Thumbnails view, Justified view, Masonry and Mosaic views. 
+While searching for the right view for you photo collection, install our plugin and find 8 beautiful and stunning views which include: Gallery/Content Popup view, Content Slider view, Lightbox gallery, Slider Gallery, Thumbnails view, Justified view, Masonry and Mosaic views.
 
 **Details about the views:**
 
-* Gallery/Content Popup view. This view is made for the gallery which has a content text. When you move the mouse over the picture gets a magnifying glass on it, and when clicked opens a full popup with a large version of the image, title and description text next to it, also a “View More” button with link , if needed - in the popup, you can scroll the image of other projects. 
+* Gallery/Content Popup view. This view is made for the gallery which has a content text. When you move the mouse over the picture gets a magnifying glass on it, and when clicked opens a full popup with a large version of the image, title and description text next to it, also a “View More” button with link , if needed - in the popup, you can scroll the image of other projects.
 
 * Content Slider view. Content slider view doesn’t slide only image it also slides the title and description of the image which is placed next to it. The content slider also may have a View More button with a special custom page link. Images of the content slider are displayed in the new lightbox, once clicked.
 
@@ -46,7 +46,7 @@ Justified. Justified view of the Photo Gallery allows you to showcase your image
 
 * Mosaic view. Mosaic view arranges photos within a flat rectangle layout, automatically picking sizes. It usually neatly fills the entire width of the container, whereas in comparison with Masonry view filling the entire space is not necessarily.
 
-Usage of the plugin is super easy. Ease of use is achieved by using a very minimum number of components, only those required for a particular action and  modern coding language. These will help to get rid of confusion and concentrate on the basic functions of your site. 
+Usage of the plugin is super easy. Ease of use is achieved by using a very minimum number of components, only those required for a particular action and  modern coding language. These will help to get rid of confusion and concentrate on the basic functions of your site.
 
 Backend options are made in minimalistic design which is loved by many developers and users. The plugin provides rating buttons to help visitors leave their impressions by liking, disliking the photos. To save more time for loading you may set pagination or load more functionality on your gallery. As a lightbox tool you may find a new and modern designed lightbox which has several types and many configuration options. By picking up the view make sure it satisfy all your needs and has the right functionality, as every view is different and unique
 
@@ -74,7 +74,7 @@ Photo Gallery allows users to add both titles and descriptions. Descriptions app
 
 **Hundreds Of Design Options**
 
-We constantly update the plugin and add new features and options in order to help users to expand the functionality of their photo gallery. 
+We constantly update the plugin and add new features and options in order to help users to expand the functionality of their photo gallery.
 
 **YouTube and Vimeo Posts**
 
@@ -82,7 +82,7 @@ Photo Gallery allows to showcase videos from YouTube and Vimeo too. This is a gr
 
 **Lightbox Popup With Many Options**
 
-This plugin used to have a basic lightbox , which is still available in the plugin under the name OLD LIGHTBOX. But we have made a NEW LIGHTBOX , which comes by default. This is really a nice and advanced tool for WordPress Photo Gallery users. Why? Because it has a lot of options and functionality to offer and some options are available on this plugin only. The list is really big, starting from big collection of top-social sharing icons and buttons and finishing with watermark and advertisement solutions. 
+This plugin used to have a basic lightbox , which is still available in the plugin under the name OLD LIGHTBOX. But we have made a NEW LIGHTBOX , which comes by default. This is really a nice and advanced tool for WordPress Photo Gallery users. Why? Because it has a lot of options and functionality to offer and some options are available on this plugin only. The list is really big, starting from big collection of top-social sharing icons and buttons and finishing with watermark and advertisement solutions.
 
 **Friendly UI/UX Coding Standards**
 
@@ -100,7 +100,7 @@ If you think, that you found a bug in our [WordPress Photo Gallery](https://huge
 ### Uploading in WordPress Dashboard
 
 1. First download the ZIP file from Wordpress website
-2. Log in to your website administrator panel   
+2. Log in to your website administrator panel
 3. Go to the 'Add New' in the plugins dashboard, click “Upload Plugin”
 4. Upload [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) ZIP file by choosing it from your computer
 5. Click **Install** Now button
@@ -139,9 +139,9 @@ If you think, that you found a bug in our [WordPress Photo Gallery](https://huge
 53.  [WordPress Photo Gallery view 7](https://huge-it.com/wordpress-photo-gallery-demo-7-masonry/#plugin_demo_wrapper) - Masonry
 54.  [WordPress Photo Gallery view 8](https://huge-it.com/wordpress-photo-gallery-demo-8-mosaic/#plugin_demo_wrapper) - Mosaic
 55.  [WordPress Photo Gallery Lightbox](https://wordpress.org/plugins/gallery-images/) - Lightbox
-6.  [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page  
-7.  [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page  
-    
+6.  [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page
+7.  [WordPress Photo Gallery](https://wordpress.org/plugins/gallery-images/) - Photo Gallery admin page
+
 
 == Frequently Asked Questions ==
 
@@ -178,17 +178,17 @@ Right now the option is not available in plugin options, but you may request cus
 
 = Is there any chance to translate Your Gallery into any other language? =
 
-* Please follow the link: https://translate.wordpress.org/projects/wp-plugins/ gallery -and-caption, here you may select the language you want to translate Photo Gallery plugin. 
+* Please follow the link: https://translate.wordpress.org/projects/wp-plugins/ gallery -and-caption, here you may select the language you want to translate Photo Gallery plugin.
 
 
 = Is there any chance to use Photo Gallery on customer's website? =
 
-* Yes, you may use Gallery Plugin on your customer website, you may use a free version of the gallery but if needed more customization you can upgrade to pro version. 
+* Yes, you may use Gallery Plugin on your customer website, you may use a free version of the gallery but if needed more customization you can upgrade to pro version.
 
 
 = Who can use Photo Gallery created by Huge-IT? =
 
-* Those who want to demonstrate images, design works, business portfolios then Photo Gallery can be a great way to achieve desired results. 
+* Those who want to demonstrate images, design works, business portfolios then Photo Gallery can be a great way to achieve desired results.
 
 
 = Does your Gallery user friendly? =
@@ -198,7 +198,7 @@ Right now the option is not available in plugin options, but you may request cus
 
 = Does Photo Gallery support HTML in description area? =
 
-* You may use HTML in the description area for each image in Photo Gallery plugin.  
+* You may use HTML in the description area for each image in Photo Gallery plugin.
 
 
 = Does your gallery work on different devices such as tablet, smartphones? =
@@ -208,22 +208,22 @@ Right now the option is not available in plugin options, but you may request cus
 
 = What should I do if I have huge variety of gallery on my website to load my gallery faster? =
 
-* Photo Gallery has two options called Pagination and Load More button. You may easily  apply one of the options to your gallery which will separate created projects and images within gallery will load faster. 
+* Photo Gallery has two options called Pagination and Load More button. You may easily  apply one of the options to your gallery which will separate created projects and images within gallery will load faster.
 
 
 = Does the gallery provide option to upload videos when needed? =
 
-* Yes, Photo Gallery has “Add Video” button and when clicking on it you may add your desired videos from Vimeo/YouTube and save the video gallery . Adding video to the plugin is accessible in the premium version only. 
+* Yes, Photo Gallery has “Add Video” button and when clicking on it you may add your desired videos from Vimeo/YouTube and save the video gallery . Adding video to the plugin is accessible in the premium version only.
 
 
 = What should I do if I am not able to install the purchased zip file of Photo Gallery plugin? =
 
-* If you fail to install gallery from your admin section WordPress website then try to add Photo Gallery via FTP adding the zip file in the following folder: photo- gallery -wp directory to the /wp-content/plugins/ directory then activate gallery in the Plugin dashboard. 
+* If you fail to install gallery from your admin section WordPress website then try to add Photo Gallery via FTP adding the zip file in the following folder: photo- gallery -wp directory to the /wp-content/plugins/ directory then activate gallery in the Plugin dashboard.
 
 
 = After using the free version of Photo Gallery I want to upgrade to the paid version but I do not want to rebuild my gallery how to avoid from rebuilding? =
 
-* There is no need to build gallery again, you should delete free version of Photo Gallery then install the paid one and all your gallery will remain, as all your projects are saved in database. 
+* There is no need to build gallery again, you should delete free version of Photo Gallery then install the paid one and all your gallery will remain, as all your projects are saved in database.
 
 
 = If my gallery is distorted or the plugin is not functioning what should I do? =
@@ -237,13 +237,13 @@ If you think, that you found a bug in our [WordPress Photo Gallery](https://huge
 
 ### Step 1 Install the plugin
 
-To install the plugin use the following steps 
+To install the plugin use the following steps
 
 **For free version**
 
 * 1) Find and install plugin from **Plugins section in the WordPress plugin menu > Click Add New Button > Search For the Gallery plugin from Huge-IT** - If you have downloaded the zip file from our website use the following step №2
 * 2) Instal the zip file from **Plugins in the WP dashboard > Add New > Upload Plugin**
-* 3) Activate. 
+* 3) Activate.
 
 **For Pro Version**
 
@@ -253,7 +253,7 @@ After you have purchased and got the zip file of the plugin, follow these steps 
 
 * 1) Go To **Plugins> Photo Gallery (free version) > Deactivate > Delete**
 If you don’t have free version then pass the first step
-* 2) **Plugins > Add New > Upload Plugin**, add the zip file of Pro version and after installation click 
+* 2) **Plugins > Add New > Upload Plugin**, add the zip file of Pro version and after installation click
 * 3) Activate
 
 * You may also install the zip file via FTP
@@ -275,7 +275,7 @@ If you don’t have free version then pass the first step
 * Displaying Content. Most of  the gallery types provide this option to divide the projects into pages or parts using pagination or ‘load more’ option
 * Ratings. Those galleries which have thumbnail blocks may have a rating icons such as like/dislike or heart.
 
-* 2.4 Click on Add Video to have a video in a gallery. This option is for premium version, and allows to add links from Youtube or Vimeo 
+* 2.4 Click on Add Video to have a video in a gallery. This option is for premium version, and allows to add links from Youtube or Vimeo
 * 2.5  Click on Add Image button to open media library from where you choose the image to add in gallery. Also choose multiple images at once with pressing ctrl button.
 
 After adding images fill the following fields:
@@ -283,7 +283,7 @@ After adding images fill the following fields:
 * Description. Description text for the image which is available in some views
 * URL. URL link for redirection to new custom page like is available with several views which has “View More” button, and also with Lightbox Gallery which is active on title click.
 
-Hover the mouse o image to see it’s whole version. 
+Hover the mouse o image to see it’s whole version.
 
 Use “edit image” button to replace the existing image with a new one
 
@@ -302,28 +302,28 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Popup Image Full Width.  The option will make image inside popup full width and height - proportionally.
 * Popup Background Color. Use his option to change the color for popup background
 * Popup Overlay Color. The back overlay of the popup may be also changed in color
-* Show Separator Lines. Inside popup between text you may have lines, or remove them 
+* Show Separator Lines. Inside popup between text you may have lines, or remove them
 * Keyboard navigation. Select the option to be able to switch among projects using right and left buttons on keyboard
-* Popup Overlay Opacity. Change the opacity level of back overlay of the popup 
+* Popup Overlay Opacity. Change the opacity level of back overlay of the popup
 * Popup Close Button Style. With this option you may change the X button style inside the popup
 
 **Element Styles**
 
-* Image Behavior.  On “Natural” this option will fit the image in element box without stretching it 
+* Image Behavior.  On “Natural” this option will fit the image in element box without stretching it
 * Element Image Width in px. Adjust width size of the elements in gallery
 * Element Image Height in px. Adjust height size of the elements in gallery
-* Element Border Width in px. Add a border and adjust its width 
-* Element Border Color. Pick up a color for the element border 
-* Elements Image Overlay Color. Choose color for the overlay which appears while you hover mouse on it 
+* Element Border Width in px. Add a border and adjust its width
+* Element Border Color. Pick up a color for the element border
+* Elements Image Overlay Color. Choose color for the overlay which appears while you hover mouse on it
 * Zoom Image Style. On hove besides overlay you can see zoom icon, which may be in two different colors.
 
 **Pagination Styles**
 
-* Pagination Font Size in px. Specify pagination numbers size 
-* Pagination Font Color. Specify the color of pagination numbers 
-* Pagination Icons Size in px. Change the size of pagination right and left arrow icons 
-* Pagination Icons Color. Change the color of pagination right and left arrow icons 
-* Pagination Position. Choose the position of pagination icons 
+* Pagination Font Size in px. Specify pagination numbers size
+* Pagination Font Color. Specify the color of pagination numbers
+* Pagination Icons Size in px. Change the size of pagination right and left arrow icons
+* Pagination Icons Color. Change the color of pagination right and left arrow icons
+* Pagination Position. Choose the position of pagination icons
 
 **Load More Styles**
 
@@ -352,10 +352,10 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Show Link Button On Element. Select this option to have a button on element which will redirect to URL of the image
 * Link Button Text. Change the text on the link button
 * Link Button Font Size in px. Change the text-size on link button in pixels
-* Link Button Font Color. Change text color on the link button 
-* Link Button Font Hover Color. Change hover  font color on the button which redirects to the link  
-* Link Button Background Color. Specify background color on the button which redirects to the link  
-* Link Button Background Hover Color Specify on hover background color of the button which redirects to the link  
+* Link Button Font Color. Change text color on the link button
+* Link Button Font Hover Color. Change hover  font color on the button which redirects to the link
+* Link Button Background Color. Specify background color on the button which redirects to the link
+* Link Button Background Hover Color Specify on hover background color of the button which redirects to the link
 
 **Popup Description**
 
@@ -372,7 +372,7 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Ratings Rated Font Color. Choose icon font color for those images which are rated
 * Like/Dislike Icon Color, Choose icon color for like and dislike buttons
 * Like/Dislike Rated Icon Color. Choose the icon color when the like/or dislike issubmitted
-* Heart Icon Color. Decide the color of heart icon 
+* Heart Icon Color. Decide the color of heart icon
 * Heart Rated Icon Color. Decide the color of heart color which is submitted
 
 ### 3.2 Content Slider
@@ -386,12 +386,12 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 **Title**
 
-* Title Font Size in px. Adjust the size of the title text 
+* Title Font Size in px. Adjust the size of the title text
 * Title Font Color. Adjust the color of the title text in popup
 
 **Description**
 
-* Show Description.  Select this option to allow the description in the slider 
+* Show Description.  Select this option to allow the description in the slider
 * Description Font Size in px.  Specify size of the description text
 * Description Font Color. Change font color of description text
 
@@ -400,9 +400,9 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Show Link Button On Element. Select this option to have a button on element which will redirect to URL of the image
 * Link Button Text. Change the text on the link button
 * Link Button Font Size in px. Change the text-size on link button in pixels
-* Link Button Font Color. Change text color on the link button 
-* Link Button Font Hover Color. Change hover  font color on the button which redirects to the link  
-* Link Button Background Color. Specify background color on the button which redirects to the link  
+* Link Button Font Color. Change text color on the link button
+* Link Button Font Hover Color. Change hover  font color on the button which redirects to the link
+* Link Button Background Color. Specify background color on the button which redirects to the link
 * Link Button Background Hover Color Specify on hover background color of the button which redirects to the link
 
 **Ratings Styles**
@@ -414,7 +414,7 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Ratings Rated Font Color. Choose icon font color for those images which are rated
 * Like/Dislike Icon Color, Choose icon color for like and dislike buttons
 * Like/Dislike Rated Icon Color. Choose the icon color when the like/or dislike issubmitted
-* Heart Icon Color. Decide the color of heart icon 
+* Heart Icon Color. Decide the color of heart icon
 * Heart Rated Icon Color. Decide the color of heart color which is submitted
 
 ### 3.3 Lightbox Gallery
@@ -425,17 +425,17 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 **Image**
 
-* Image Width in px. The only size option in this view is width, you need to adjust it and then height will be proportionally taken 
+* Image Width in px. The only size option in this view is width, you need to adjust it and then height will be proportionally taken
 * Image Border Width in px. Choose the border width for the elements
-* Image Border Color. Choose some color for the border 
+* Image Border Color. Choose some color for the border
 * Border Radius. Change the radius of corners
 
 **Title**
 
 * Title Font Size in px. Adjust the size of the title text
-* Title Font Color. Adjust the color of the title text 
+* Title Font Color. Adjust the color of the title text
 * Title Font Hover Color. Adjust the color of the title text on hover
-* Title Background Color. Adjust the background color of the title 
+* Title Background Color. Adjust the background color of the title
 * Title Background Opacity. Background of coming up title may be adjusted in opacity level
 
 **Load More Styles**
@@ -445,16 +445,16 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Load More Font Color. Change the color of the button which comes with Load More function
 * Load More Font Hover Color. Change color of the text on load more button while you hover the mouse point on it.
 * Load More Button Color. Specify the color of the button of load more function
-* Load More Background Hover Color. Specify the button color of load more function on hover 
-* Load More Position. Change the position of load more button         
+* Load More Background Hover Color. Specify the button color of load more function on hover
+* Load More Position. Change the position of load more button
 * Loading Animation. Decide the animation type of load more function
 
 **Pagination Styles**
 
-* Pagination Font Size in px. Specify pagination numbers size 
-* Pagination Font Color. Specify the color of pagination numbers 
-* Pagination Icons Size in px. Change the size of pagination right and left arrow icons 
-* Pagination Icons Color. Change the color of pagination right and left arrow icons 
+* Pagination Font Size in px. Specify pagination numbers size
+* Pagination Font Color. Specify the color of pagination numbers
+* Pagination Icons Size in px. Change the size of pagination right and left arrow icons
+* Pagination Icons Color. Change the color of pagination right and left arrow icons
 * Pagination Position. Choose the position of pagination icons
 
 **Ratings Styles**
@@ -466,14 +466,14 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Ratings Rated Font Color. Choose icon font color for those images which are rated
 * Like/Dislike Icon Color, Choose icon color for like and dislike buttons
 * Like/Dislike Rated Icon Color. Choose the icon color when the like/or dislike issubmitted
-* Heart Icon Color. Decide the color of heart icon 
+* Heart Icon Color. Decide the color of heart icon
 * Heart Rated Icon Color. Decide the color of heart color which is submitted
 
 ### 3.4 Slider Gallery
 
 **Arrows**
 
-* Show Arrows. Select to show the arrows on slider 
+* Show Arrows. Select to show the arrows on slider
 * Arrows Styles. Choose one among 22 available arrow styles
 
 **Thumbnails**
@@ -484,42 +484,42 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 **Bullets**
 
 * Show Bullets/ Select to have navigation bullets on the slider
-* Position. Change the position of bullets on the top or bottom 
+* Position. Change the position of bullets on the top or bottom
 * Bullets Background. Change the color of the bullets background
-* Bullets Background on Hover. Specify the color of bullets while hove a mouse 
-* Orientation. Make them horizontal or vertical  
-* Rows. Choose how many rows the bullets should be 
-* Inline Space Horizontal. Space between each bullet in horizontal inline 
+* Bullets Background on Hover. Specify the color of bullets while hove a mouse
+* Orientation. Make them horizontal or vertical
+* Rows. Choose how many rows the bullets should be
+* Inline Space Horizontal. Space between each bullet in horizontal inline
 * Inline Space Vertical. Space between each bullet in vertical inline \
 
 **Title**
 
-* Color.  Adjust the color of the title text 
+* Color.  Adjust the color of the title text
 * Hover Color. Adjust the color of the title text on hover
 * Opacity. Background of title may be adjusted in opacity level
 * Border (px).  Background may have border at every width size
 * Border Color. Adjust  the color for the border
 * Border Radius. Adjust  the corner radius for the border
 * Font Size. Adjust the size of the title text
-* Font Color. Adjust the color of the title text 
+* Font Color. Adjust the color of the title text
 * Background Color. Adjust the background color of the title text
 
 **Description**
 
-* Color. Adjust the color of the description text 
+* Color. Adjust the color of the description text
 * Hover Color. Adjust the color of the description text on hover
 * Opacity. Background of title may be adjusted in opacity level
 * Border. Background may have border at every width size
 * Border Color. Adjust  the color for the border
 * Border Radius. Adjust  the corner radius for the border
 * Font Size. Adjust the size of the description text
-* Background Color. Adjust the color of the description 
+* Background Color. Adjust the color of the description
 
 ### 3.5 Thumbnails View
 
 **Container Style**
 
-* Box padding in px. Between each element you may configure padding size 
+* Box padding in px. Between each element you may configure padding size
 * Box background Color. You may have colored background under the gallery
 * Box Use shadowdow. Select to allow box have the shadow
 * Box Has background. Select to have or remove the box of background under the gallery
@@ -527,9 +527,9 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 **Title**
 
 * Title Font Size in px. Adjust the size of the title text
-* Title Font Color. Adjust the color of the title text 
+* Title Font Color. Adjust the color of the title text
 * Title Font Hover Color. Adjust the color of the title text on hover
-* Title Background Color. Adjust the background color of the title 
+* Title Background Color. Adjust the background color of the title
 * Title Background Opacity. Background of coming up title may be adjusted in opacity level
 
 **Load More Styles**
@@ -539,13 +539,13 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Load More Font Color. Change the color of the button which comes with Load More function
 * Load More Font Hover Color. Change color of the text on load more button while you hover the mouse point on it.
 * Load More Button Color. Specify the color of the button of load more function
-* Load More Background Hover Color. Specify the button color of load more function on hover 
-* Load More Position. Change the position of load more button         
+* Load More Background Hover Color. Specify the button color of load more function on hover
+* Load More Position. Change the position of load more button
 * Loading Animation. Decide the animation type of load more function
 
 **Image**
 
-* Image Behaviour. On “Natural” this option will fit the image in element box without stretching it 
+* Image Behaviour. On “Natural” this option will fit the image in element box without stretching it
 * Image Width in px. Change the width size of the picture
 * Image Height in px. Change the height size of the picture
 * Image Border Width in px. Set the width of the borders around the image thumbnail
@@ -555,11 +555,11 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 **Pagination Styles**
 
-* Pagination Font Size in px. Specify pagination numbers size 
-* Pagination Font Color. Specify the color of pagination numbers 
-* Pagination Icons Size in px. Change the size of pagination right and left arrow icons 
-* Pagination Icons Color. Change the color of pagination right and left arrow icons 
-* Pagination Position. Choose the position of pagination icons 
+* Pagination Font Size in px. Specify pagination numbers size
+* Pagination Font Color. Specify the color of pagination numbers
+* Pagination Icons Size in px. Change the size of pagination right and left arrow icons
+* Pagination Icons Color. Change the color of pagination right and left arrow icons
+* Pagination Position. Choose the position of pagination icons
 
 **Ratings Styles**
 
@@ -570,7 +570,7 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Ratings Rated Font Color. Choose icon font color for those images which are rated
 * Like/Dislike Icon Color, Choose icon color for like and dislike buttons
 * Like/Dislike Rated Icon Color. Choose the icon color when the like/or dislike issubmitted
-* Heart Icon Color. Decide the color of heart icon 
+* Heart Icon Color. Decide the color of heart icon
 * Heart Rated Icon Color. Decide the color of heart color which is submitted
 
 ### 3.6 Justified Gallery
@@ -580,7 +580,7 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Image height in px. Adjust the height of elements in pixels
 * Image margin in px. Adjust the width size of elements in pixels
 * Image Justify. This option will adjust size of images in most optimal way to fill the 100% width of the container
-* Image Randomize. Select this option to load images randomly on every page loading 
+* Image Randomize. Select this option to load images randomly on every page loading
 * Opening With Animation. Select to make images appear with animation
 * Opening Animation Speed. While the above option is selected you may choose the animation speed.
 
@@ -591,26 +591,26 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Load More Font Color. Change the color of the button which comes with Load More function
 * Load More Font Hover Color. Change color of the text on load more button while you hover the mouse point on it.
 * Load More Button Color. Specify the color of the button of load more function
-* Load More Background Hover Color. Specify the button color of load more function on hover 
+* Load More Background Hover Color. Specify the button color of load more function on hover
 * Load More Position. Change the position of load more button
 * Loading Animation. Decide the animation type of load more function
 
 **Element Title**
 
-* Show Title. Select to have title shown on the hover 
-* Element Title Font Size. Configure the size of element title 
-* Element Title Font Color. Configure the color of element title 
+* Show Title. Select to have title shown on the hover
+* Element Title Font Size. Configure the size of element title
+* Element Title Font Color. Configure the color of element title
 * Element Title Background Color. Configure the color of title background
 * Elements Title Overlay Opacity. Configure the transparency of coming overlay
 
 **Pagination Styles**
 
-* Pagination Font Size in px. Specify pagination numbers size 
-* Pagination Font Color. Specify the color of pagination numbers 
-* Pagination Icons Size in px. Change the size of pagination right and left arrow icons 
-* Pagination Icons Color. Change the color of pagination right and left arrow icons 
+* Pagination Font Size in px. Specify pagination numbers size
+* Pagination Font Color. Specify the color of pagination numbers
+* Pagination Icons Size in px. Change the size of pagination right and left arrow icons
+* Pagination Icons Color. Change the color of pagination right and left arrow icons
 * Pagination Position. Choose the position of pagination icons
- 
+
 **Ratings Styles**
 
 * Show Ratings Count. Show the number of users who have liked the image
@@ -620,7 +620,7 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Ratings Rated Font Color. Choose icon font color for those images which are rated
 * Like/Dislike Icon Color, Choose icon color for like and dislike buttons
 * Like/Dislike Rated Icon Color. Choose the icon color when the like/or dislike issubmitted
-* Heart Icon Color. Decide the color of heart icon 
+* Heart Icon Color. Decide the color of heart icon
 * Heart Rated Icon Color. Decide the color of heart color which is submitted
 
 ### 3.7 Masonry View
@@ -633,16 +633,16 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 * Show Title. Select to show the tile or not
 * Title Font Size in px. Adjust the size of the title text
-* Title Font Color. Adjust the color of the title text 
+* Title Font Color. Adjust the color of the title text
 * Title Font Hover Color. Adjust the color of the title text on hover
-* Title Background Color. Adjust the background color of the title 
+* Title Background Color. Adjust the background color of the title
 * Title Background Opacity. Background of coming up title may be adjusted in opacity level
 
 **Image Styles**
 
-* Image Width in px. The only size option in this view is width, you need to adjust it and then height will be proportionally taken 
+* Image Width in px. The only size option in this view is width, you need to adjust it and then height will be proportionally taken
 * Image Border Width in px. Choose the border width for the elements
-* Image Border Color. Choose some color for the border 
+* Image Border Color. Choose some color for the border
 * Border Radius. Change the radius of corners
 
 **Ratings Styles**
@@ -654,7 +654,7 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Ratings Rated Font Color. Choose icon font color for those images which are rated
 * Like/Dislike Icon Color, Choose icon color for like and dislike buttons
 * Like/Dislike Rated Icon Color. Choose the icon color when the like/or dislike issubmitted
-* Heart Icon Color. Decide the color of heart icon 
+* Heart Icon Color. Decide the color of heart icon
 * Heart Rated Icon Color. Decide the color of heart color which is submitted
 
 **Load More Styles**
@@ -664,25 +664,25 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 * Load More Font Color. Change the color of the button which comes with Load More function.
 * Load More Font Hover Color. Change color of the text on load more button while you hover the mouse point on it.
 * Load More Button Color. Specify the color of the button of load more function
-* Load More Background Hover Color. Specify the button color of load more function on hover 
-* Load More Position. Change the position of load more button         
+* Load More Background Hover Color. Specify the button color of load more function on hover
+* Load More Position. Change the position of load more button
 * Loading Animation. Decide the animation type of load more function
 
 **Pagination Styles**
 
-* Pagination Font Size in px. Specify pagination numbers size 
-* Pagination Font Color. Specify the color of pagination numbers 
-* Pagination Icons Size in px. Change the size of pagination right and left arrow icons 
-* Pagination Icons Color. Change the color of pagination right and left arrow icons 
-* Pagination Position. Choose the position of pagination icons 
+* Pagination Font Size in px. Specify pagination numbers size
+* Pagination Font Color. Specify the color of pagination numbers
+* Pagination Icons Size in px. Change the size of pagination right and left arrow icons
+* Pagination Icons Color. Change the color of pagination right and left arrow icons
+* Pagination Position. Choose the position of pagination icons
 
 
 ### Step 4 Lightbox Options.
 
 **Internationalization**
 
-* Lightbox style. Pick up one among 4 available  lightbox styles               
-* Slide Animation Type. Sliding image in lightbox may have 9 different animation, choose one of them        
+* Lightbox style. Pick up one among 4 available  lightbox styles
+* Slide Animation Type. Sliding image in lightbox may have 9 different animation, choose one of them
 * Speed. Decide the speed of sliding
 * Slider Animation. Select to have sliding animation or not
 * Overlay Close. Select to be able to close the lightbox by clicking on any place of overlay
@@ -703,29 +703,29 @@ Every view has it’s options. Choose the  view you use, and under that tab make
 
 * Popup size fix. Select to have fixe size for the lightbox or allow it vary due to the image dimensions.
 
-* Besides the mentioned options above, you have a chance to go deep and discover more advanced tools , that come with photo gallery plugin. 
+* Besides the mentioned options above, you have a chance to go deep and discover more advanced tools , that come with photo gallery plugin.
 
 * Photo Gallery plugin produced by Huge-IT suggests various useful tools to build the most stunning gallery ever. It suggests 8 engaging views to apply for images. You may showcase both images/videos  create fully engaging gallery which will demonstrate your projects nicely and attract all your visitors.
 
-* Due to Ratings option in Photo Gallery you may make a website more engaging; that is select Like/Dislike button or Herat one. With these two buttons your website visitors may show their opinion over your projects displayed in gallery so you could know their attitude toward your works. 
+* Due to Ratings option in Photo Gallery you may make a website more engaging; that is select Like/Dislike button or Herat one. With these two buttons your website visitors may show their opinion over your projects displayed in gallery so you could know their attitude toward your works.
 
-* There is a Show Loading Icon and by enabling this option it may show load icon before your gallery images will appear on your page. This option can be perfect tool if you have many images inside gallery 
+* There is a Show Loading Icon and by enabling this option it may show load icon before your gallery images will appear on your page. This option can be perfect tool if you have many images inside gallery
 
-* What comes to Displaying Content option this is prepared to separate gallery images by Pagination option or Load More. 
+* What comes to Displaying Content option this is prepared to separate gallery images by Pagination option or Load More.
 
 * Within the plugin Photo Gallery has  Lightbox Options section. This is prepared for those views which allows gallery images to be opened in Lightbox. In Lightbox Options you may customize how the gallery images opened. There is 4 lightbox styles with 9 animation types which gives you vast amount of choice to make gallery looks perfectly.
 
-* Photo Gallery enables social sharing icons to share gallery images to your favorite platform. 
+* Photo Gallery enables social sharing icons to share gallery images to your favorite platform.
 
-* Photo Gallery plugin provides Image Behaviour option which prevents gallery images to look distorted or squashed. Just select Natural and enjoy the appearance of your created gallery . 
+* Photo Gallery plugin provides Image Behaviour option which prevents gallery images to look distorted or squashed. Just select Natural and enjoy the appearance of your created gallery .
 
 * If there will be any other technical issues with Photo Gallery plugin please contact our support team. They will assist you to solve any kind of issue with gallery plugin quickly.
 
-* The great thing with Gallery plugin is that those who want to have more style options can do it with paid version. General Options provide the tools to customize gallery title, change size for each image in gallery and apply various colors to load more, Rating and Pagination icons. 
+* The great thing with Gallery plugin is that those who want to have more style options can do it with paid version. General Options provide the tools to customize gallery title, change size for each image in gallery and apply various colors to load more, Rating and Pagination icons.
 
-* Huge-IT always tries to provide new innovative and modern tools to make your website look beautiful. In Photo Gallery you may find new Views like Masonry, Mosaic which shows gallery images in a perfect way.  Both versions free and paid one of Photo Gallery plugin allows to add unlimited numbers of images and produce as many gallery as you need. 
+* Huge-IT always tries to provide new innovative and modern tools to make your website look beautiful. In Photo Gallery you may find new Views like Masonry, Mosaic which shows gallery images in a perfect way.  Both versions free and paid one of Photo Gallery plugin allows to add unlimited numbers of images and produce as many gallery as you need.
 
-* Huge-IT designed a responsive Photo Gallery due to which your gallery images can be watched using different size gadgets. The backend of Photo Gallery plugin is minimalistic which means that it will be easier for you to use the plugin. 
+* Huge-IT designed a responsive Photo Gallery due to which your gallery images can be watched using different size gadgets. The backend of Photo Gallery plugin is minimalistic which means that it will be easier for you to use the plugin.
 
 * Photo Gallery plugin acquires a new relesed modern lightbox which you may evaluate in free version as well. New Lightbox Option will make your gallery images to appear in a perfect way when clicking on it.
 

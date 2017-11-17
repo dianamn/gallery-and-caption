@@ -70,6 +70,7 @@ class Photo_Gallery_WP_Admin
         add_action('wpdev_settings_photo_gallery_wp_header', array($this, 'free_banner'));
         add_action('photo_gallery_wp_before_featured_plugins', array($this, 'free_banner'));
         add_action('photo_gallery_wp_before_galleries', array($this, 'free_banner'));
+        add_action('photo_gallery_wp_before_albums', array($this, 'free_banner'));
     }
 
     /**

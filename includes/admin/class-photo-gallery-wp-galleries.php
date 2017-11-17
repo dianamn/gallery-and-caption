@@ -228,8 +228,8 @@ class Photo_Gallery_WP_Galleries
                 $orderBy = sanitize_text_field($_POST["order_by_" . $rowimages->id]);
                 $linkTaret = sanitize_text_field($_POST["sl_link_target" . $rowimages->id]);
                 $slUrl = sanitize_text_field(str_replace('%', '__5_5_5__', $_POST["sl_url" . $rowimages->id]));
-                $name = wp_unslash(str_replace('%', '__5_5_5__', $_POST["titleimage" . $rowimages->id]));
-                $desc = wp_unslash(str_replace('%', '__5_5_5__', $_POST["im_description" . $rowimages->id]));
+                $name = str_replace('%', '__5_5_5__', $_POST["titleimage" . $rowimages->id]);
+                $desc = str_replace('%', '__5_5_5__', $_POST["im_description" . $rowimages->id]);
                 $imageUrl = sanitize_text_field($_POST["imagess" . $rowimages->id]);
                 $like = sanitize_text_field($_POST["like_" . $rowimages->id]);
                 $dislike = sanitize_text_field($_POST["dislike_" . $rowimages->id]);
