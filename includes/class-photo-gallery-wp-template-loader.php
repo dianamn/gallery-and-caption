@@ -37,7 +37,7 @@ class Photo_Gallery_WP_Template_Loader
         $sliderheight = $gallery[0]->sl_height - 2 * Photo_Gallery_WP()->settings->slider_slideshow_border_size;
         $sliderwidth = $gallery[0]->sl_width - 2 * Photo_Gallery_WP()->settings->slider_slideshow_border_size;
         $slidereffect = $gallery[0]->gallery_list_effects_s;
-        $slidepausetime = ($gallery[0]->description + $gallery[0]->param);
+        $slidepausetime = ((int)$gallery[0]->description + (int)$gallery[0]->param);
         $sliderpauseonhover = $gallery[0]->pause_on_hover;
         $sliderposition = $gallery[0]->sl_position;
         $slidechangespeed = $gallery[0]->param;
