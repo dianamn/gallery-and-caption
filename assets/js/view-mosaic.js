@@ -53,8 +53,6 @@ function Ph_Gallery_Mosaic(id) {
                         _this.container.find('#mosaic_images_section_' + currentPage).append(val);
                     }
                 });
-                console.log(currentPage);
-                console.log(prevPage);
                 _this.container.find('#mosaic_images_section_' + currentPage).hide();
                 _this.container.find('#mosaic_images_section_' + currentPage).append(response);
                 setTimeout(function () {
