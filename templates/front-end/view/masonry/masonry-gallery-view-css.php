@@ -378,6 +378,7 @@ case "dislike":
         right: 16px;
         font-size: 14px;
     }
-
-
+    .view {
+        margin: 0;
+    }
    </style>

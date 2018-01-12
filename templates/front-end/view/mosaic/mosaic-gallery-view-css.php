@@ -260,5 +260,5 @@ case 'left':
         font-size: 14px;
     }
 
-   
+
 </style>

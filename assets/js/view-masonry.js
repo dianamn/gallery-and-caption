@@ -114,9 +114,21 @@ function Ph_Gallery_Masonry(id) {
 }
 var galleries = [];
 jQuery(document).ready(function () {
-    jQuery(".ph-g-wp_gallery_container.view-masonry").each(function (i) {
-        var id = jQuery(this).attr('id');
-        galleries[i] = new Ph_Gallery_Masonry(id);
+    /////  call when image are loaded
+    var count = jQuery(".gallery-img-content.view-masonry img").length;
+    var decrement = function () {
+        if (--count == 0) {
+            jQuery(".ph-g-wp_gallery_container.view-masonry").each(function (i) {
+                var id = jQuery(this).attr('id');
+                galleries[i] = new Ph_Gallery_Masonry(id);
+            });
+        }
+    };
+    jQuery(".gallery-img-content.view-masonry img").each(function () {
+        if (this.complete) {
+            decrement();
+        } else {
+            jQuery(this).one('load', decrement);
+        }
     });
 });
-
