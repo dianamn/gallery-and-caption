@@ -7,6 +7,8 @@ Version: 2.1.2
 Author: Huge-IT
 Author URI: https://huge-it.com/
 License: GNU/GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: photo-gallery-wp
+Domain Path:  /languages
 */
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly

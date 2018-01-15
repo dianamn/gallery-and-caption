@@ -65,7 +65,7 @@ if (isset($_GET["addslide"])) {
                         <div id="post-body">
                             <div id="ph-gallery-wp-post-body-heading">
                                 <div id="ph-gallery-wp-img_preview">
-                                    <h3><?php echo __('Images', 'gallery-images'); ?></h3>
+                                    <h3><?php echo __('Images', 'photo-gallery-wp'); ?></h3>
                                     <input type="hidden" name="imagess" id="_unique_name"/>
                                     <input type="hidden" name="photo_gallery_wp_admin_image_hover_preview" value="off"/>
                                     <label for="img_hover_preview"><?php echo __('Image preview on hover', 'photo-gallery-wp'); ?>

@@ -55,7 +55,7 @@ class Photo_Gallery_WP_Galleries
         if (isset($_COOKIE['gallery_deleted'])) {
             if ($_COOKIE['gallery_deleted'] == 'success') {
                 ?>
-                <div class="updated"><p><strong><?php _e('Item Deleted.'); ?></strong></p></div>
+                <div class="updated"><p><strong><?php _e('Item Deleted.','photo-gallery-wp'); ?></strong></p></div>
                 <?php
             } elseif ($_COOKIE["gallery_deleted"] == 'fail') {
                 ?>
@@ -277,7 +277,7 @@ class Photo_Gallery_WP_Galleries
             $wpdb->query($wpdb->prepare("UPDATE " . $wpdb->prefix . "photo_gallery_wp_gallerys SET  published = %d WHERE id = %d ", $_POST["posthuge-it-description-length"], $_GET['id']));
         }
         ?>
-        <div class="updated"><p><strong><?php _e('Item Saved'); ?></strong></p></div>
+        <div class="updated"><p><strong><?php _e('Item Saved','photo-gallery-wp'); ?></strong></p></div>
         <?php
         return true;
 
