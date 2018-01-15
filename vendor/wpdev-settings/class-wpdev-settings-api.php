@@ -771,7 +771,7 @@ if (!class_exists('WPDEV_Settings_API')):
         { ?>
             <div class="wpdev-settings-pagetitle"><h2><?php echo $this->page_title; ?></h2>
                 <button value="save" type="submit" class="wpdev_settings_save_button wpdev-primary-button"
-                        name="wpdev_settings_save_options"><?php _e('Save Settings'); ?></button>
+                        name="wpdev_settings_save_options"><?php _e('Save Settings', 'photo-gallery-wp'); ?></button>
                 <span class="spinner"></span></div>
         <?php }
 
@@ -902,7 +902,7 @@ if (!class_exists('WPDEV_Settings_API')):
                                    value="<?php echo $this->plugin_id; ?>"/>
                             <span class="spinner"></span>
                             <button value="save" type="submit" class="wpdev_settings_save_button wpdev-primary-button"
-                                    name="wpdev_settings_save_options"><?php _e('Save Settings'); ?></button>
+                                    name="wpdev_settings_save_options"><?php _e('Save Settings', 'photo-gallery-wp'); ?></button>
                         </div>
                     </form>
                 </div>

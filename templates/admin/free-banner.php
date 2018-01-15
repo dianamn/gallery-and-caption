@@ -8,9 +8,9 @@ if (!defined('ABSPATH')) {
         <img class="manual_icon"
              src="<?php echo PHOTO_GALLERY_WP_IMAGES_URL ?>/admin_images/free-banner/plugin_logo.png"
              alt="user manual"/>
-        <p class="usermanual_text"><?php _e('Wordpress Photo Gallery', 'hugeit_contact'); ?></p>
+        <p class="usermanual_text"><?php _e('Wordpress Photo Gallery', 'photo-gallery-wp'); ?></p>
         <a class="get_full_version" href="https://huge-it.com/wordpress-photo-gallery/" target="_blank">
-            <?php _e('GO PRO', 'hugeit_contact'); ?>
+            <?php _e('GO PRO', 'photo-gallery-wp'); ?>
         </a>
         <p class="close_banner">Close for now</p>
         <img class="closer_icon_only" alt="Close Icon"
@@ -36,37 +36,37 @@ if (!defined('ABSPATH')) {
             <ul class="inline_menu">
                 <li>
                     <a target="_blank" href="https://huge-it.com/wordpress-photo-gallery-demo-7-masonry/">
-                        <?php _e('Demo', 'hugeit_contact'); ?>
+                        <?php _e('Demo', 'photo-gallery-wp'); ?>
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://wordpress.org/support/plugin/gallery-and-caption/reviews/">
-                        <?php _e('Review', 'hugeit_contact'); ?>
+                        <?php _e('Review', 'photo-gallery-wp'); ?>
                     </a>
                 </li>
                 <li class="help_element">
 
-                    <?php _e('Help', 'hugeit_contact'); ?>
+                    <?php _e('Help', 'photo-gallery-wp'); ?>
                     </a>
                     <ul class="submenu">
                         <li>
                             <a target="_blank" href="https://huge-it.com/contact-us/">
-                                <?php _e('Contact Us', 'hugeit_contact'); ?>
+                                <?php _e('Contact Us', 'photo-gallery-wp'); ?>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" href="https://huge-it.com/wordpress-photo-gallery-user-manual/">
-                                <?php _e('User Manual', 'hugeit_contact'); ?>
+                                <?php _e('User Manual', 'photo-gallery-wp'); ?>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" href="https://huge-it.com/wordpress-photo-gallery-faq/">
-                                <?php _e('FAQ', 'hugeit_contact'); ?>
+                                <?php _e('FAQ', 'photo-gallery-wp'); ?>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" href="https://wordpress.org/support/plugin/gallery-and-caption">
-                                <?php _e('Forum', 'hugeit_contact'); ?>
+                                <?php _e('Forum', 'photo-gallery-wp'); ?>
                             </a>
                         </li>
                     </ul>
@@ -79,7 +79,7 @@ if (!defined('ABSPATH')) {
                 </li>
             </ul>
             <div class="description_text">
-                <p><?php _e('Click GO PRO to activate all additional customization options.', 'hugeit_contact'); ?></p>
+                <p><?php _e('Click GO PRO to activate all additional customization options.', 'photo-gallery-wp'); ?></p>
             </div>
         </div>
         <div style="clear: both;"></div>

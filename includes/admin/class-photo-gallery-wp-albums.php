@@ -14,6 +14,6 @@ class Photo_Gallery_WP_Albums
      */
     public function albums()
     {
-        echo "Albums Page";
+        echo __('Albums Page', 'photo-gallery-wp');
     }
 }
